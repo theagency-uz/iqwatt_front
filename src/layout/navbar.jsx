@@ -25,6 +25,7 @@ function Navbar({ lng, ...props }) {
   return (
     <Box className={classes.navbar}>
       <h1>Navbar</h1>
+      <h1>Wrapper</h1>
 
       {mdUp && <LangSwitcher lng={lng} />}
     </Box>
