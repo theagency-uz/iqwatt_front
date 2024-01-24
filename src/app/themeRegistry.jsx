@@ -19,7 +19,7 @@ export default function ThemeRegistry({...props}) {
     const prevInsert = cache.insert;
     let inserted = [];
     cache.insert = (...args) => {
-      const serialized = args[1];
+      const serialized = args[1]; 
       if (cache.inserted[serialized.name] === undefined) {
         inserted.push(serialized.name);
       }

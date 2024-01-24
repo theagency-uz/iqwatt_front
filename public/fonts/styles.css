@@ -1,13 +1,320 @@
-/*============================================= Bebas Neue ===================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/*============================================= Futura PT ===================================================*/
 
 @font-face {
-  font-family: "Bebas Neue Cyrillic";
-  src: url("/fonts/Bebas-Neue-Cyrillic/BebasNeueCyrillic.woff2") format("woff2"),
-    url("/fonts/Bebas-Neue-Cyrillic/BebasNeueCyrillic.woff") format("woff"),
-    url("/fonts/Bebas-Neue-Cyrillic/BebasNeueCyrillic.ttf") format("truetype");
+  font-family: "Futura PT";
+  src: url("/fonts/Futura/FuturaPT-Bold.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-Bold.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Extra";
+  src: url("/fonts/Futura/FuturaPTCond-ExtraBold.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPTCond-ExtraBold.woff") format("woff"),
+    url("/fonts/Futura/FuturaPTCond-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Book";
+  src: url("/fonts/Futura/FuturaPT-Book.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-Book.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-Book.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-/*============================================= Bebas Neue ===================================================*/
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("/fonts/Futura/FuturaPTCond-BoldObl.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPTCond-BoldObl.woff") format("woff"),
+    url("/fonts/Futura/FuturaPTCond-BoldObl.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Book";
+  src: url("/fonts/Futura/FuturaPTCond-BookObl.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPTCond-BookObl.woff") format("woff"),
+    url("/fonts/Futura/FuturaPTCond-BookObl.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Book";
+  src: url("/fonts/Futura/FuturaPTCond-Book.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPTCond-Book.woff") format("woff"),
+    url("/fonts/Futura/FuturaPTCond-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("/fonts/Futura/FuturaPTCond-Bold.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPTCond-Bold.woff") format("woff"),
+    url("/fonts/Futura/FuturaPTCond-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Book";
+  src: url("/fonts/Futura/FuturaPT-BookObl.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-BookObl.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-BookObl.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/Futura/FuturaPT-BoldObl.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-BoldObl.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-BoldObl.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Extra";
+  src: url("/fonts/Futura/FuturaPTCond-ExtraBoldObl.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPTCond-ExtraBoldObl.woff") format("woff"),
+    url("/fonts/Futura/FuturaPTCond-ExtraBoldObl.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Demi";
+  src: url("/fonts/Futura/FuturaPT-DemiObl.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-DemiObl.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-DemiObl.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("/fonts/Futura/FuturaPTCond-MediumObl.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPTCond-MediumObl.woff") format("woff"),
+    url("/fonts/Futura/FuturaPTCond-MediumObl.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Extra";
+  src: url("/fonts/Futura/FuturaPT-ExtraBoldObl.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-ExtraBoldObl.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-ExtraBoldObl.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("/fonts/Futura/FuturaPTCond-Medium.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPTCond-Medium.woff") format("woff"),
+    url("/fonts/Futura/FuturaPTCond-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Extra";
+  src: url("/fonts/Futura/FuturaPT-ExtraBold.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-ExtraBold.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Demi";
+  src: url("/fonts/Futura/FuturaPT-Demi.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-Demi.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-Demi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/Futura/FuturaPT-LightObl.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-LightObl.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-LightObl.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/Futura/FuturaPT-MediumObl.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-MediumObl.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-MediumObl.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/Futura/FuturaPT-HeavyObl.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-HeavyObl.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-HeavyObl.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/Futura/FuturaPT-Light.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-Light.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/Futura/FuturaPT-Heavy.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-Heavy.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/fonts/Futura/FuturaPT-Medium.woff2") format("woff2"),
+    url("/fonts/Futura/FuturaPT-Medium.woff") format("woff"),
+    url("/fonts/Futura/FuturaPT-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*============================================= Futura PT ===================================================*/
+
+/*============================================= Onest ===================================================*/
+
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest/Onest-Light.woff2") format("woff2"),
+    url("/fonts/Onest/Onest-Light.woff") format("woff"),
+    url("/fonts/Onest/Onest-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("Onest-ExtraLight.woff2") format("woff2"),
+    url("/fonts/Onest/Onest-ExtraLight.woff") format("woff"),
+    url("/fonts/Onest/Onest-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest/Onest-Medium.woff2") format("woff2"),
+    url("/fonts/Onest/Onest-Medium.woff") format("woff"),
+    url("/fonts/Onest/Onest-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest/Onest-Bold.woff2") format("woff2"),
+    url("/fonts/Onest/Onest-Bold.woff") format("woff"),
+    url("/fonts/Onest/Onest-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest/Onest-ExtraBold.woff2") format("woff2"),
+    url("/fonts/Onest/Onest-ExtraBold.woff") format("woff"),
+    url("/fonts/Onest/Onest-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest/Onest-Regular.woff2") format("woff2"),
+    url("/fonts/Onest/Onest-Regular.woff") format("woff"),
+    url("/fonts/Onest/Onest-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest/Onest-Black.woff2") format("woff2"),
+    url("/fonts/Onest/Onest-Black.woff") format("woff"),
+    url("/fonts/Onest/Onest-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest/Onest-SemiBold.woff2") format("woff2"),
+    url("/fonts/Onest/Onest-SemiBold.woff") format("woff"),
+    url("/fonts/Onest/Onest-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest/Onest-Thin.woff2") format("woff2"),
+    url("/fonts/Onest/Onest-Thin.woff") format("woff"),
+    url("/fonts/Onest/Onest-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*============================================= Onest ===================================================*/

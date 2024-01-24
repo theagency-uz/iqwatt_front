@@ -1,0 +1,40 @@
+.contacts {
+  padding: 94px 0;
+  background: #d9d9d9;
+}
+
+.contactsWrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contactsText {
+  color: #000;
+  font-family: "Futura PT Book";
+  font-size: 21.823px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 107.4%;
+  max-width: 414px;
+  margin-bottom: 16px;
+}
+
+.contactsLink {
+  border-radius: 10px;
+  background: #f07d00;
+  color: #fff;
+  font-family: "Futura PT Book";
+  font-size: 21.823px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 107.4%;
+  letter-spacing: 0.873px;
+  text-transform: uppercase;
+  width: 244px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

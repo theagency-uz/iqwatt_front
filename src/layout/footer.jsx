@@ -19,7 +19,38 @@ function Footer({ lng, ...props }) {
 
   return (
     <Box className={classes.footer}>
-      <h1>Footer</h1>
+      <Box className={classes.footerWrapper}>
+        <ul className={classes.footerList}>
+          <li className={classes.footerItem}>
+            <Link href={"/"}>{t("Каталог")}</Link>
+          </li>
+          <li className={classes.footerItem}>
+            <Link href={"/"}>{t("Каталог")}</Link>
+          </li>
+          <li className={classes.footerItem}>
+            <Link href={"/"}>{t("Каталог")}</Link>
+          </li>
+        </ul>
+        <button onClick={goToTop} className={classes.footerImage}>
+          <Image
+            src={"/icons/logo.svg"}
+            width={159}
+            height={49}
+            alt={"logo"}
+            priority
+            className={classes.footerLogo}
+          />
+        </button>
+
+        <Box className={classes.footerNumbersBox}>
+          <Link
+            href={"tel: +998 94 678 67 78"}
+            className={classes.number}
+          >
+            +998 94 678 67 78
+          </Link>
+        </Box>
+      </Box>
     </Box>
   );
 }

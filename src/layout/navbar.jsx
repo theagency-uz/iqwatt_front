@@ -8,6 +8,7 @@ import { useTranslation } from "@/app/i18n/client";
 import { useContext, useRef, useState } from "react";
 import SidebarContext from "@/context/sidebar.context";
 import LangSwitcher from "./langSwitcher";
+import NavList from "./navList";
 
 function Navbar({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
@@ -24,10 +25,14 @@ function Navbar({ lng, ...props }) {
 
   return (
     <Box className={classes.navbar}>
-      <h1>Navbar</h1>
-      <h1>Wrapper</h1>
+      <Box className={classes.navbarWrapper}>
+        <Link href={"tel: +998 94 678 67 78"} className={classes.number}>
+          +998 94 678 67 78
+        </Link>
 
-      {mdUp && <LangSwitcher lng={lng} />}
+        <NavList lng={lng} />
+        {mdUp && <LangSwitcher lng={lng} />}
+      </Box>
     </Box>
   );
 }

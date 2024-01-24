@@ -2,25 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   flex-direction: column;
-  width: 100%;
 }
 
 .navItem {
-  color: #ccc65a;
-  font-family: "Manrope";
-  font-size: var(--font14);
+  color: #313131;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 800;
-  line-height: 110%;
-  letter-spacing: 2.4px;
-  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 107.4%;
 }
 
 @media (min-width: 992px) {
   .navList {
-    gap: 35px;
+    gap: 20px;
     flex-direction: row;
     
   }

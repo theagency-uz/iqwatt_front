@@ -27,7 +27,7 @@ export default function LangSwitcher({ lng, ...props }) {
       >
         Ru
       </Link>
-      <span>|</span>
+      {/* <span>|</span> */}
       <Link
         href={redirectedPathName("uz")}
         className={`${classes.sidebarBtn} ${

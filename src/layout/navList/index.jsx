@@ -15,7 +15,67 @@ function NavList({ lng, setOpen, ...props }) {
             setOpen(false);
           }}
         >
-          {t("")}
+          {t("Каталог")}
+        </Link>
+      </li>
+      <li className={classes.navItem}>
+        <Link
+          href={"#"}
+          onClick={(e) => {
+            setOpen(false);
+          }}
+        >
+          {t("Калькулятор")}
+        </Link>
+      </li>
+      <li className={classes.navItem}>
+        <Link
+          href={"#"}
+          onClick={(e) => {
+            setOpen(false);
+          }}
+        >
+          {t("Гарантии")}
+        </Link>
+      </li>
+      <li className={classes.navItem}>
+        <Link
+          href={"#"}
+          onClick={(e) => {
+            setOpen(false);
+          }}
+        >
+          {t("Центр обучения")}
+        </Link>
+      </li>
+      <li className={classes.navItem}>
+        <Link
+          href={"#"}
+          onClick={(e) => {
+            setOpen(false);
+          }}
+        >
+          {t("Статьи")}
+        </Link>
+      </li>
+      <li className={classes.navItem}>
+        <Link
+          href={"#"}
+          onClick={(e) => {
+            setOpen(false);
+          }}
+        >
+          {t("Точки продаж")}
+        </Link>
+      </li>
+      <li className={classes.navItem}>
+        <Link
+          href={"#"}
+          onClick={(e) => {
+            setOpen(false);
+          }}
+        >
+          {t("Оставить заявку")}
         </Link>
       </li>
     </ul>

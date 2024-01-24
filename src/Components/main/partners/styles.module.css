@@ -1,0 +1,45 @@
+.partners {}
+
+.partnersWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 85px;
+}
+
+.partnersInfo {
+  display: flex;
+  flex-direction: column;
+}
+.partnersInfo h3 {
+  margin-bottom: 13px;
+}
+
+.partnersText {
+  color: #000;
+  font-family: "Futura PT Book";
+  font-size: 21.823px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 107.4%;
+  max-width: 414px;
+  margin-bottom: 25px;
+}
+
+.partnersLink {
+  border-radius: 10px;
+  background: #f07d00;
+  color: #fff;
+  font-family: "Futura PT Book";
+  font-size: 21.823px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 107.4%;
+  letter-spacing: 0.873px;
+  text-transform: uppercase;
+  width: 244px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
