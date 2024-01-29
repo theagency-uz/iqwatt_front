@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import classes from "./styles.module.css";
 import { useTranslation } from "@/app/i18n/client";
 
-export default function LangSwitcher({ lng, ...props }) {
+export default function ExtraLangSwitcher({ lng, ...props }) {
   const { i18n } = useTranslation(lng);
 
   const pathName = usePathname();

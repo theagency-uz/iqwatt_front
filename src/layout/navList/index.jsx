@@ -65,17 +65,7 @@ function NavList({ lng, setOpen, ...props }) {
             setOpen(false);
           }}
         >
-          {t("Точки продаж")}
-        </Link>
-      </li>
-      <li className={classes.navItem}>
-        <Link
-          href={"#"}
-          onClick={(e) => {
-            setOpen(false);
-          }}
-        >
-          {t("Оставить заявку")}
+          {t("контакты")}
         </Link>
       </li>
     </ul>

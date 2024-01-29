@@ -1,0 +1,57 @@
+.house {
+  padding: 0 20px;
+  margin-bottom: 80px;
+}
+
+.houseList {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.houseItem {
+  border-radius: 8.568px;
+  background: #f8f8f8;
+  padding: 25px;
+}
+
+.houseWrapper {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 11px;
+}
+
+.houseImgBox {
+  border-radius: 4.284px;
+  background: #f1f1f1;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.houseIcon {
+  object-fit: cover;
+}
+
+.houseTitle {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font16);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18.85px;
+  max-width: 11.1vw;
+}
+
+.houseText {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15.423px;
+  max-width: 17.8vw;
+}

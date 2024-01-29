@@ -1,43 +1,67 @@
+.navbarTop {
+  width: 100%;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+}
+
+.socialLinkBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.socialLink {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font10);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 9px;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+}
+
 .navbar {
-  padding: 15px 60px 18px; 
-  background: #F07D00;
+  padding: 0px 25px;
+  margin-bottom: 15px;
 }
 
 .navbarWrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 15px 0px;
+  border-bottom: 1px solid #efefef;
 }
 
+.navbarLogo {
+  width: 73px;
+  height: 27px;
+  object-fit: cover;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.number {
-  color: #000;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
+button.navbarBtn {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font12);
   font-style: normal;
   font-weight: 400;
-  line-height: 107.4%; 
+  line-height: 12px;
+  border-radius: 30px;
+  border: 1px solid #ff8115;
+  padding: 10px 17px;
+  min-width: auto;
 }
 
-
+button.navbarBtn:hover {
+  background: transparent;
+}
 .footer {
-  padding: 30px 30px 100px; 
-  background: #F07D00;
+  padding: 0 20px;
+  margin-bottom: 60px;
 }
 
 .footerWrapper {
@@ -47,19 +71,60 @@
 }
 
 .footerList {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 140px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 110px;
+  border-radius: 20px;
+  background: #f8f8f8;
+  padding: 40px;
+  padding-top: 60px;
 }
 
 .footerItem {
-  color: #000;
-  font-family: "Onest", sans-serif;
-  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerIconBox {
+  border-radius: 50px;
+  background: #ff8115;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18.85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 105px;
+  height: 37px;
+}
+
+.footerLink {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font33);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  white-space: pre-line;
+}
+
+.footerTime {
+  color: #8e8e8e;
+  font-family: "Manrope";
+  font-size: var(--font12);
   font-style: normal;
   font-weight: 400;
-  line-height: 107.4%; 
+  line-height: 18.85px;
+}
+
+.footerSocialBox {
+  display: flex;
+  gap: 10px;
 }
 
 .footerImage {
@@ -70,7 +135,46 @@
 }
 
 .footerLogo {
-  width: 100%;
-  height: auto;
+  width: 100px;
+  height: 37px;
   object-fit: cover;
+}
+
+.footerItemLink {
+  display: flex;
+  gap: 50px;
+}
+.footerBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerBoxItem {
+  color: #8e8e8e;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18.85px;
+}
+
+.footerPolicy {
+  color: #8e8e8e;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18.85px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footerItem .sideBarLang > a {
+  color: #8e8e8e !important;
+  font-family: "Manrope";
+  font-size: var(--font12) !important; 
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18.85px;
 }

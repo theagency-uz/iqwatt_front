@@ -7,18 +7,18 @@
 }
 
 .navItem {
-  color: #313131;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  color: #656565;
+  font-family: "Manrope";
+  font-size: var(--font12);
   font-style: normal;
-  font-weight: 400;
-  line-height: 107.4%;
+  font-weight: 500;
+  line-height: 26px;
+  text-transform: lowercase;
 }
 
 @media (min-width: 992px) {
   .navList {
-    gap: 20px;
+    gap: 30px;
     flex-direction: row;
-    
   }
 }

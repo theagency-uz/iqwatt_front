@@ -1,6 +1,6 @@
 .contacts {
-  padding: 94px 0;
-  background: #d9d9d9;
+  padding: 0px 20px;
+  margin-bottom: 20px;
 }
 
 .contactsWrapper {
@@ -8,33 +8,54 @@
   align-items: flex-start;
   flex-direction: row;
   justify-content: space-between;
+  background: #f07d00;
+  border-radius: 10px;
+  padding: 60px;
+}
+
+.contactsWrapper h3 {
+  color: #fff;
 }
 
 .contactsText {
-  color: #000;
-  font-family: "Futura PT Book";
-  font-size: 21.823px;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font14);
   font-style: normal;
-  font-weight: 400;
-  line-height: 107.4%;
-  max-width: 414px;
+  font-weight: 500;
+  line-height: 18px;
   margin-bottom: 16px;
+  max-width: 29.7vw;
 }
 
 .contactsLink {
-  border-radius: 10px;
+  border-radius: 50px;
+  border: 1px solid #fff;
   background: #f07d00;
   color: #fff;
-  font-family: "Futura PT Book";
-  font-size: 21.823px;
+  font-family: "Manrope";
+  font-size: var(--font14);
   font-style: normal;
-  font-weight: 400;
-  line-height: 107.4%;
-  letter-spacing: 0.873px;
-  text-transform: uppercase;
-  width: 244px;
-  height: 52px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: lowercase;
+  width: 8vw;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contactsIconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.contactsIcon {
+  object-fit: cover;
 }

@@ -16,27 +16,43 @@ function Partners({ lng, ...props }) {
   return (
     <Box className={classes.partners}>
       <Box className={classes.partnersWrapper}>
-        <Box className={classes.partnersInfo}>
-          <Title title={"Партнерам"} />
-          <p className={classes.partnersText}>
-            {t(
-              "Полное сопровождение проекта - фотоотчеты каждую неделю и выезды на стройку. Полное сопровождение проекта - фотоотчеты каждую неделю и выезды на стройку."
-            )}
-          </p>
-          <Link href={"/"} className={classes.partnersLink}>
-            {t("подробнее")}
-          </Link>
+        <Box className={classes.partnersImgBox}>
+          <Image
+            src={"/static/site/partner-img.png"}
+            width={570}
+            height={385}
+            alt={"image"}
+            className={classes.partnersImg}
+          />
         </Box>
 
-        <Box className={classes.partnersImgBox}>
-          {/* <Image
-            src={"/static/site/craft-bottle.svg"}
-            width={636}
-            height={250}
-            alt={"logo"}
-            className={classes.partnersImg}
-            priority
-          /> */}
+        <Box className={classes.partnersInfo}>
+          <Title title={"Партнерам"} />
+          <Box className={classes.partnersTextBox}>
+            <p className={classes.partnersText}>
+              {t(
+                "IQWATT сформировал команду целеустремлённых людей, отладил систему поставок, создал высокую культуру партнёрских отношений. Мы сконцентрированы на том, чтобы идти у к успеху совместно с нашими партнёрами."
+              )}
+            </p>
+            <br />
+            <p className={classes.partnersText}>
+              {t(
+                "Приглашаем торговые компании, заинтересованные в нашем продукте, а также дизайнерам помещений, строительным бригадам, профессиональным электрикам."
+              )}
+            </p>
+          </Box>
+          <Link href={"/"} className={classes.partnersLink}>
+            {t("подробнее")}
+            <Box className={classes.partnersIconBox}>
+              <Image
+                src={"/icons/arrow-right.svg"}
+                width={18}
+                height={15}
+                alt={"icon"}
+                className={classes.partnersIcon}
+              />
+            </Box>
+          </Link>
         </Box>
       </Box>
     </Box>

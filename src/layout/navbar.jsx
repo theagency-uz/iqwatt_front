@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, Button, useMediaQuery } from "@mui/material";
 
 import classes from "./styles.module.css";
 import { useTranslation } from "@/app/i18n/client";
@@ -24,16 +24,39 @@ function Navbar({ lng, ...props }) {
   };
 
   return (
-    <Box className={classes.navbar}>
-      <Box className={classes.navbarWrapper}>
-        <Link href={"tel: +998 94 678 67 78"} className={classes.number}>
-          +998 94 678 67 78
-        </Link>
-
-        <NavList lng={lng} />
+    <>
+      <Box className={classes.navbarTop}>
         {mdUp && <LangSwitcher lng={lng} />}
+
+        <Box className={classes.socialLinkBox}>
+          <Link href={"/"} className={classes.socialLink}>
+            telegram
+          </Link>
+          <Link href={"/"} className={classes.socialLink}>
+            instagram
+          </Link>
+        </Box>
       </Box>
-    </Box>
+      <Box className={classes.navbar}>
+        <Box className={classes.navbarWrapper}>
+          <Link href={"/"} className={classes.footerImage}>
+            <Image
+              src={"/icons/logo.svg"}
+              width={73}
+              height={27}
+              alt={"logo"}
+              priority
+              className={classes.navbarLogo}
+            />
+          </Link>
+          <NavList lng={lng} />
+
+          <Button className={classes.navbarBtn}>
+            {t("оставить заявку")}
+          </Button>
+        </Box>
+      </Box>
+    </>
   );
 }
 
