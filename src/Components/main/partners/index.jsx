@@ -27,7 +27,7 @@ function Partners({ lng, ...props }) {
         </Box>
 
         <Box className={classes.partnersInfo}>
-          <Title title={"Партнерам"} />
+          <Title title={"Партнерам"} lng={lng} />
           <Box className={classes.partnersTextBox}>
             <p className={classes.partnersText}>
               {t(

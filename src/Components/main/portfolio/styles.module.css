@@ -1,0 +1,45 @@
+.portfolio {
+  margin-bottom: 80px;
+}
+
+.portfolioWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.swiperWrapper {
+  width: 100%;
+}
+
+.mySwiper {
+  width: 100%;
+  margin: 0 auto;
+  cursor: grab;
+}
+
+.portfolioImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.swiperSlide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+}
+.portfolioText {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15.423px;
+  max-width: 14.7vw;
+}

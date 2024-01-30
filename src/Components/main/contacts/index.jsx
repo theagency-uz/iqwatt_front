@@ -22,7 +22,7 @@ function Contacts({ lng, ...props }) {
   return (
     <Box className={classes.contacts}>
       <Box className={classes.contactsWrapper}>
-        <Title title={"Свяжитесь \n с нами"} />
+        <Title title={"Свяжитесь \n с нами"} lng={lng} />
 
         <Box className={classes.contactsInfo}>
           <p className={classes.contactsText}>

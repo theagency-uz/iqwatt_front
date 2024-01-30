@@ -20,8 +20,8 @@ function Footer({ lng, ...props }) {
   };
 
   return (
-    <Box className={classes.footer}>
-      <>
+    <>
+      <Box className={classes.footer}>
         <ul className={classes.footerList}>
           <li className={classes.footerItem}>
             <Box className={classes.footerIconBox}>
@@ -195,8 +195,18 @@ function Footer({ lng, ...props }) {
             </Link>
           </li>
         </ul>
-      </>
-    </Box>
+      </Box>
+
+      <Box className={classes.footerMapBox}>
+        <Image
+          src={"/static/site/map.png"}
+          width={1221}
+          height={365}
+          alt={"map"}
+          className={classes.footerMap}
+        />
+      </Box>
+    </>
   );
 }
 

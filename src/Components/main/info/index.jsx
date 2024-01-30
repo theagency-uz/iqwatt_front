@@ -23,7 +23,7 @@ function Info({ lng, ...props }) {
   return (
     <Box className={classes.info}>
       <Box className={classes.infoWrapper}>
-        <Title title={"IQ WATT -- разумный подход \n к теплу в вашем доме"} />
+        <Title title={"IQ WATT -- разумный подход \n к теплу в вашем доме"} lng={lng} />
         <span className={classes.border}></span>
         <p className={classes.infoText}>
           {t(

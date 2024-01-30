@@ -1,0 +1,21 @@
+.faq {
+  padding: 0 20px;
+  margin-bottom: 80px;
+}
+
+.faqInner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.faqText {
+  color: #8e8e8e;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  max-width: 25.9vw;
+}
