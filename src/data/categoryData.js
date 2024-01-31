@@ -32,7 +32,7 @@ const categoryData = [
   {
     id: 6,
     title: "Термостаты",
-    image: "/images/category/category6.png",
+    image: "/images/category/category1.png",
     link: "/"
   },
 ];

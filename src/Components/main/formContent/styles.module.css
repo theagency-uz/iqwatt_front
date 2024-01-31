@@ -1,0 +1,45 @@
+.formContent {
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.formContentImgBox {
+  display: flex;
+}
+
+.formContentImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.formContentInner {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 10px;
+  background: #f8f8f8;
+  padding: 60px 50px;
+}
+
+.formContentInner .MuiAccordionSummary-expandIconWrapper > svg {
+  color: #FF8115;
+}
+
+.formContentInner div:global(.MuiAccordion-root::before) {
+  background-color: transparent;
+}
+
+.formContentTitle {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font40);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  max-width: 18.7vw;
+}
