@@ -39,11 +39,12 @@
   font-weight: 500;
   line-height: 18px;
   text-transform: lowercase;
-  width: 9vw;
-  height: 55px;
+  width: 8vw;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding-left: 9px;
 }
 
 .contactsIconBox {

@@ -1,0 +1,156 @@
+.stage {
+  padding: 0 20px;
+  margin-bottom: 80px;
+}
+
+.stageInner {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  /* background: #ff8115; */
+  padding: 65px 45px;
+  padding-right: 0;
+  background-image: url("/static/site/stage.png");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+  min-height: 816px;
+}
+
+.stageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+}
+
+.stageWrapper h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.stageText {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
+  max-width: 27.6vw;
+}
+
+.swiperWrapper {
+  width: 60%;
+}
+
+.mySwiper {
+  width: 100%;
+  margin: 0 auto;
+  cursor: grab;
+}
+
+.swiperSlide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 25px 40px;
+  border-radius: 10px;
+  background: #ffa152;
+  min-height: 421px;
+  height: 100%;
+}
+
+.stageStepBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stageStep,
+.stageGrade {
+  object-fit: cover;
+}
+
+.stageInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stageInfoTitle {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font20);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 94.249%;
+  max-width: 15.4vw;
+}
+
+.stageInfoText {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110.162%;
+  max-width: 19vw;
+}
+
+.stageBtnBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button.stageBtn {
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background: #ffa152;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: lowercase;
+  width: 11.5vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 9px;
+}
+
+.stageIconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stageIcon {
+  object-fit: cover;
+}
+
+button.btnNext {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+}
+
+button.btnNext > svg {
+  color: #fff;
+  font-size: var(--font20);
+  position: relative;
+  left: 1px;
+}

@@ -1,0 +1,10 @@
+.sliderScrollbar {
+  background: #dadada;
+  height: 2px;
+  width: 300px;
+}
+
+.sliderScrollbar :global(div.swiper-scrollbar-drag) {
+  background: #FF8115;
+  height: 100%;
+}

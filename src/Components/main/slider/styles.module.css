@@ -1,0 +1,107 @@
+.slider {
+  padding: 0 20px;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.mySwiper {
+  width: 100%;
+  margin: 0 auto;
+  cursor: grab;
+}
+
+.sliderImgBox {
+  position: relative;
+  display: flex;
+  border-radius: 10px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  z-index: 10;
+  padding-left: 73px;
+}
+
+.sliderImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.sliderInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+  padding-bottom: 12%;
+  padding-left: 53px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.88) 22.83%,
+    rgba(255, 255, 255, 0) 52.71%
+  );
+  width: 80%;
+  height: 100%;
+}
+
+.sliderTitle {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font40);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  white-space: pre-line;
+}
+
+.sliderText {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  max-width: 21.3vw;
+}
+
+.sliderLink {
+  border-radius: 50px;
+  border: 1px solid #f07d00;
+  background: #f07d00;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: lowercase;
+  width: 8vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 9px;
+}
+
+.sliderIconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliderIcon {
+  object-fit: cover;
+}

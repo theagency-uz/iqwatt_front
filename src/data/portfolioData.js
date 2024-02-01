@@ -15,7 +15,7 @@ const portfolioData = [
     text: "Гарантия 25 лет, срок службы 50 лет, Производство - Канада"
   },
   {
-    id: 3,
+    id: 4,
     image: "/images/portfolio/portfolio1.png",
     text: "Гарантия 25 лет, срок службы 50 лет, Производство - Канада"
   },

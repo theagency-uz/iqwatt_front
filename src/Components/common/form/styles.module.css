@@ -168,6 +168,12 @@
   font-weight: 500;
   line-height: 18px;
 }
+.sliderIcon {
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+}
+
 .checkbox :global(span.MuiRadio-root) {
   color: #ededed;
   padding: 0;

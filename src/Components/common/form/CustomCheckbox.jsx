@@ -5,6 +5,7 @@ import FormControl from "@mui/material/FormControl";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckIcon from "@mui/icons-material/Check";
 import classes from "./styles.module.css";
+import Image from "next/image";
 
 export default function CustomCheckbox({ label, value, onChange }) {
   return (
@@ -12,8 +13,24 @@ export default function CustomCheckbox({ label, value, onChange }) {
       className={classes.checkbox}
       control={
         <Checkbox
-          icon={<i className={`icon-square`}></i>}
-          checkedIcon={<i className={`icon-square-checked`}></i>}
+          icon={
+            <Image
+              src={"/icons/icon-square.svg"}
+              width={12}
+              height={12}
+              alt={"icon"}
+              className={classes.sliderIcon}
+            />
+          }
+          checkedIcon={
+            <Image
+              src={"/icons/icon-square-checked.svg"}
+              width={12}
+              height={12}
+              alt={"icon"}
+              className={classes.sliderIcon}
+            />
+          }
         />
       }
       sx={{

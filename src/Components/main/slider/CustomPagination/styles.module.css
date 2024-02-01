@@ -1,0 +1,36 @@
+.sliderPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  gap: 5px;
+  color: #acacac;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.sliderPagination > span {
+  color: #acacac;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.sliderPagination :global(span.swiper-pagination-current) {
+  cursor: pointer;
+  color: #ff8115;
+}
+
+.sliderPagination :global(span.swiper-pagination-total) {
+  color: #acacac;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}

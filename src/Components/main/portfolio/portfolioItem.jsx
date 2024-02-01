@@ -17,6 +17,7 @@ function PortfolioItem({ lng, portfolio, ...props }) {
       width={775}
       height={479}
       alt={"portfolio-image"}
+      priority
       className={classes.portfolioImg}
     />
     <p className={classes.portfolioText}>{t(portfolio.text)}</p>
