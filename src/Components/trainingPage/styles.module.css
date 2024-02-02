@@ -1,0 +1,88 @@
+.trainingWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.trainingBox {
+  border-radius: 10px;
+  background: #f9f9f9;
+  padding: 33px 30px 40px;
+}
+
+.trainingTitle {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font25);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  margin-bottom: 30px;
+}
+
+.trainingList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trainingItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trainingInner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.trainingCircleIcon {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+}
+
+.trainingText {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.trainingLink {
+  border-radius: 50px;
+  background: transparent;
+  color: #7a7a7a;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
+  text-transform: lowercase;
+  border: 1px solid #7a7a7a;
+  width: 6.5vw;
+  padding-left: 10px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.trainingIconBox {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ff8115;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+}
+
+.trainingIcon {
+  object-fit: cover;
+}

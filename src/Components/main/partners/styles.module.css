@@ -4,14 +4,13 @@
 }
 
 .partnersWrapper {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .partnersImgBox {
   display: flex;
-  width: 50%;
 }
 
 .partnersImg {
@@ -28,7 +27,6 @@
   background: #f8f8f8;
   padding: 50px;
   gap: 20px;
-  width: 50%;
 }
 
 .partnersTextBox {
@@ -45,7 +43,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
 }
 
 .partnersLink {
@@ -56,7 +54,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 128.571%;
   text-transform: lowercase;
   width: 10vw;
   height: 56px;

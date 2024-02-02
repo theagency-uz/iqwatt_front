@@ -49,7 +49,7 @@ function Navbar({ lng, ...props }) {
               className={classes.navbarLogo}
             />
           </Link>
-          <NavList lng={lng} />
+          <NavList lng={lng} setOpen={setOpen} />
 
           <Button className={classes.navbarBtn}>
             {t("оставить заявку")}

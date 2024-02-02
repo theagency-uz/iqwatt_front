@@ -114,7 +114,7 @@ button.stageBtn {
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 128.571%;
   text-transform: lowercase;
   width: 11.5vw;
   height: 50px;

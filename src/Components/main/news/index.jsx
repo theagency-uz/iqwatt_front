@@ -63,7 +63,7 @@ function News({ lng, ...props }) {
         </swiper-container>
       </Box>
 
-      <Link href={"/"} className={classes.newsLink}>
+      <Link href={"/articles"} className={classes.newsLink}>
         {t("смотреть всё")}
         <Box className={classes.newsIconBox}>
           <Image

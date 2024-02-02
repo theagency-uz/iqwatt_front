@@ -53,7 +53,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 128.571%;
   text-transform: lowercase;
   width: 10vw;
   height: 56px;

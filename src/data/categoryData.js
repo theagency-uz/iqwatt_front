@@ -8,7 +8,7 @@ const categoryData = [
   {
     id: 2,
     title: "Кондиционеры",
-    image: "/images/category/category1.png",
+    image: "/images/category/category2.png",
     link: "/"
   },
   {
@@ -26,13 +26,13 @@ const categoryData = [
   {
     id: 5,
     title: "Системы для труб",
-    image: "/images/category/category1.png",
+    image: "/images/category/category5.png",
     link: "/"
   },
   {
     id: 6,
     title: "Термостаты",
-    image: "/images/category/category1.png",
+    image: "/images/category/category6.png",
     link: "/"
   },
 ];

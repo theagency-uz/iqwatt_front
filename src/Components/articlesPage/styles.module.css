@@ -1,0 +1,28 @@
+.articlesList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.articlesItem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.articlesImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.articlesTitle {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font18);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  max-width: 17.3vw;
+}

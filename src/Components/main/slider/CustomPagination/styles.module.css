@@ -9,7 +9,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
 }
 
 .sliderPagination > span {
@@ -18,7 +18,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
 }
 
 .sliderPagination :global(span.swiper-pagination-current) {
@@ -32,5 +32,5 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
 }

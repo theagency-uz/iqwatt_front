@@ -24,5 +24,20 @@ const newsData = [
     title: "Экономичен ли теплый пол, сколько кВт потребляется ежемесячно?",
     image: "/images/news/news.png",
   },
+  {
+    id: 6,
+    title: "Экономичен ли теплый пол, сколько кВт потребляется ежемесячно?",
+    image: "/images/news/news.png",
+  },
+  {
+    id: 7,
+    title: "Экономичен ли теплый пол, сколько кВт потребляется ежемесячно?",
+    image: "/images/news/news.png",
+  },
+  {
+    id: 8,
+    title: "Экономичен ли теплый пол, сколько кВт потребляется ежемесячно?",
+    image: "/images/news/news.png",
+  },
 ];
 export default newsData;

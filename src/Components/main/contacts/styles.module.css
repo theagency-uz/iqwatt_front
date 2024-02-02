@@ -5,12 +5,19 @@
 
 .contactsWrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  background: #f07d00;
+  /* background: #f07d00; */
   border-radius: 10px;
   padding: 60px;
+  background-image: url("/static/site/contact-back.png");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+  min-height: 235px;
 }
 
 .contactsWrapper h3 {
@@ -23,7 +30,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 128.571%;
   margin-bottom: 20px;
   max-width: 29.7vw;
 }
@@ -37,7 +44,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 128.571%;
   text-transform: lowercase;
   width: 8vw;
   height: 50px;

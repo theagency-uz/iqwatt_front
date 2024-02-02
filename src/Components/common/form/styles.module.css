@@ -17,7 +17,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 128.571%;
   margin-bottom: 15px;
 }
 
@@ -30,7 +30,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
 }
 .input :global(.MuiFormHelperText-root.Mui-error) {
   color: #8e8e8e;
@@ -38,7 +38,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
   margin-top: 5px;
 }
 
@@ -48,7 +48,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
   margin-top: 5px;
 }
 
@@ -61,7 +61,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
 }
  
 .number :global(.react-tel-input .flag-dropdown) {
@@ -79,7 +79,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
   height: auto;
 }
 
@@ -105,7 +105,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
   text-transform: uppercase;
 }
 
@@ -121,7 +121,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
 }
 .textarea :global(textarea::placeholder) {
   color: #8e8e8e;
@@ -129,7 +129,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
   text-transform: initial !important;
 }
 
@@ -139,7 +139,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 128.571%;
   box-shadow: none;
   border-radius: 0;
   width: 70%;
@@ -166,7 +166,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 128.571%;
 }
 .sliderIcon {
   width: 18px;
@@ -197,7 +197,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 128.571%;
   margin-top: 5px;
 }
 
@@ -209,7 +209,7 @@ button.submit {
   font-size: var(--font14);
   font-style: normal;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 128.571%;
   text-transform: lowercase;
   width: 9vw;
   height: 56px;

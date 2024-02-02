@@ -10,7 +10,7 @@ function NavList({ lng, setOpen, ...props }) {
     <ul className={classes.navList}>
       <li className={classes.navItem}>
         <Link
-          href={"#"}
+          href={"/"}
           onClick={(e) => {
             setOpen(false);
           }}
@@ -20,7 +20,7 @@ function NavList({ lng, setOpen, ...props }) {
       </li>
       <li className={classes.navItem}>
         <Link
-          href={"#"}
+          href={"/"}
           onClick={(e) => {
             setOpen(false);
           }}
@@ -30,7 +30,7 @@ function NavList({ lng, setOpen, ...props }) {
       </li>
       <li className={classes.navItem}>
         <Link
-          href={"#"}
+          href={"/"}
           onClick={(e) => {
             setOpen(false);
           }}
@@ -40,7 +40,17 @@ function NavList({ lng, setOpen, ...props }) {
       </li>
       <li className={classes.navItem}>
         <Link
-          href={"#"}
+          href={"/partners"}
+          onClick={(e) => {
+            setOpen(false);
+          }}
+        >
+          {t("Партнерам")}
+        </Link>
+      </li>
+      <li className={classes.navItem}>
+        <Link
+          href={"/training"}
           onClick={(e) => {
             setOpen(false);
           }}
@@ -50,7 +60,7 @@ function NavList({ lng, setOpen, ...props }) {
       </li>
       <li className={classes.navItem}>
         <Link
-          href={"#"}
+          href={"/articles"}
           onClick={(e) => {
             setOpen(false);
           }}
@@ -60,7 +70,7 @@ function NavList({ lng, setOpen, ...props }) {
       </li>
       <li className={classes.navItem}>
         <Link
-          href={"#"}
+          href={"/"}
           onClick={(e) => {
             setOpen(false);
           }}

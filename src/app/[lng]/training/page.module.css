@@ -1,0 +1,28 @@
+.trainingPage {
+  padding: 60px 20px 0;
+  margin-bottom: 80px;
+}
+
+.trainingWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.border {
+  width: 100%;
+  height: 1px;
+  background: #e8e8e8;
+  display: block;
+}
+
+.trainingText {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  max-width: 21.4vw;
+}
