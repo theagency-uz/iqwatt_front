@@ -9,6 +9,7 @@ import { useContext, useRef, useState } from "react";
 import SidebarContext from "@/context/sidebar.context";
 import LangSwitcher from "./langSwitcher";
 import NavList from "./navList";
+import MenuIcon from "./menuIcon";
 
 function Navbar({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
@@ -25,18 +26,27 @@ function Navbar({ lng, ...props }) {
 
   return (
     <>
-      <Box className={classes.navbarTop}>
-        {mdUp && <LangSwitcher lng={lng} />}
+      {mdUp && (
+        <Box className={classes.navbarTop}>
+          <LangSwitcher lng={lng} />
 
-        <Box className={classes.socialLinkBox}>
-          <Link href={"/"} className={classes.socialLink}>
-            telegram
-          </Link>
-          <Link href={"/"} className={classes.socialLink}>
-            instagram
-          </Link>
+          <Box className={classes.socialLinkBox}>
+            <Link
+              href={"https://t.me/uz_iqwatt"}
+              className={classes.socialLink}
+            >
+              telegram
+            </Link>
+            <Link
+              href={"https://www.instagram.com/iqwatt"}
+              className={classes.socialLink}
+            >
+              instagram
+            </Link>
+          </Box>
         </Box>
-      </Box>
+      )}
+
       <Box className={classes.navbar}>
         <Box className={classes.navbarWrapper}>
           <Link href={"/"} className={classes.footerImage}>
@@ -49,11 +59,18 @@ function Navbar({ lng, ...props }) {
               className={classes.navbarLogo}
             />
           </Link>
-          <NavList lng={lng} setOpen={setOpen} />
 
-          <Button className={classes.navbarBtn}>
-            {t("оставить заявку")}
-          </Button>
+          {mdUp ? (
+            <>
+              <NavList lng={lng} setOpen={setOpen} />
+
+              <Button className={classes.navbarBtn}>
+                {t("оставить заявку")}
+              </Button>
+            </>
+          ) : (
+            <MenuIcon />
+          )}
         </Box>
       </Box>
     </>

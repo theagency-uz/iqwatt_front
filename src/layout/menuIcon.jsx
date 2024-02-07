@@ -82,7 +82,7 @@ export default function MenuIcon({}) {
           {...path01Variants.closed}
           animate={path01Controls}
           transition={{ duration: 0.1 }}
-          stroke="#ccc65a"
+          stroke="#FF8115"
           strokeLinecap="round"
           strokeWidth={1.5}
         />
@@ -90,7 +90,7 @@ export default function MenuIcon({}) {
           {...path02Variants.closed}
           animate={path02Controls}
           transition={{ duration: 0.1 }}
-          stroke="#ccc65a"
+          stroke="#FF8115"
           strokeLinecap="round"
           strokeWidth={1.5}
         />
@@ -98,7 +98,7 @@ export default function MenuIcon({}) {
           {...path03Variants.closed}
           animate={path03Controls}
           transition={{ duration: 0.1 }}
-          stroke={menuOpen ? "#000" : "#ccc65a"}
+          stroke={menuOpen ? "#fff" : "#FF8115"}
           strokeLinecap="round"
           strokeWidth={1.5}
         />

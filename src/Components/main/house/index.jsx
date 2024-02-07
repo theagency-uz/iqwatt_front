@@ -8,6 +8,7 @@ import { useContext, useRef, useState } from "react";
 
 import classes from "./styles.module.css";
 import Title from "@/Components/common/title";
+import HouseCard from "./houseCard";
 
 const houseData = [
   {
@@ -33,11 +34,31 @@ function House({ lng, ...props }) {
 
   return (
     <Box className={classes.house}>
+      <Box className={classes.houseBox}>
+        <Image
+          src={"/static/site/house.webp"}
+          width={1045}
+          height={644}
+          alt={"house-image"}
+          className={classes.houseImg}
+        />
+      </Box>
+
+      {/* <HouseCard lng={lng} /> */}
+
+      {/* <div className={classes.youtube}>
+        <div className={classes.youtubeLine}>
+          <div className={classes.youtubeLineThird}>
+            <div className={classes.youtubeCircle}></div>
+          </div>
+        </div>
+      </div> */}
+
       <ul className={classes.houseList}>
         {houseData.map((house, index) => {
           return (
             <li className={classes.houseItem} key={index}>
-              <Box className={classes.houseWrapper}> 
+              <Box className={classes.houseWrapper}>
                 <Box className={classes.houseImgBox}>
                   <Image
                     src={house.icon}

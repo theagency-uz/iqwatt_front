@@ -14,18 +14,18 @@ import Stage from "@/Components/main/stage";
 export default function Home({ params: { lng }, ...props }) {
   return (
     <main>
-      <Slider lng={lng} />
       <Category lng={lng} />
       <Info lng={lng} />
       <House lng={lng} />
       <FormContent lng={lng} />
+      {/* <Slider lng={lng} />
       <Portfolio lng={lng} />
       <Stage lng={lng} />
       <Reviews lng={lng} />
       <Faq lng={lng} />
       <Partners lng={lng} />
       <News lng={lng} />
-      <Contacts lng={lng} />
+      <Contacts lng={lng} /> */}
     </main>
   );
 }

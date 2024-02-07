@@ -1,13 +1,7 @@
 "use client";
 import { Drawer } from "@mui/material";
 
-function Sidebar({
-  open,
-  setOpen,
-  children,
-  maxWidth = "600px",
-  ...props
-}) {
+function Sidebar({ open, setOpen, children, maxWidth = "600px", ...props }) {
   return (
     <Drawer
       // disablePortal={true}
@@ -16,8 +10,8 @@ function Sidebar({
       open={open}
       PaperProps={{
         sx: {
-          background: "#000",
-          color: "#FFFFFF",
+          background: "#fff",
+          color: "#fff",
           // maxWidth: "400px",
           width: "100%",
           maxWidth: maxWidth,

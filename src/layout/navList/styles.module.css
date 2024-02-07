@@ -4,6 +4,7 @@
   justify-content: center;
   gap: 10px;
   flex-direction: column;
+  position: relative;
 }
 
 .navItem {
@@ -13,6 +14,53 @@
   font-style: normal;
   font-weight: 500;
   line-height: 26px;
+  text-transform: lowercase;
+}
+
+.navDropList {
+  position: absolute;
+  top: 48px;
+  left: -20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 5px;
+  border: 1px solid #ededed;
+  background: #fff;
+  z-index: 10;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.dropDown:hover .navDropList {
+  transition: all 0.4s ease;
+  opacity: 1;
+}
+
+.navDropItem {
+  color: #656565;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  text-transform: lowercase;
+}
+
+.navDropItem a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.icon {
+  color: #ff8115;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
   text-transform: lowercase;
 }
 

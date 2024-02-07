@@ -1,0 +1,127 @@
+.productBox {
+  border-radius: 10px;
+  background: #f9f9f9;
+  width: 50%;
+}
+
+.productWrapper {
+  padding: 40px 63px;
+  display: flex;
+  flex-direction: column;
+}
+
+.productTitle {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font25);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  max-width: 26.6vw;
+  margin-bottom: 25px;
+}
+
+.productList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.productItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.productDesc {
+  color: #a0a0a0;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.productAbout {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.productLink {
+  border-radius: 50px;
+  background: #f07d00;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 128.571%;
+  text-transform: lowercase;
+  width: 11vw;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.productIconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productIcon {
+  object-fit: cover;
+}
+
+.accordion:global(.MuiAccordion-root) {
+  color: #8e8e8e;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
+  box-shadow: none;
+  border-radius: 0;
+  width: 30%;
+  margin-bottom: 25px;
+}
+
+.accordionDetails:global(.MuiAccordionDetails-root) {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ededed;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.checkbox:global(.MuiFormControlLabel-root) {
+  margin-right: 0;
+  margin-left: 0;
+  gap: 11px;
+}
+.checkbox :global(span.MuiFormControlLabel-label) {
+  color: #8e8e8e;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
+}
+
+.checkboxIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}

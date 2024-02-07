@@ -26,7 +26,9 @@
 
 .navbar {
   padding: 0px 25px;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 15;
 }
 
 .navbarWrapper {
@@ -34,7 +36,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px 0px;
-  border-bottom: 1px solid #efefef;
 }
 
 .navbarLogo {
@@ -59,9 +60,10 @@ button.navbarBtn {
 button.navbarBtn:hover {
   background: transparent;
 }
+
 .footer {
-  padding: 0 20px;
-  margin-bottom: 30px;
+  padding: 0 10px;
+  margin-bottom: 10px;
 }
 
 .footerWrapper {
@@ -72,12 +74,11 @@ button.navbarBtn:hover {
 
 .footerList {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 110px;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
   border-radius: 20px;
   background: #f8f8f8;
-  padding: 40px;
-  padding-top: 60px;
+  padding: 20px;
 }
 
 .footerItem {
@@ -94,19 +95,19 @@ button.navbarBtn:hover {
   font-size: var(--font12);
   font-style: normal;
   font-weight: 600;
-  line-height: 18.85px;
+  line-height: 157.082%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  width: 105px;
-  height: 37px;
+  width: 90px;
+  height: 27px;
 }
 
 .footerLink {
   color: #333;
   font-family: "Manrope";
-  font-size: var(--font33);
+  font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
   line-height: 110%;
@@ -119,7 +120,7 @@ button.navbarBtn:hover {
   font-size: var(--font12);
   font-style: normal;
   font-weight: 400;
-  line-height: 18.85px;
+  line-height: 157.082%;
 }
 
 .footerSocialBox {
@@ -132,6 +133,7 @@ button.navbarBtn:hover {
   padding: none;
   display: flex;
   background: transparent;
+  margin-bottom: 10px;
 }
 
 .footerLogo {
@@ -144,10 +146,12 @@ button.navbarBtn:hover {
   display: flex;
   gap: 50px;
 }
+
 .footerBox {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .footerBoxItem {
@@ -156,18 +160,20 @@ button.navbarBtn:hover {
   font-size: var(--font12);
   font-style: normal;
   font-weight: 400;
-  line-height: 18.85px;
+  line-height: 157.082%;
 }
-
+.footerLinkBox {
+  margin-bottom: 10px;
+}
 .footerPolicy {
   color: #8e8e8e;
   font-family: "Manrope";
   font-size: var(--font12);
   font-style: normal;
   font-weight: 400;
-  line-height: 18.85px;
+  line-height: 157.082%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .footerMapBox {
@@ -176,6 +182,60 @@ button.navbarBtn:hover {
 
 .footerMap {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    margin-bottom: 15px;
+  }
+
+  .navbarWrapper {
+    border-bottom: 1px solid #efefef;
+  }
+  
+  .footer {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  .footerList {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 110px;
+    padding: 40px;
+    padding-top: 60px;
+  }
+
+  .footerIconBox {
+    width: 105px;
+    height: 37px;
+  }
+
+  .footerSocialBox {
+    display: flex;
+    gap: 10px;
+  }
+
+  .footerImage {
+    border: none;
+    padding: none;
+    display: flex;
+    background: transparent;
+    margin-bottom: 0;
+  }
+
+  .footerLogo {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .footerBox {
+    margin-bottom: 0;
+  }
+
+  .footerPolicy {
+    justify-content: flex-end;
+  }
 }

@@ -33,7 +33,7 @@ export default function LabelInput({
         }`}
         InputProps={{ disableUnderline: true }}
         placeholder={placeholder}
-        rows={5}
+        rows={4 }
         multiline={type === "textarea"}
       />
     </label>

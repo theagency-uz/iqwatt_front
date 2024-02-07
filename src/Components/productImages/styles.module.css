@@ -1,0 +1,40 @@
+.productImages {
+  width: 50%;
+  margin: auto;
+}
+
+.productImages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.productMainSwiperItem {
+  display: flex;
+}
+
+.productMainImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.productBottomSwiperItem {
+  display: flex;
+  width: 4.4vw !important;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* .productBottomSwiper :global(.swiper-slide-thumb-active) {
+  border: 2px solid yellowgreen;
+  padding: 5px;
+} */
+
+.productBottomImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}

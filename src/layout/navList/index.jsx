@@ -8,7 +8,7 @@ function NavList({ lng, setOpen, ...props }) {
 
   return (
     <ul className={classes.navList}>
-      <li className={classes.navItem}>
+      <li className={`${classes.navItem} ${classes.dropDown}`}>
         <Link
           href={"/"}
           onClick={(e) => {
@@ -17,6 +17,74 @@ function NavList({ lng, setOpen, ...props }) {
         >
           {t("Каталог")}
         </Link>
+        <ul className={classes.navDropList}>
+          <li className={classes.navDropItem}>
+            <Link
+              href={"/catalog"}
+              onClick={(e) => {
+                setOpen(false);
+              }}
+            >
+              {t("Теплые полы")}
+              <span className={classes.icon}>{">"}</span>
+            </Link>
+          </li>
+          <li className={classes.navDropItem}>
+            <Link
+              href={"/"}
+              onClick={(e) => {
+                setOpen(false);
+              }}
+            >
+              {t("Кондиционеры")}
+              <span className={classes.icon}>{">"}</span>
+            </Link>
+          </li>
+          <li className={classes.navDropItem}>
+            <Link
+              href={"/"}
+              onClick={(e) => {
+                setOpen(false);
+              }}
+            >
+              {t("Системы для крыш")}
+              <span className={classes.icon}>{">"}</span>
+            </Link>
+          </li>
+          <li className={classes.navDropItem}>
+            <Link
+              href={"/"}
+              onClick={(e) => {
+                setOpen(false);
+              }}
+            >
+              {t("Системы для участка")}
+              <span className={classes.icon}>{">"}</span>
+            </Link>
+          </li>
+          <li className={classes.navDropItem}>
+            <Link
+              href={"/"}
+              onClick={(e) => {
+                setOpen(false);
+              }}
+            >
+              {t("Системы для труб")}
+              <span className={classes.icon}>{">"}</span>
+            </Link>
+          </li>
+          <li className={classes.navDropItem}>
+            <Link
+              href={"/"}
+              onClick={(e) => {
+                setOpen(false);
+              }}
+            >
+              {t("Термостаты")}
+              <span className={classes.icon}>{">"}</span>
+            </Link>
+          </li>
+        </ul>
       </li>
       <li className={classes.navItem}>
         <Link

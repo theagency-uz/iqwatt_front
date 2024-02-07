@@ -1,7 +1,7 @@
 .title {
   color: #333;
   font-family: "Manrope";
-  font-size: 60px;
+  font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
@@ -10,11 +10,6 @@
 
 @media (min-width: 992px) {
   .title {
-    color: #333;
-    font-family: "Manrope";
     font-size: var(--font60);
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;  
   }
 }

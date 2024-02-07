@@ -6,8 +6,8 @@ import classes from "./styles.module.css";
 import newsData from "@/data/newsData";
 import Image from "next/image";
 import Link from "next/link";
-import Contacts from "../main/contacts";
-import Reviews from "../main/reviews";
+import Contacts from "@component/main/contacts";
+import Reviews from "@component/main/reviews";
 
 function PartnersPage({ lng, ...props }) {
   const { t } = useTranslation(lng);

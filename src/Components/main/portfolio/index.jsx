@@ -45,7 +45,7 @@ function Portfolio({ lng, ...props }) {
   return (
     <Box className={classes.portfolio}>
       <Box className={classes.portfolioWrapper}>
-        <Title title={"Портфолио работ"} lng={lng} />
+        <Title title={"Галерея"} lng={lng} />
         <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
       </Box>
 

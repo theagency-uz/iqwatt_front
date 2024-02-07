@@ -4,9 +4,6 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
-  Button,
-  CircularProgress,
-  TextField,
   useMediaQuery,
 } from "@mui/material";
 import React, { useContext, useState } from "react";
@@ -14,12 +11,12 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import CustomCheckbox from "./CustomCheckbox";
 import classes from "./styles.module.css";
 
-function AccordionContent({ lng, ...props }) {
+function ProductAccordion({ lng, footage, ...props }) {
   const { t, i18n } = useTranslation(lng);
   const [expanded, setExpanded] = useState(false);
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
   const smUp = useMediaQuery((theme) => theme.breakpoints.up("sm"));
-  
+
   return (
     <Accordion
       // ref={accordionRef}
@@ -42,7 +39,7 @@ function AccordionContent({ lng, ...props }) {
         aria-controls="panel1a-content"
         id="panel1a-header"
         sx={{
-          padding: "11px 15px",
+          padding: "10px 15px",
           backgroundColor: "#fff",
           borderRadius: "5px",
           flexGrow: 0,
@@ -69,13 +66,15 @@ function AccordionContent({ lng, ...props }) {
           },
         }}
       >
-        {t("Выберите услуги")}
+        {t("Выбрать метраж")}
       </AccordionSummary>
 
       <AccordionDetails className={classes.accordionDetails}>
-        <div>
+        {footage.map((item, index) => {
+          return (
+        <div key={index}>
           <CustomCheckbox
-            label={t("Теплые полы")}
+            label={t(item)}
             // value={formik.values.services.includes(SERVICES[0])}
             // onChange={(e, checked) => {
             //   formik.setFieldValue(
@@ -87,65 +86,12 @@ function AccordionContent({ lng, ...props }) {
             // }}
           />
         </div>
-        <div>
-          <CustomCheckbox
-            label={t("Системы для участка")}
-            // value={formik.values.services.includes(SERVICES[1])}
-            // onChange={(e, checked) => {
-            //   formik.setFieldValue(
-            //     "services",
-            //     checked
-            //       ? [...formik.values.services, SERVICES[1]]
-            //       : [...formik.values.services.filter((s) => s !== SERVICES[1])]
-            //   );
-            // }}
-          />
-        </div>
-        <div>
-          <CustomCheckbox
-            label={t("Кондиционеры")}
-            // value={formik.values.services.includes(SERVICES[2])}
-            // onChange={(e, checked) => {
-            //   formik.setFieldValue(
-            //     "services",
-            //     checked
-            //       ? [...formik.values.services, SERVICES[2]]
-            //       : [...formik.values.services.filter((s) => s !== SERVICES[2])]
-            //   );
-            // }}
-          />
-        </div>
-        <div>
-          <CustomCheckbox
-            label={t("Системы для труб")}
-            // value={formik.values.services.includes(SERVICES[3])}
-            // onChange={(e, checked) => {
-            //   formik.setFieldValue(
-            //     "services",
-            //     checked
-            //       ? [...formik.values.services, SERVICES[3]]
-            //       : [...formik.values.services.filter((s) => s !== SERVICES[3])]
-            //   );
-            // }}
-          />
-        </div>
-        <div>
-          <CustomCheckbox
-            label={t("Системы для крыш")}
-            // value={formik.values.services.includes(SERVICES[3])}
-            // onChange={(e, checked) => {
-            //   formik.setFieldValue(
-            //     "services",
-            //     checked
-            //       ? [...formik.values.services, SERVICES[3]]
-            //       : [...formik.values.services.filter((s) => s !== SERVICES[3])]
-            //   );
-            // }}
-          />
-        </div>
+            
+          )
+        })}
       </AccordionDetails>
     </Accordion>
   );
 }
 
-export default AccordionContent;
+export default ProductAccordion;
