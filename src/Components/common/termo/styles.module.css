@@ -1,8 +1,8 @@
 .termo {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .termoImgBox {
@@ -17,21 +17,23 @@
 .termoWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 30px;
+  justify-content: flex-start;
+  gap: 40px;
   border-radius: 10px;
   background: #f8f8f8;
-  padding: 0 60px;
+  padding: 20px;
 }
+
 .termoInfo {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .termoTitle {
   color: #333;
   font-family: "Manrope";
-  font-size: var(--font40);
+  font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
@@ -43,8 +45,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: 128.571%;
-  max-width: 25.3vw;
+
 }
+
 .termoLink {
   border-radius: 50px;
   border: 1px solid #f07d00;
@@ -56,8 +59,8 @@
   font-weight: 500;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 8.5vw;
-  height: 50px;
+  width: 120px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -65,8 +68,8 @@
 }
 
 .termoIconBox {
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: #fff;
   display: flex;
@@ -76,4 +79,39 @@
 
 .termoIcon {
   object-fit: cover;
+}
+
+
+@media (min-width: 992px) {
+  .termo {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 80px;
+  }
+  .termoWrapper {
+    justify-content: center;
+    gap: 30px;
+    padding: 0 60px;
+  }
+  .termoTitle {
+    font-size: var(--font40);
+  }
+  .termoText {
+    max-width: 25.3vw;
+  }
+
+  .termoItemLink {
+    width: 110px;
+  }
+
+  .termoItemIconBox {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .termoItemLink {
+    width: 7.5vw;
+    height: 36px;
+  }
 }

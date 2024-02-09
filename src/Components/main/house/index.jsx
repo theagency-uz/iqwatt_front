@@ -36,23 +36,75 @@ function House({ lng, ...props }) {
     <Box className={classes.house}>
       <Box className={classes.houseBox}>
         <Image
-          src={"/static/site/house.webp"}
+          src={"/static/site/house.png"}
           width={1045}
           height={644}
           alt={"house-image"}
           className={classes.houseImg}
         />
+
+        <Box className={classes.boxWrapper}>
+          <div className={classes.box}>
+            <div className={classes.boxLine}>
+              <div className={classes.boxLineThird}>
+                <div className={classes.boxCircle}></div>
+              </div>
+            </div>
+          </div>
+
+          <Box className={`${classes.card} ${classes.cardFrst}`}>
+            <Box className={classes.cardImgBox}>
+              <Image
+                src={"/static/site/card-img.png"}
+                width={197}
+                height={116}
+                alt={"house-image"}
+                className={classes.cardImg}
+              />
+            </Box>
+            <Box className={classes.cardWrapper}>
+              <h3 className={classes.cardTitle}>{t("IQ Roof")}</h3>
+              <p className={classes.cardText}>
+                {t(
+                  "Заключим договор поставки и разделим оплату на две равные части, которые можно оплатить удобным для вас способом."
+                )}
+              </p>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box className={classes.boxWrapperScnd}>
+          <div className={classes.box}>
+            <div className={classes.boxLine}>
+              <div className={classes.boxLineThird}>
+                <div className={classes.boxCircle}></div>
+              </div>
+            </div>
+          </div>
+
+          <Box className={`${classes.card} ${classes.cardScnd}`}>
+            <Box className={classes.cardImgBox}>
+              <Image
+                src={"/static/site/card-img.png"}
+                width={197}
+                height={116}
+                alt={"house-image"}
+                className={classes.cardImg}
+              />
+            </Box>
+            <Box className={classes.cardWrapper}>
+              <h3 className={classes.cardTitle}>{t("IQ Roof")}</h3>
+              <p className={classes.cardText}>
+                {t(
+                  "Заключим договор поставки и разделим оплату на две равные части, которые можно оплатить удобным для вас способом."
+                )}
+              </p>
+            </Box>
+          </Box>
+        </Box>
       </Box>
 
       {/* <HouseCard lng={lng} /> */}
-
-      {/* <div className={classes.youtube}>
-        <div className={classes.youtubeLine}>
-          <div className={classes.youtubeLineThird}>
-            <div className={classes.youtubeCircle}></div>
-          </div>
-        </div>
-      </div> */}
 
       <ul className={classes.houseList}>
         {houseData.map((house, index) => {

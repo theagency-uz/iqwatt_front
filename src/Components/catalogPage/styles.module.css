@@ -1,9 +1,9 @@
 .catalog {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .catalogList {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
 
@@ -16,7 +16,7 @@
 .catalogItemBox {
   border-radius: 20px;
   background: #f8f8f8;
-  padding: 20px 20px 12px 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -25,7 +25,7 @@
 .catalogWrapper {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .catalogName {
@@ -42,23 +42,23 @@
   background: transparent;
   color: #7a7a7a;
   font-family: "Manrope";
-  font-size: var(--font12);
+  font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
   line-height: 128.571%;
   text-transform: lowercase;
   border: 1px solid #7a7a7a;
-  width: 7vw;
-  height: 36px;
+  width: 120px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding-left: 10px;
+  padding-left: 7px;
 }
 
 .catalogItemIconBox {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: #ff8115;
   display: flex;
@@ -94,19 +94,56 @@
 .catalogMainTitle {
   color: #333;
   font-family: "Manrope";
-  font-size: var(--font40);
+  font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
   line-height: 101.576%;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .catalogTitle {
   color: #242424;
   font-family: "Manrope";
-  font-size: var(--font20);
+  font-size: var(--font16);
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
   margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .catalog {
+    margin-bottom: 40px;
+  }
+  .catalogList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .catalogItemBox {
+    padding: 20px 20px 12px 30px;
+  }
+  .catalogItemLink {
+    width: 110px;
+  }
+
+  .catalogItemIconBox {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .catalogMainTitle {
+    font-size: var(--font40);
+    margin-bottom: 30px;
+  }
+
+  .catalogTitle {
+    font-size: var(--font20);
+  }
+}
+
+@media (min-width: 1440px) {
+  .catalogItemLink {
+    width: 7.5vw;
+    height: 36px;
+  }
 }

@@ -66,10 +66,10 @@ function Faq({ lng, isOpen, setIsOpen, ...props }) {
                   borderRadius: "10px !important",
                   background: "#F8F8F8",
                   boxShadow: "none",
-                  paddingTop: "40px",
-                  paddingBottom: "50px",
-                  paddingRight: "25px",
-                  paddingLeft: "50px",
+                  paddingTop: mdUp ? "40px" : "20px",
+                  paddingBottom: mdUp ? "50px" : "20px",
+                  paddingRight: mdUp ? "25px" : "20px",
+                  paddingLeft: mdUp ? "50px" : "20px",
                   marginBottom: "15px",
                   "&::before": {
                     display: "none",
@@ -102,8 +102,8 @@ function Faq({ lng, isOpen, setIsOpen, ...props }) {
                     <ExpandMoreIcon
                       style={{
                         color: "rgba(255, 129, 20, 1)",
-                        width: "45px",
-                        height: "45px",
+                        width: mdUp ? "45px" : "40px",
+                        height: mdUp ? "45px" : "40px",
                       }}
                     />
                   }
@@ -121,8 +121,8 @@ function Faq({ lng, isOpen, setIsOpen, ...props }) {
                       minHeight: "auto",
                     },
                     "& .MuiAccordionSummary-expandIconWrapper": {
-                      width: "55px",
-                      height: "55px",
+                      width: mdUp ? "55px" : "40px",
+                      height: mdUp ? "55px" : "40px",
                       borderRadius: "50%",
                       backgroundColor: "#fff",
                       display: "flex",
@@ -156,7 +156,7 @@ function Faq({ lng, isOpen, setIsOpen, ...props }) {
                 <AccordionDetails
                   sx={{
                     padding: "0",
-                    paddingTop: "40px",
+                    paddingTop: mdUp ? "40px" : "15px",
                   }}
                 >
                   <Typography

@@ -25,7 +25,7 @@ function Stage({ lng, ...props }) {
 
     const params = {
       modules: [Scrollbar, Navigation],
-      slidesPerView: 1.5,
+      slidesPerView: 1.2,
       spaceBetween: 20,
       loop: true,
       scrollbar: { draggable: true },

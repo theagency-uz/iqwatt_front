@@ -1,13 +1,13 @@
 .portfolio {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .portfolioWrapper {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 40px;
-  padding: 0 20px;
+  margin-bottom: 20px;
+  padding: 0 10px;
 }
 
 .swiperWrapper {
@@ -41,5 +41,21 @@
   font-style: normal;
   font-weight: 500;
   line-height: 15.423px;
-  max-width: 14.7vw;
+}
+
+
+@media (min-width: 992px) {
+  .portfolio {
+    margin-bottom: 80px;
+  }
+  
+  .portfolioWrapper {
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .portfolioText {
+    max-width: 14.7vw;
+  }
+  
 }

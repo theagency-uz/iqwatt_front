@@ -30,18 +30,21 @@ function Contacts({ lng, ...props }) {
               "Полное сопровождение проекта - фотоотчеты каждую неделю и выезды на строительные обьекты"
             )}
           </p>
-          <Link href={"/"} className={classes.contactsLink}>
-            {t("telegram")}
-            <Box className={classes.contactsIconBox}>
-              <Image
-                src={"/icons/arrow-right.svg"}
-                width={18}
-                height={15}
-                alt={"icon"}
-                className={classes.contactsIcon}
-              />
-            </Box>
-          </Link>
+
+          <Box className={classes.contactsBox}>
+            <Link href={"/"} className={classes.contactsLink}>
+              {t("telegram")}
+              <Box className={classes.contactsIconBox}>
+                <Image
+                  src={"/icons/arrow-right.svg"}
+                  width={18}
+                  height={15}
+                  alt={"icon"}
+                  className={classes.contactsIcon}
+                />
+              </Box>
+            </Link>
+          </Box>
         </Box>
       </Box>
 

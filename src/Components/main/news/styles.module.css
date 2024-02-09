@@ -1,5 +1,5 @@
 .news {
-  padding: 0 20px;
+  padding: 0 10px;
   margin-bottom: 60px;
 }
 
@@ -41,9 +41,12 @@
   font-style: normal;
   font-weight: 500;
   line-height: 110%;
-  max-width: 17.3vw;
 }
 
+.newsBox {
+  display: flex;
+  justify-content: flex-end;
+}
 
 .newsLink {
   border-radius: 50px;
@@ -55,17 +58,16 @@
   font-weight: 600;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 10vw;
-  height: 56px;
+  width: 150px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: auto;
 }
 
 .newsIconBox {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background: #fff;
   display: flex;
@@ -75,4 +77,28 @@
 
 .newsIcon {
   object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .news {
+    padding: 0 20px;
+  }
+
+  .newsTitle {
+    max-width: 17.3vw;
+  }
+  
+  .newsLink {
+    width: 10vw;
+    height: 56px;
+  }
+  
+  .newsIconBox {
+    width: 32px;
+    height: 32px;
+  }
+
+  .newsBox {
+    justify-content: center;
+  }
 }

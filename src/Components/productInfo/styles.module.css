@@ -1,11 +1,11 @@
 .productBox {
   border-radius: 10px;
   background: #f9f9f9;
-  width: 50%;
+  width: 100%;
 }
 
 .productWrapper {
-  padding: 40px 63px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -13,19 +13,18 @@
 .productTitle {
   color: #333;
   font-family: "Manrope";
-  font-size: var(--font25);
+  font-size: var(--font20);
   font-style: normal;
   font-weight: 600;
   line-height: 100%;
-  max-width: 26.6vw;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .productList {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .productItem {
@@ -57,21 +56,21 @@
   background: #f07d00;
   color: #fff;
   font-family: "Manrope";
-  font-size: var(--font14);
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 11vw;
-  height: 46px;
+  width: 170px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .productIconBox {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background: #fff;
   display: flex;
@@ -92,8 +91,8 @@
   line-height: 128.571%;
   box-shadow: none;
   border-radius: 0;
-  width: 30%;
-  margin-bottom: 25px;
+  width: 220px;
+  margin-bottom: 20px;
 }
 
 .accordionDetails:global(.MuiAccordionDetails-root) {
@@ -103,7 +102,7 @@
   background: #fff;
   display: flex;
   flex-direction: column;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .checkbox:global(.MuiFormControlLabel-root) {
@@ -124,4 +123,56 @@
   width: 20px;
   height: 20px;
   object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .productBox {
+    width: 50%;
+  }
+  .productWrapper {
+    padding: 40px 63px;
+  }
+  
+  .productTitle {
+    font-size: var(--font25);
+    max-width: 26.6vw;
+    margin-bottom: 25px;
+  }
+  .productList {
+    margin-bottom: 30px;
+  }
+
+  .productLink {
+    height: 46px;
+  }
+  .productIconBox {
+    width: 28px;
+    height: 28px;
+  }
+  .accordion:global(.MuiAccordion-root) {
+    width: 40%;
+    margin-bottom: 25px;
+  }
+  
+  .accordionDetails:global(.MuiAccordionDetails-root) {
+    margin-bottom: 25px;
+  }
+  
+}
+
+
+@media (min-width: 1440px) {
+  .productLink {
+    width: 11vw;
+    height: 46px;
+    font-size: var(--font14);
+  }
+  
+  .productIconBox {
+    width: 32px;
+    height: 32px;
+  }
+  .accordion:global(.MuiAccordion-root) {
+    width: 35%;
+  }
 }

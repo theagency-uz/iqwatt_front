@@ -1,26 +1,28 @@
 .sliderNavigation {
-  /* position: absolute; */
-  /* width: 100%; */
+  position: absolute;
+  width: 100%;
   display: none;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  /* top: 47%;
+  bottom: 20px;
   left: 0;
-  z-index: 12; */
+  z-index: 10;
 }
 
 .sliderNavigation > button {
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ff8115;
+  border: 1px solid #fff;
+  background: #ff9f54;
 }
 
 .sliderNavigation > button > svg {
-  color: #ff8115;
+  color: #fff;
   font-size: var(--font20);
 }
 

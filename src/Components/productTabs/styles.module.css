@@ -1,9 +1,89 @@
 .editor {
   color: #333;
   font-family: "Manrope";
-  font-size: var(--font14);
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  max-width: 52.2vw;
+}
+
+.editorBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editorInner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.editorLink {
+  border-radius: 50px;
+  background: transparent;
+  color: #9a9a9a;
+  font-family: "Manrope";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 128.571%;
+  text-transform: lowercase;
+  border: none;
+  width: auto;
+  height: auto;
+  padding-left: 8px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.editorIconBox {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ff8115;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+}
+
+.editorIcon {
+  object-fit: cover;
+}
+
+.editorLink span {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .editor {
+    max-width: 52.2vw;
+  }
+  .editorLink span {
+    display: block;
+  }
+
+  .editorLink {
+    width: 110px;
+    height: 36px;
+    border: 1px solid #9a9a9a;
+    background: #f9f9f9;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .editorLink {
+    border: 1px solid #9a9a9a;
+    width: 7vw;
+    height: 36px;
+    font-size: var(--font14);
+  }
+  .editor {
+    font-size: var(--font14);
+  }
+  
 }

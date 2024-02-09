@@ -4,14 +4,16 @@ import { Box, Button, useMediaQuery } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import classes from "./styles.module.css";
 import Image from "next/image";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { Scrollbar, Navigation } from "swiper/modules";
 import { register } from "swiper/element";
+import CustomNavigation from "./CustomNavigation";
 
 function ProductImages({ productImage, ...props }) {
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
 
   const swiperRef = useRef(null);
-  const swiperThumbRef = useRef(null);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   const [images, setImages] = useState(productImage);
 
   useEffect(() => {
@@ -22,31 +24,24 @@ function ProductImages({ productImage, ...props }) {
     register();
 
     const params = {
-      spaceBetween: 20,
-      thumbs: { swiper: swiperThumbRef.current },
-      modules: [FreeMode, Navigation, Thumbs],
-      // autoHeight: true,
+      modules: [Scrollbar, Navigation],
+      slidesPerView: 1,
+      spaceBetween: 10,
       loop: true,
+      scrollbar: { draggable: true },
+      navigation: {
+        prevEl: prevRef.current,
+        nextEl: nextRef.current,
+        disabledClass: "disabled",
+      },
+
+      injectStyles: [],
     };
 
-    const paramsThumb = {
-      spaceBetween: 15,
-      slidesPerView: 3,
-      freeMode: true,
-      loop: true,
-      watchSlidesProgress: true,
-      modules: [FreeMode, Navigation, Thumbs],
-    };
-
-    // Assign it to swiper element
     Object.assign(swiperRef.current, params);
-    // Assign it to swiper element
-    Object.assign(swiperThumbRef.current, paramsThumb);
 
-    // initialize swiper
     swiperRef.current.initialize();
-    swiperThumbRef.current.initialize();
-  }, [productImage]);
+  }, [images]);
 
   return (
     <Box className={classes.productImages}>
@@ -61,7 +56,7 @@ function ProductImages({ productImage, ...props }) {
               <Image
                 src={image}
                 width={570}
-                height={458}
+                height={533}
                 alt={"Product image"}
                 className={classes.productMainImg}
               />
@@ -69,26 +64,7 @@ function ProductImages({ productImage, ...props }) {
           );
         })}
       </swiper-container>
-
-      <swiper-container
-        init="false"
-        ref={swiperThumbRef}
-        class={classes.productBottomSwiper}
-      >
-        {images.map((image, index) => {
-          return (
-            <swiper-slide class={classes.productBottomSwiperItem} key={index}>
-              <Image
-                src={image}
-                width={65}
-                height={65}
-                alt={"Product image"}
-                className={classes.productBottomImg}
-              />
-            </swiper-slide>
-          );
-        })}
-      </swiper-container>
+      <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
     </Box>
   );
 }

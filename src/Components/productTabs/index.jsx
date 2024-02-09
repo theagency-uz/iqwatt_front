@@ -11,10 +11,11 @@ import {
   useTheme,
 } from "@mui/material";
 import classes from "./styles.module.css";
+import Image from "next/image";
 
 function ProductTabs({ lng, product, ...props }) {
   const { t, i18n } = useTranslation(lng);
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
   const [value, setValue] = useState("1");
   const handleChange = (event, newValue) => {
@@ -26,8 +27,8 @@ function ProductTabs({ lng, product, ...props }) {
       sx={{
         width: "100%",
         typography: "body1",
-        padding: "0 50px",
-        marginBottom: "80px"
+        padding: mdUp ? "0 50px" : "0 10px",
+        marginBottom: mdUp ? "80px" : "60px",
       }}
     >
       <TabContext value={value}>
@@ -42,9 +43,9 @@ function ProductTabs({ lng, product, ...props }) {
                 color: "black!important",
               },
               "& .MuiTabs-flexContainer": {
-                justifyContent: "space-between",
-                marginBottom: "15px",
-                padding: "0 65px",
+                justifyContent: mdUp ? "space-around" : "space-between",
+                marginBottom: mdUp ? "15px" : "0",
+                padding: "0",
               },
             }}
           >
@@ -66,27 +67,10 @@ function ProductTabs({ lng, product, ...props }) {
               }}
               disableRipple={true}
             />
-            <Tab
-              label={t("Характеристики")}
-              value="2"
-              sx={{
-                fontFamily: "Manrope",
-                fontStyle: "normal",
-                fontWeight: 500,
-                fontSize: "var(--font14)",
-                lineHeight: "130%",
-                color: "#BFBFBF",
-                textTransform: "none",
-                lineHeight: "100%",
-                padding: 0,
-                border: "none",
-                minWidth: "auto",
-              }}
-              disableRipple={true}
-            />
+
             <Tab
               label={t("Инструкция")}
-              value="3"
+              value="2"
               sx={{
                 fontFamily: "Manrope",
                 fontStyle: "normal",
@@ -105,58 +89,65 @@ function ProductTabs({ lng, product, ...props }) {
           </TabList>
         </Box>
 
-       
-            <Box>
-              <TabPanel
-                value="1"
-                sx={{
-                  padding: "0 65px",
-                  paddingTop: "30px",
-                }}
+        <Box>
+          <TabPanel
+            value="1"
+            sx={{
+              padding: mdUp ? "0 65px" : "0",
+              paddingTop: mdUp ? "30px" : "15px",
+            }}
+          >
+            <div
+              dangerouslySetInnerHTML={{
+                __html: product.description,
+              }}
+              className={classes.editor}
+            ></div>
+          </TabPanel>
+
+          <TabPanel
+            value="2"
+            sx={{
+              padding: mdUp ? "0 65px" : "0",
+              paddingTop: mdUp ? "30px" : "15px",
+            }}
+          >
+            <div
+              // dangerouslySetInnerHTML={{
+              //   __html: product.description[i18n.language],
+              // }}
+              className={classes.editorBox}
+            >
+              <Box className={classes.editorInner}>
+                <Image
+                  src={"/icons/training-icon.svg"}
+                  width={17}
+                  height={17}
+                  alt={"icon"}
+                  className={classes.editorCircleIcon}
+                />
+                <p className={classes.editor}>{t(product.editorText)}</p>
+              </Box>
+
+              <a
+                href="./directory/yourfile.pdf"
+                download="newfilename"
+                className={classes.editorLink}
               >
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: product.description
-                  }}
-                  className={classes.editor}
-                >
-                  {/* {t(item.description)} */}
-                </div>
-              </TabPanel>
-              <TabPanel
-                value="2"
-                sx={{
-                  padding: "0 65px",
-                  paddingTop: "30px",
-                }}
-              >
-                <div
-                  // dangerouslySetInnerHTML={{
-                  //   __html: product.description[i18n.language],
-                  // }}
-                  className={classes.editor}
-                >
-                  {t(product.description)}
-                </div>
-              </TabPanel>
-              <TabPanel
-                value="3"
-                sx={{
-                  padding: "0 65px",
-                  paddingTop: "30px",
-                }}
-              >
-                <div
-                  // dangerouslySetInnerHTML={{
-                  //   __html: product.description[i18n.language],
-                  // }}
-                  className={classes.editor}
-                >
-                  {t(product.description)}
-                </div>
-              </TabPanel>
-            </Box>
-         
+                <span>{t("скачать")}</span>
+                <Box className={classes.editorIconBox}>
+                  <Image
+                    src={"/icons/arrow-right-white.svg"}
+                    width={15}
+                    height={13}
+                    alt={"icon"}
+                    className={classes.editorIcon}
+                  />
+                </Box>
+              </a>
+            </div>
+          </TabPanel>
+        </Box>
       </TabContext>
     </Box>
   );

@@ -9,7 +9,7 @@ import Link from "next/link";
 
 function TrainingPage({ lng, ...props }) {
   const { t } = useTranslation(lng);
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
   return (
     <Box className={classes.trainingWrapper}>
@@ -56,7 +56,9 @@ function TrainingPage({ lng, ...props }) {
               download="newfilename"
               className={classes.trainingLink}
             >
-              {t("скачать")}
+              <span>
+                {t("скачать")}
+              </span>
               <Box className={classes.trainingIconBox}>
                 <Image
                   src={"/icons/arrow-right-white.svg"}

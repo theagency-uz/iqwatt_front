@@ -1,13 +1,13 @@
 .faq {
-  padding: 0 20px;
-  margin-bottom: 80px;
+  padding: 0 10px;
+  margin-bottom: 60px;
 }
 
 .faqInner {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .faqText {
@@ -17,5 +17,18 @@
   font-style: normal;
   font-weight: 400;
   line-height: 128.571%;
-  max-width: 25.9vw;
+}
+
+
+@media (min-width: 992px) {
+  .faq {
+    padding: 0 20px;
+    margin-bottom: 80px;
+  }
+  .faqInner {
+    margin-bottom: 30px;
+  }
+  .faqText {
+    max-width: 25.9vw;
+  }
 }

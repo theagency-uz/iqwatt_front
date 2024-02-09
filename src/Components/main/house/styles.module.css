@@ -6,6 +6,7 @@
 .houseBox {
   display: flex;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .houseImg {
@@ -65,8 +66,58 @@
   line-height: 128.571%;
 }
 
-.youtube {
-  border: 1px solid #724c1f;
+.boxWrapper {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 16.5%;
+  right: 0;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+.boxWrapperScnd {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 5%;
+  right: 15%;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+.boxWrapper:hover .cardFrst {
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.boxWrapperScnd:hover > .cardScnd {
+  opacity: 1;
+  transition: all 0.4s ease;
+  visibility: inherit;
+}
+
+.cardFrst {
+  position: relative;
+  bottom: 35px;
+  right: 37px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.cardScnd {
+  position: relative;
+  bottom: 35px;
+  right: 37px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  visibility: hidden;
+}
+
+/*============================================= Circle Animation ===================================================*/
+
+.box {
+  border: 1px solid #ff8115cc;
   border-radius: 50%;
   width: 87px;
   height: 87px;
@@ -74,11 +125,11 @@
   align-items: center;
   justify-content: center;
   transform: scale(0);
-  animation: radius 1s linear infinite;
+  animation: radius 2.5s linear infinite;
 }
 
-.youtubeLine {
-  border: 1px solid #ff811580;
+.boxLine {
+  border: 1px solid #ff8115cc;
   border-radius: 50%;
   width: 69px;
   height: 69px;
@@ -86,10 +137,10 @@
   align-items: center;
   justify-content: center;
   transform: scale(0);
-  animation: radius 1s linear infinite;
+  animation: radius 2.5s linear infinite;
 }
 
-.youtubeLineThird {
+.boxLineThird {
   border: 1px solid #ff8115cc;
   border-radius: 50%;
   width: 48px;
@@ -98,21 +149,15 @@
   align-items: center;
   justify-content: center;
   transform: scale(0);
-  animation: radius 1s linear infinite;
+  animation: radius 2.5s linear infinite;
 }
-/* .youtube::before {
-  content: "";
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 1px solid #ff8115cc;
+
+.boxCircle {
+  width: 15px;
+  height: 15px;
+  background: #ff8115;
   border-radius: 50%;
-  transform: scale(0);
-  animation: radius 1s linear infinite;
-} */
+}
 
 @keyframes radius {
   0% {
@@ -123,13 +168,9 @@
     transform: scale(1.3);
   }
 }
+/*============================================= /Circle Animation ===================================================*/
 
-.youtubeCircle {
-  width: 15px;
-  height: 15px;
-  background: #ff8115;
-  border-radius: 50%;
-}
+/*============================================= Card ===================================================*/
 
 .card {
   border-radius: 8.568px;
@@ -175,6 +216,7 @@
   font-weight: 500;
   line-height: 128.571%;
 }
+/*============================================= /Card ===================================================*/
 
 @media (min-width: 992px) {
   .house {
@@ -222,71 +264,5 @@
 
   .houseText {
     max-width: 17.8vw;
-  }
-
-  .youtube {
-    border: 1px solid #724c1f;
-    border-radius: 50%;
-    width: 87px;
-    height: 87px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0);
-    animation: radius 1s linear infinite;
-  }
-
-  .youtubeLine {
-    border: 1px solid #ff811580;
-    border-radius: 50%;
-    width: 69px;
-    height: 69px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0);
-    animation: radius 1s linear infinite;
-  }
-
-  .youtubeLineThird {
-    border: 1px solid #ff8115cc;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0);
-    animation: radius 1s linear infinite;
-  }
-  /* .youtube::before {
-    content: "";
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid #ff8115cc;
-    border-radius: 50%;
-    transform: scale(0);
-    animation: radius 1s linear infinite;
-  } */
-
-  @keyframes radius {
-    0% {
-      transform: scale(0);
-    }
-
-    100% {
-      transform: scale(1.3);
-    }
-  }
-
-  .youtubeCircle {
-    width: 15px;
-    height: 15px;
-    background: #ff8115;
-    border-radius: 50%;
   }
 }

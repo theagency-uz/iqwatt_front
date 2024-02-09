@@ -29,7 +29,7 @@ export default function RootLayout({ children, params: { lng } }) {
           <Providers>
             <Navbar lng={lng} />
             {children}
-            <Footer lng={lng} />
+            <Footer lng={lng} page="main" />
             {<SidebarMenu lng={lng} />}
           </Providers>
         </ThemeRegistry>

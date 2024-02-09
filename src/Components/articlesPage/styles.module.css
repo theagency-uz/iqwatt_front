@@ -1,13 +1,13 @@
 .articlesList {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
 
 .articlesItem {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .articlesImg {
@@ -20,9 +20,28 @@
 .articlesTitle {
   color: #333;
   font-family: "Manrope";
-  font-size: var(--font18);
+  font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
   line-height: 110%;
-  max-width: 17.3vw;
+}
+
+@media (min-width: 768px) {
+  .articlesList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .articlesList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .articlesItem {
+    gap: 20px;
+  }
+  .articlesTitle {
+    font-size: var(--font18);
+    max-width: 17.3vw;
+  }
 }

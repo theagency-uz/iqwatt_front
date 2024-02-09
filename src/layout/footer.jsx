@@ -8,7 +8,7 @@ import { useTranslation } from "@/app/i18n/client";
 import LangSwitcher from "./langSwitcher";
 import ExtraLangSwitcher from "./extraLangSwitcher";
 
-function Footer({ lng, ...props }) {
+function Footer({ lng, page, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
   const { t, i18n } = useTranslation(lng);
 
@@ -207,7 +207,7 @@ function Footer({ lng, ...props }) {
 
         <Box className={classes.footerMapBox}>
           <Image
-            src={"/static/site/map.png"}
+            src={"/static/site/map.webp"}
             width={1200}
             height={518}
             alt={"map"}
@@ -391,7 +391,7 @@ function Footer({ lng, ...props }) {
 
       <Box className={classes.footerMapBox}>
         <Image
-          src={"/static/site/map.png"}
+          src={"/static/site/map.webp"}
           width={1200}
           height={518}
           alt={"map"}
