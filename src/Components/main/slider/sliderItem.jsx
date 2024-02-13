@@ -15,8 +15,8 @@ function SliderItem({ lng, slider, ...props }) {
     <Box className={classes.sliderImgBox}>
       <Image
         src={slider.image}
-        width={1152}
-        height={615}
+        width={1160}
+        height={580}
         alt={"slider-image"}
         priority
         className={classes.sliderImg}

@@ -49,11 +49,13 @@
     padding: 0 20px;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 80px;
+    min-height: 760px;
   }
 
   .formContentInner {
     gap: 25px;
     padding: 60px 50px;
+    padding-right: 0;
   }
 
   .formContentInner .MuiAccordionSummary-expandIconWrapper > svg {

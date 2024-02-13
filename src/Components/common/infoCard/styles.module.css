@@ -1,0 +1,87 @@
+.card {
+  padding: 0 10px;
+  margin-bottom: 80px;
+}
+
+.cardTitle {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font30);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+.cardItem {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ff8115;
+}
+
+.cardIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardStep,
+.cardIcon {
+  object-fit: cover;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cardInfoTitle {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font20);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 94.249%;
+}
+
+.cardInfoText {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 128.571%;
+}
+
+@media (min-width: 992px) {
+  .card {
+    padding: 0 20px;
+    margin-bottom: 80px;
+  }
+  .cardTitle {
+    font-size: var(--font45);
+    margin-bottom: 30px;
+  }
+  .cardList {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .cardItem {
+    gap: 60px;
+    padding: 30px;
+    padding-bottom: 35px;
+  }
+  .cardInfo {
+    gap: 25px;
+  }
+}

@@ -1,7 +1,14 @@
 "use client";
 import { Drawer } from "@mui/material";
 
-function Sidebar({ open, setOpen, children, maxWidth = "600px", ...props }) {
+function Sidebar({
+  open,
+  setOpen,
+  children,
+  isForm = false,
+  maxWidth = "600px",
+  ...props
+}) {
   return (
     <Drawer
       // disablePortal={true}
@@ -10,14 +17,14 @@ function Sidebar({ open, setOpen, children, maxWidth = "600px", ...props }) {
       open={open}
       PaperProps={{
         sx: {
-          background: "#fff",
-          color: "#fff",
+          background: "#F8F8F8",
+          color: "#F8F8F8",
           // maxWidth: "400px",
           width: "100%",
           maxWidth: maxWidth,
         },
       }}
-      sx={{ zIndex: 12 }}
+      sx={{ zIndex: isForm ? 15 : 12 }}
       variant="temporary"
     >
       {children}

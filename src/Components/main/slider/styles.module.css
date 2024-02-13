@@ -1,6 +1,6 @@
 .slider {
-  padding: 0 20px;
-  margin-bottom: 70px;
+  padding: 0 10px;
+  margin-bottom: 120px;
   position: relative;
 }
 
@@ -16,47 +16,42 @@
   border-radius: 10px;
 }
 
+.sliderImg {
+  width: 100%;
+  height: 496px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
 .navigation {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
   position: absolute;
-  bottom: 60px;
   left: 0;
   z-index: 10;
-  padding-left: 73px;
-}
-
-.sliderImg {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
+  padding-top: 15px;
 }
 
 .sliderInfo {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 20px;
-  padding-bottom: 12%;
-  padding-left: 53px;
+  gap: 10px;
+  padding-bottom: 10%;
+  padding-left: 10px;
   position: absolute;
   left: 0;
   bottom: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.88) 22.83%,
-    rgba(255, 255, 255, 0) 52.71%
-  );
-  width: 80%;
-  height: 100%;
 }
 
 .sliderTitle {
-  color: #333;
+  color: #fff;
   font-family: "Manrope";
-  font-size: var(--font40);
+  font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
@@ -64,13 +59,12 @@
 }
 
 .sliderText {
-  color: #333;
+  color: #fff;
   font-family: "Manrope";
   font-size: var(--font12);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 150%;
-  max-width: 21.3vw;
 }
 
 .sliderLink {
@@ -79,13 +73,13 @@
   background: #f07d00;
   color: #fff;
   font-family: "Manrope";
-  font-size: var(--font14);
+  font-size: var(--font12);
   font-style: normal;
   font-weight: 500;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 8vw;
-  height: 50px;
+  width: 110px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -93,8 +87,8 @@
 }
 
 .sliderIconBox {
-  width: 32px;
-  height: 32px;
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
   background: #fff;
   display: flex;
@@ -104,4 +98,69 @@
 
 .sliderIcon {
   object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .slider {
+    padding: 0 20px;
+    margin-bottom: 70px;
+  }
+
+  .sliderImg {
+    height: auto;
+  }
+
+  .sliderTitle {
+    font-size: var(--font50);
+  }
+
+  .sliderText {
+    max-width: 24.4vw;
+  }
+
+  .sliderLink {
+    width: 125px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .sliderInfo {
+    gap: 15px;
+    padding-bottom: 12%;
+  }
+
+  .sliderIconBox {
+    width: 27px;
+    height: 27px;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    bottom: 40px;
+    padding-left: 75px;
+    width: auto;
+  }
+
+  .sliderInfo {
+    padding-bottom: 12%;
+    padding-left: 55px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sliderLink {
+    width: 8.5vw;
+    height: 46px;
+    font-size: var(--font14);
+  }
+  .sliderIconBox {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sliderInfo {
+    padding-bottom: 9%;
+  }
 }

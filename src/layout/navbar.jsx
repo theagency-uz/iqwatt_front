@@ -7,6 +7,7 @@ import classes from "./styles.module.css";
 import { useTranslation } from "@/app/i18n/client";
 import { useContext, useRef, useState } from "react";
 import SidebarContext from "@/context/sidebar.context";
+import FormContext from "@/context/form.context";
 import LangSwitcher from "./langSwitcher";
 import NavList from "./navList";
 import MenuIcon from "./menuIcon";
@@ -14,6 +15,7 @@ import MenuIcon from "./menuIcon";
 function Navbar({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  const { form, setForm } = useContext(FormContext);
   const { open, setOpen } = useContext(SidebarContext);
   const { t, i18n } = useTranslation(lng);
 
@@ -49,7 +51,7 @@ function Navbar({ lng, ...props }) {
 
       <Box className={classes.navbar}>
         <Box className={classes.navbarWrapper}>
-          <Link href={"/"} className={classes.footerImage}>
+          <Link href={"/"} className={classes.navbarImage}>
             <Image
               src={"/icons/logo.svg"}
               width={73}
@@ -64,7 +66,11 @@ function Navbar({ lng, ...props }) {
             <>
               <NavList lng={lng} setOpen={setOpen} />
 
-              <Button className={classes.navbarBtn}>
+              <Button
+                className={classes.navbarBtn}
+                onClick={() => setForm({ open: true })}
+                disableRipple={true}
+              >
                 {t("оставить заявку")}
               </Button>
             </>

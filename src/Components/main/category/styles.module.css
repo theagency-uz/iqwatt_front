@@ -39,33 +39,6 @@
   line-height: 125%;
 }
 
-.categoryLink {
-  border-radius: 50px;
-  background: #f07d00;
-  color: #fff;
-  font-family: "Manrope";
-  font-size: var(--font14);
-  font-style: normal;
-  font-weight: 600;
-  line-height: 128.571%;
-  text-transform: lowercase;
-  width: 10vw;
-  height: 56px;
-  display: none;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.categoryIconBox {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .newsIcon {
   object-fit: cover;
 }
@@ -75,7 +48,7 @@
   background: transparent;
   color: #7a7a7a;
   font-family: "Manrope";
-  font-size: var(--font12);
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
@@ -86,6 +59,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding-left: 5px;
 }
 
 .categoryItemIconBox {
@@ -117,7 +91,7 @@
 @media (min-width: 992px) {
   .category {
     padding: 0 20px;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
   }
 
   .categoryWrapper {
@@ -140,60 +114,21 @@
     padding-right: 0;
   }
 
-  .categoryLink {
-    border-radius: 50px;
-    background: #f07d00;
-    color: #fff;
-    font-family: "Manrope";
-    font-size: var(--font14);
-    font-style: normal;
-    font-weight: 600;
-    line-height: 128.571%;
-    text-transform: lowercase;
-    width: 10vw;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  .categoryItemLink {
+    width: 95px;
+    height: 30px;
   }
+}
 
-  .categoryIconBox {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .newsIcon {
-    object-fit: cover;
-  }
-
+@media (min-width: 1440px) {
   .categoryItemLink {
     width: 6.5vw;
     height: 36px;
+    font-size: var(--font12);
   }
 
   .categoryItemIconBox {
     width: 25px;
     height: 25px;
-  }
-
-  .categoryIcon {
-    object-fit: cover;
-  }
-
-  .categoryImgBox {
-    display: flex;
-    width: 50%;
-  }
-
-  .categoryImg {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
   }
 }

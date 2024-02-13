@@ -17,19 +17,6 @@ function Category({ lng, ...props }) {
     <Box className={classes.category}>
       <Box className={classes.categoryWrapper}>
         <Title title={"Каталог"} lng={lng} />
-
-        <Link href={"/"} className={classes.categoryLink}>
-          {t("смотреть всё")}
-          <Box className={classes.categoryIconBox}>
-            <Image
-              src={"/icons/arrow-right.svg"}
-              width={18}
-              height={15}
-              alt={"icon"}
-              className={classes.categoryIcon}
-            />
-          </Box>
-        </Link>
       </Box>
 
       <ul className={classes.categoryList}>

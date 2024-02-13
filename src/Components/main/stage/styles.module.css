@@ -11,13 +11,8 @@
   background: #ff8115;
   padding: 20px;
   padding-right: 0;
-  /* background-image: url("/static/site/stage.png");
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat; */
-  height: auto;
   width: 100%;
-  gap: 40px;
+  gap: 20px;
 }
 
 .stageWrapper {
@@ -114,7 +109,7 @@ button.stageBtn {
   font-weight: 500;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 140px;
+  width: 150px;
   height: 35px;
   display: flex;
   align-items: center;
@@ -162,8 +157,15 @@ button.btnNext > svg {
   .stageInner {
     align-items: center;
     flex-direction: row;
-    padding: 65px 45px;
-    min-height: 816px;
+    padding: 0 45px;
+    min-height: 551px;
+    padding-right: 0;
+    background-image: url("/static/site/bg-line.png");
+    background-size: auto;
+    background-position: left top;
+    background-position-y: -50px;
+    background-repeat: no-repeat;
+    gap: 0;
   }
 
   .stageWrapper {
@@ -195,9 +197,9 @@ button.btnNext > svg {
   }
 
   button.stageBtn {
-    font-size: var(--font14);
-    width: 11.5vw;
-    height: 50px;
+    font-size: 14px;
+    width: 170px;
+    height: 46px;
   }
 
   .stageIconBox {
@@ -212,5 +214,18 @@ button.btnNext > svg {
 
   button.btnNext > svg {
     font-size: var(--font20);
+  }
+}
+
+@media (min-width: 1440px) {
+  button.stageBtn {
+    font-size: var(--font14);
+    width: 11.5vw;
+    height: 50px;
+  }
+
+  .stageIconBox {
+    width: 32px;
+    height: 32px;
   }
 }

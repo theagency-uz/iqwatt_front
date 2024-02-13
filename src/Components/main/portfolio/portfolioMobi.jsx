@@ -46,7 +46,7 @@ function PortfolioMobi({ lng, ...props }) {
   return (
     <Box className={classes.portfolio}>
       <Box className={classes.portfolioWrapper}>
-        <Title title={"Портфолио объектов"} lng={lng} />
+        <Title title={"Галерея объектов"} lng={lng} />
         <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
       </Box>
 

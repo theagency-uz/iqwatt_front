@@ -2,11 +2,15 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarContext from "@/context/sidebar.context";
+import FormContext from "@/context/form.context";
+import FormBar from "@/layout/formBar";
 
 export default function Providers({ children }) {
   const [loading, setLoading] = useState(true);
+  const [form, setForm] = useState(false);
   const [open, setOpen] = useState(false);
   const sidebarValue = { open, setOpen };
+  const formValue = { form, setForm };
 
   useEffect(() => {
     setLoading(false);
@@ -28,9 +32,12 @@ export default function Providers({ children }) {
           )}
         </motion.div>
       </AnimatePresence> */}
-      <SidebarContext.Provider value={sidebarValue}>
-        {children}
-      </SidebarContext.Provider>
+      <FormContext.Provider value={formValue}>
+        <SidebarContext.Provider value={sidebarValue}>
+          <FormBar form={form} setForm={setForm} />
+          {children}
+        </SidebarContext.Provider>
+      </FormContext.Provider>
     </>
   );
 }

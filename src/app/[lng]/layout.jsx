@@ -6,9 +6,9 @@ import Footer from "@/layout/footer";
 import Providers from "./providers";
 import { languages } from "../i18n/settings";
 import ThemeRegistry from "../themeRegistry";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import SidebarMenu from "@/layout/sidebarMenu";
 import Head from "next/head";
-
 
 export const metadata = {
   title: "Next App",
@@ -22,17 +22,20 @@ export default function RootLayout({ children, params: { lng } }) {
   return (
     <html lang={lng} dir={dir(lng)}>
       <Head>
-        <link rel='shortcut icon' href='/public/icons/favicon.ico' />
+        <link rel="shortcut icon" href="/public/icons/favicon.ico" />
       </Head>
       <body>
-        <ThemeRegistry options={{ key: "mui" }}>
-          <Providers>
-            <Navbar lng={lng} />
-            {children}
-            <Footer lng={lng} page="main" />
-            {<SidebarMenu lng={lng} />}
-          </Providers>
-        </ThemeRegistry>
+        <AppRouterCacheProvider>
+          <ThemeRegistry options={{ key: "mui" }}>
+            <Providers>
+              <Navbar lng={lng} />
+              {children}
+              <Footer lng={lng} page="main" />
+              {<SidebarMenu lng={lng} />}
+            </Providers>
+          </ThemeRegistry>
+          +{" "}
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

@@ -1,13 +1,15 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import { Box, Button, useMediaQuery } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import classes from "./styles.module.css";
 import { useTranslation } from "@/app/i18n/client";
+import FormContext from "@/context/form.context";
 
 function StageItem({ lng, stage, nextItemRef, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const { form, setForm } = useContext(FormContext);
   const { t, i18n } = useTranslation(lng);
 
   return (
@@ -38,6 +40,8 @@ function StageItem({ lng, stage, nextItemRef, ...props }) {
       <Box className={classes.stageBtnBox}>
         <Button
           className={classes.stageBtn}
+          onClick={() => setForm({ open: true })}
+          disableRipple={true}
           sx={{
             "&:hover": {
               background: "transparent",

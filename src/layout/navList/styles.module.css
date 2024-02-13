@@ -10,7 +10,7 @@
 .navItem {
   color: #656565;
   font-family: "Manrope";
-  font-size: var(--font12);
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 26px;
@@ -42,7 +42,7 @@
 .navDropItem {
   color: #656565;
   font-family: "Manrope";
-  font-size: var(--font12);
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
@@ -57,7 +57,7 @@
 .icon {
   color: #ff8115;
   font-family: "Manrope";
-  font-size: var(--font12);
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
@@ -68,5 +68,17 @@
   .navList {
     gap: 30px;
     flex-direction: row;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navItem {
+    font-size: var(--font12);
+  }
+  .navDropItem {
+    font-size: var(--font12);
+  }
+  .icon {
+    font-size: var(--font12);
   }
 }

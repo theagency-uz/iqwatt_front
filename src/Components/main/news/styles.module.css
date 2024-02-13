@@ -63,6 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding-left: 7px;
 }
 
 .newsIconBox {
@@ -89,16 +90,30 @@
   }
   
   .newsLink {
+    width: 160px;
+    height: 46px;
+    font-size: 14px;
+  }
+  
+  .newsIconBox {
+    width: 27px;
+    height: 27px;
+  }
+
+  .newsBox {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .newsLink {
     width: 10vw;
-    height: 56px;
+    height: 50px;
+    font-size: var(--font14);
   }
   
   .newsIconBox {
     width: 32px;
     height: 32px;
-  }
-
-  .newsBox {
-    justify-content: center;
   }
 }

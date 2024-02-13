@@ -10,9 +10,11 @@ import SocialMedia from "@/Components/common/socialMedia";
 import classes from "./styles.module.css";
 import NavList from "./navList";
 import LangSwitcher from "./langSwitcher";
+import FormContext from "@/context/form.context";
 
 function SidebarMenu({ lng, ...props }) {
   const { t, i18n } = useTranslation(lng);
+  const { form, setForm } = useContext(FormContext);
   const { open, setOpen } = useContext(SidebarContext);
   return (
     <Sidebar maxWidth={"100%"} open={open} setOpen={setOpen}>

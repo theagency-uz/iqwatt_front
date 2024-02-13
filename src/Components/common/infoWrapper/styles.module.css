@@ -1,0 +1,102 @@
+.info {
+  padding: 0 10px;
+  margin-bottom: 50px;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.infoWrapper h3 {
+  white-space: initial;
+}
+
+.border {
+  width: 100%;
+  height: 1px;
+  background: #e8e8e8;
+  display: block;
+}
+
+.infoText {
+  color: #8e8e8e;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 128.571%;
+}
+
+.infoList {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.infoItem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.infoNumber {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font60);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.infoItemText {
+  color: #333;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  max-width: 112px;
+}
+
+@media (min-width: 992px) {
+  .info {
+    padding: 0 20px;
+  }
+  .infoWrapper h3 {
+    white-space: pre-line;
+  }
+
+  .infoWrapper {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .infoText {
+    max-width: 35vw;
+  }
+
+  .infoList {
+    gap: 60px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .infoItem {
+    gap: 15px;
+    align-items: flex-start;
+    text-align: initial;
+    flex-direction: row;
+  }
+
+  .infoNumber {
+    font-size: var(--font60);
+  }
+
+  .infoItemText {
+    max-width: 7.7vw;
+  }
+}

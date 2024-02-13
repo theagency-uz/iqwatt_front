@@ -2,9 +2,16 @@
   background: #dadada;
   height: 2px;
   width: 300px;
+  display: none;
 }
 
 .sliderScrollbar :global(div.swiper-scrollbar-drag) {
   background: #FF8115;
   height: 100%;
+}
+
+@media (min-width: 992px) {
+  .sliderScrollbar {
+    display: block;
+  }
 }
