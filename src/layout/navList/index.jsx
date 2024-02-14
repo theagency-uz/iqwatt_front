@@ -98,7 +98,7 @@ function NavList({ lng, setOpen, ...props }) {
       </li>
       <li className={classes.navItem}>
         <Link
-          href={"/"}
+          href={"/guarantee"}
           onClick={(e) => {
             setOpen(false);
           }}

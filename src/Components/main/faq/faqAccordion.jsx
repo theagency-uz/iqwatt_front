@@ -13,7 +13,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 function FaqAccordion({ lng, isOpen, setIsOpen, ...props }) {
   const { t, i18n } = useTranslation(lng);
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
-  
+  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+
   const [expanded, setExpanded] = useState(false);
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -51,10 +52,10 @@ function FaqAccordion({ lng, isOpen, setIsOpen, ...props }) {
                 borderRadius: "10px !important",
                 background: "#F8F8F8",
                 boxShadow: "none",
-                paddingTop: mdUp ? "40px" : "20px",
-                paddingBottom: mdUp ? "50px" : "20px",
-                paddingRight: mdUp ? "25px" : "20px",
-                paddingLeft: mdUp ? "50px" : "20px",
+                paddingTop: lgUp ? "40px" : mdUp ? "30px" : "20px",
+                paddingBottom: lgUp ? "40px" : mdUp ? "30px" : "20px",
+                paddingRight: lgUp ? "25px" : mdUp ? "15px" : "10px",
+                paddingLeft: lgUp ? "50px" : mdUp ? "15px" : "10px",
                 marginBottom: "15px",
                 "&::before": {
                   display: "none",
@@ -122,7 +123,7 @@ function FaqAccordion({ lng, isOpen, setIsOpen, ...props }) {
               <AccordionDetails
                 sx={{
                   padding: "0",
-                  paddingTop: mdUp ? "40px" : "15px",
+                  paddingTop: "15px",
                 }}
               >
                 <Typography
@@ -133,6 +134,7 @@ function FaqAccordion({ lng, isOpen, setIsOpen, ...props }) {
                     fontFamily: "Manrope",
                     color: "#8E8E8E",
                     fontStyle: "normal",
+                    maxWidth: mdUp ? "45.4vw" : "100%",
                   }}
                 >
                   {t(item.text)}

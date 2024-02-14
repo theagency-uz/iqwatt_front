@@ -1,0 +1,381 @@
+.houseBox {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.houseBoxMobi {
+  display: flex;
+  overflow-x: auto;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+/* .houseBoxMobi::-webkit-scrollbar {
+  background: #fff;
+  height: 6px;
+}
+
+.houseBoxMobi::-webkit-scrollbar-thumb {
+  background: #ff8115;
+  border-radius: 50px;
+} */
+
+.houseImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.houseImgMobi {
+  object-fit: cover;
+}
+
+.boxWrapper {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 14.5%;
+  right: 0;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+.boxWrapperScnd {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 7%;
+  right: 15%;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+.boxWrapperThrd {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 25%;
+  right: 23.5%;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+.boxWrapperFourth {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 46%;
+  right: 30%;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+.boxWrapperFifth {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 66%;
+  right: 25%;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+.boxWrapperSixth {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 36%;
+  left: 28%;
+  z-index: 20;
+  transition: all 0.4s ease;
+}
+
+.boxWrapperSeventh {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 19%;
+  left: 28%;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+.boxWrapper:hover .cardFrst {
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.boxWrapperScnd:hover > .cardScnd {
+  opacity: 1;
+  transition: all 0.4s ease;
+  visibility: inherit;
+}
+
+.boxWrapperThrd:hover > .cardThrd {
+  opacity: 1;
+  transition: all 0.4s ease;
+  visibility: inherit;
+}
+
+.boxWrapperFourth:hover > .cardFourth {
+  opacity: 1;
+  transition: all 0.4s ease;
+  visibility: inherit;
+}
+
+.boxWrapperFifth:hover > .cardFifth {
+  opacity: 1;
+  transition: all 0.4s ease;
+  visibility: inherit;
+}
+
+.boxWrapperSixth:hover > .cardSixth {
+  opacity: 1;
+  transition: all 0.4s ease;
+  visibility: inherit;
+}
+
+.boxWrapperSeventh:hover > .cardSeventh {
+  opacity: 1;
+  transition: all 0.4s ease;
+  visibility: inherit;
+}
+
+.cardFrst {
+  position: relative;
+  bottom: 35px;
+  right: 37px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.cardScnd {
+  position: relative;
+  bottom: 35px;
+  right: 37px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  visibility: hidden;
+}
+
+.cardThrd {
+  position: relative;
+  bottom: 35px;
+  right: 37px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  visibility: hidden;
+}
+
+.cardFourth {
+  position: relative;
+  bottom: 35px;
+  right: 37px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  visibility: hidden;
+}
+
+.cardFifth {
+  position: relative;
+  bottom: 35px;
+  right: 90%;
+  opacity: 0;
+  transition: all 0.4s ease;
+  visibility: hidden;
+}
+.cardSixth {
+  position: relative;
+  bottom: 35px;
+  right: 90%;
+  opacity: 0;
+  transition: all 0.4s ease;
+  visibility: hidden;
+}
+.cardSeventh {
+  position: relative;
+  bottom: 35px;
+  right: 90%;
+  opacity: 0;
+  transition: all 0.4s ease;
+  visibility: hidden;
+}
+
+/*============================================= Circle Animation ===================================================*/
+
+.box {
+  border: 1px solid #ff8115cc;
+  border-radius: 50%;
+  width: 87px;
+  height: 87px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  animation: radius 2.5s linear infinite;
+}
+
+.boxLine {
+  border: 1px solid #ff8115cc;
+  border-radius: 50%;
+  width: 69px;
+  height: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  animation: radius 2.5s linear infinite;
+}
+
+.boxLineThird {
+  border: 1px solid #ff8115cc;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+  animation: radius 2.5s linear infinite;
+}
+
+.boxCircle {
+  width: 15px;
+  height: 15px;
+  background: #ff8115;
+  border-radius: 50%;
+}
+
+@keyframes radius {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1.3);
+  }
+}
+/*============================================= /Circle Animation ===================================================*/
+
+/*============================================= Card ===================================================*/
+
+.card {
+  border-radius: 8.568px;
+  background: #ff8115;
+  padding: 26px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 17vw;
+}
+
+.cardImgBox {
+  display: flex;
+}
+.cardImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.cardTitle {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font16);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 122.222%;
+  text-transform: uppercase;
+}
+
+.cardText {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
+}
+/*============================================= /Card ===================================================*/
+
+@media (min-width: 1200px) {
+  .boxWrapper {
+    top: 14.5%;
+    right: -25px;
+  }
+
+  .boxWrapperScnd {
+    bottom: 6%;
+    right: 13%;
+  }
+
+  .boxWrapperThrd {
+    bottom: 25%;
+    right: 22%;
+  }
+
+  .boxWrapperFourth {
+    bottom: 43%;
+    right: 30%;
+  }
+
+  .boxWrapperFifth {
+    bottom: 63%;
+    right: 23%;
+  }
+
+  .boxWrapperSixth {
+    bottom: 34%;
+    left: 27%;
+  }
+
+  .boxWrapperSeventh {
+    bottom: 17%;
+    left: 28%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .boxWrapper {
+    top: 14.5%;
+    right: 0;
+  }
+
+  .boxWrapperScnd {
+    bottom: 7%;
+    right: 15%;
+  }
+
+  .boxWrapperThrd {
+    bottom: 25%;
+    right: 23.5%;
+  }
+
+  .boxWrapperFourth {
+    bottom: 46%;
+    right: 30%;
+  }
+
+  .boxWrapperFifth {
+    bottom: 66%;
+    right: 25%;
+  }
+
+  .boxWrapperSixth {
+    bottom: 36%;
+    left: 28%;
+  }
+
+  .boxWrapperSeventh {
+    bottom: 19%;
+    left: 28%;
+  }
+}

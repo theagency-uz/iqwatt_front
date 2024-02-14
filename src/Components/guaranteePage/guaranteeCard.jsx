@@ -5,6 +5,7 @@ import React from "react";
 import classes from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import FileUpload from "./fileUpload";
 
 function GuaranteeCard({ lng, ...props }) {
   const { t } = useTranslation(lng);
@@ -86,6 +87,8 @@ function GuaranteeCard({ lng, ...props }) {
                 </p>
               </Box>
             </Box>
+
+            <FileUpload name="file" lng={lng} />
           </Box>
         </li>
       </ul>

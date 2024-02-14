@@ -34,7 +34,7 @@ function GuaranteePage({ lng, ...props }) {
               )}
             </p>
             <br />
-            <p className={classes.guaranteeText} style={{ color: "#000" }}>
+            <p className={classes.guaranteeText}>
               {t(
                 "Мы просим Вас внимательно ознакомиться с условиями, на которых мы предоставляем гарантию."
               )}

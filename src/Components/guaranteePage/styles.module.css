@@ -1,9 +1,9 @@
 .guaranteeInner {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   margin-bottom: 60px;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .guaranteeImgBox {
@@ -20,24 +20,19 @@
 .guaranteeInfo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   border-radius: 10px;
   background: #f8f8f8;
-  padding: 0 63px;
+  padding: 10px;
   gap: 20px;
 }
 
 .guaranteeTitle {
   color: #333;
   font-family: "Manrope";
-  font-size: var(--font50);
+  font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
-}
-
-.guaranteeTextBox {
-  max-width: 28.1vw;
 }
 
 .guaranteeText {
@@ -134,14 +129,65 @@
   font-weight: 400;
   line-height: 128.571%;
 }
+
+.uploadBox {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+button.uploadBtn {
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background: #ff8115;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 128.571%;
+  text-transform: lowercase;
+  width: 170px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 5px;
+}
+
+.uploadIconBox {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadIcon {
+  object-fit: cover;
+}
+
 @media (min-width: 992px) {
   .guaranteeInner {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
     margin-bottom: 90px;
     padding: 0 20px;
   }
+  .guaranteeInfo {
+    justify-content: center;
+    padding: 0 63px;
+    gap: 20px;
+  }
+  .guaranteeTitle {
+    font-size: var(--font50);
+  }
+
+  .guaranteeTextBox {
+    max-width: 28.1vw;
+  }
+
   .cardWrapper {
     margin-bottom: 80px;
     padding: 0 20px;
@@ -164,5 +210,25 @@
   .cardDesc {
     max-width: 24.3vw;
     margin: 0 auto;
+  }
+
+  button.uploadBtn {
+    font-size: 14px;
+    width: 170px;
+    height: 46px;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  button.uploadBtn {
+    font-size: var(--font14);
+    width: 11.5vw;
+    height: 50px;
+  }
+
+  .uploadIconBox {
+    width: 32px;
+    height: 32px;
   }
 }
