@@ -14,7 +14,7 @@ function Category({ lng, ...props }) {
   const { t, i18n } = useTranslation(lng);
 
   return (
-    <Box className={classes.category}>
+    <Box className={classes.category} id="catalog">
       <Box className={classes.categoryWrapper}>
         <Title title={"Каталог"} lng={lng} />
       </Box>

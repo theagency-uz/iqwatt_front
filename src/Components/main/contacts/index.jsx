@@ -20,7 +20,7 @@ function Contacts({ lng, ...props }) {
   let number;
 
   return (
-    <Box className={classes.contacts}>
+    <Box className={classes.contacts} id="contacts">
       <Box className={classes.contactsWrapper}>
         <Title title={"Свяжитесь \n с нами"} lng={lng} />
 
@@ -47,26 +47,6 @@ function Contacts({ lng, ...props }) {
           </Box>
         </Box>
       </Box>
-
-      {/* <input
-        type="number"
-        placeholder={t("10 000 сум")}
-        value={number}
-        onChange={(e) => {
-          number = e.target.value;
-          setPrice(number * cost);
-        }}
-      />
-
-      <p>
-        <NumericFormat
-          value={price}
-          displayType="text"
-          thousandSeparator=" "
-          prefix=""
-        />{" "}
-        {t("сум")}
-      </p> */}
     </Box>
   );
 }

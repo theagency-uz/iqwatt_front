@@ -14,8 +14,8 @@ function PortfolioItem({ lng, portfolio, ...props }) {
     <>
     <Image
       src={portfolio.image}
-      width={775}
-      height={479}
+      width={648}
+      height={400}
       alt={"portfolio-image"}
       priority
       className={classes.portfolioImg}

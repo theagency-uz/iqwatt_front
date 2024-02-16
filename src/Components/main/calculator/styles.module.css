@@ -1,0 +1,236 @@
+.calculator {
+  padding: 0 10px;
+  margin-bottom: 60px;
+}
+
+.calculatorInner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #ff8115;
+  padding: 50px 20px 40px; 
+  width: 100%;
+  gap: 40px;
+}
+
+.calculatorWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculatorTitle {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font24);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  margin-bottom: 15px;
+}
+
+.calculatorText {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
+  margin-bottom: 40px;
+}
+
+.tabPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tabPanelTitle {
+  color: #fff;
+  font-family: Manrope;
+  font-size: var(--font30);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.tabPanelText {
+  color: #fff;
+  font-family: Manrope;
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 113.925%;
+}
+
+.tabInputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tabPanelTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tabPanelDesc {
+  color: #ffdfc4;
+  font-family: Manrope;
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.tabInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tabInput input {
+  border-radius: 5px;
+  background: #ffae68;
+  width: 70px;
+  height: 36px;
+  border: none;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
+  padding-left: 5px;
+}
+.tabInput input:focus-visible {
+  outline: none;
+}
+.tabInputMetre {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
+}
+
+.tabPriceInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.tabPriceBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tabPanelPrice {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font30);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+button.stageBtn {
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background: #ffa152;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
+  text-transform: lowercase;
+  width: 150px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 5px;
+}
+
+.stageIconBox {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stageIcon {
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .calculator {
+    padding: 0 20px;
+    margin-bottom: 80px;
+  }
+
+  .calculatorInner {
+    align-items: flex-end;
+    flex-direction: row;
+    padding: 60px 45px;
+    min-height: 551px;
+    background-image: url("/static/site/bg-line.png");
+    background-size: auto;
+    background-position: left top;
+    background-position-y: -50px;
+    background-repeat: no-repeat;
+  }
+
+  .calculatorTitle {
+    font-size: var(--font40);
+    max-width: 33vw;
+  }
+  .calculatorText {
+    max-width: 26vw;
+    margin-bottom: 30px;
+  }
+
+  .tabPanelTitle {
+    font-size: 40px;
+  }
+
+  .tabPanelText {
+    font-size: var(--font14);
+    line-height: 128.571%;
+  }
+
+  .tabPanelPrice {
+    font-size: var(--font40);
+  }
+
+  button.stageBtn {
+    font-size: 14px;
+    width: 170px;
+    height: 46px;
+  }
+
+  .stageIconBox {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  button.stageBtn {
+    font-size: var(--font14);
+    width: 11.5vw;
+    height: 50px;
+  }
+
+  .stageIconBox {
+    width: 32px;
+    height: 32px;
+  }
+}

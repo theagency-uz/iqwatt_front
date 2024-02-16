@@ -30,7 +30,7 @@
 .swiperSlide {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   text-align: center;
   align-items: center;
 }
@@ -41,21 +41,23 @@
   font-style: normal;
   font-weight: 500;
   line-height: 15.423px;
+  max-width: 249px;
 }
-
 
 @media (min-width: 992px) {
   .portfolio {
     margin-bottom: 80px;
   }
-  
+  .swiperSlide {
+    gap: 20px;
+  }
+
   .portfolioWrapper {
     margin-bottom: 40px;
     padding: 0 20px;
   }
 
   .portfolioText {
-    max-width: 14.7vw;
+    max-width: 100%;
   }
-  
 }

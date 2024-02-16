@@ -1,5 +1,5 @@
 .slider {
-  padding: 0 10px;
+  padding: 0;
   margin-bottom: 120px;
   position: relative;
 }
@@ -23,17 +23,17 @@
   border-radius: 10px;
 }
 
-
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
   position: absolute;
   left: 0;
+  bottom: 30px;
   z-index: 10;
-  width: 100%;
-  padding-top: 15px;
+  padding-left: 10px;
+  width: auto;
 }
 
 .sliderInfo {
@@ -41,11 +41,17 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: 10px;
-  padding-bottom: 10%;
+  padding-bottom: 100px;
   padding-left: 10px;
   position: absolute;
   left: 0;
   bottom: 0;
+  /* background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.88) 22.83%,
+    rgba(255, 255, 255, 0) 52.71%
+  );
+  height: 100%; */
 }
 
 .sliderTitle {
@@ -65,39 +71,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
-}
-
-.sliderLink {
-  border-radius: 50px;
-  border: 1px solid #f07d00;
-  background: #f07d00;
-  color: #fff;
-  font-family: "Manrope";
-  font-size: var(--font12);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 128.571%;
-  text-transform: lowercase;
-  width: 110px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding-left: 9px;
-}
-
-.sliderIconBox {
-  width: 23px;
-  height: 23px;
-  border-radius: 50%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sliderIcon {
-  object-fit: cover;
+  max-width: 290px;
 }
 
 @media (min-width: 992px) {
@@ -118,49 +92,24 @@
     max-width: 24.4vw;
   }
 
-  .sliderLink {
-    width: 125px;
-    height: 40px;
-    font-size: 14px;
-  }
-
   .sliderInfo {
     gap: 15px;
     padding-bottom: 12%;
   }
 
-  .sliderIconBox {
-    width: 27px;
-    height: 27px;
-  }
   .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
     bottom: 40px;
     padding-left: 75px;
-    width: auto;
   }
 
   .sliderInfo {
-    padding-bottom: 12%;
+    padding-bottom: 10%;
     padding-left: 55px;
   }
 }
 
 @media (min-width: 1440px) {
-  .sliderLink {
-    width: 8.5vw;
-    height: 46px;
-    font-size: var(--font14);
-  }
-  .sliderIconBox {
-    width: 32px;
-    height: 32px;
-  }
-
   .sliderInfo {
-    padding-bottom: 9%;
+    padding-bottom: 7%;
   }
 }

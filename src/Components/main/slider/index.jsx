@@ -3,7 +3,7 @@ import { Box, useMediaQuery } from "@mui/material";
 import { register } from "swiper/element";
 import { useTranslation } from "@/app/i18n/client";
 import { useEffect, useRef, useState } from "react";
-import { Scrollbar, Navigation, Pagination } from "swiper/modules";
+import { Scrollbar, Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import classes from "./styles.module.css";
 import Title from "@/Components/common/title";
@@ -27,10 +27,14 @@ function Slider({ lng, ...props }) {
     register();
 
     const params = {
-      modules: [Scrollbar, Navigation, Pagination],
+      modules: [Scrollbar, Navigation, Pagination, Autoplay],
       slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
       scrollbar: { el: scrollbarRef.current, draggable: true },
       navigation: {
         prevEl: prevRef.current,

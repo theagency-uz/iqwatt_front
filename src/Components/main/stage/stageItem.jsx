@@ -6,6 +6,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import classes from "./styles.module.css";
 import { useTranslation } from "@/app/i18n/client";
 import FormContext from "@/context/form.context";
+import Link from "next/link";
 
 function StageItem({ lng, stage, nextItemRef, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
@@ -38,27 +39,52 @@ function StageItem({ lng, stage, nextItemRef, ...props }) {
       </Box>
 
       <Box className={classes.stageBtnBox}>
-        <Button
-          className={classes.stageBtn}
-          onClick={() => setForm({ open: true })}
-          disableRipple={true}
-          sx={{
-            "&:hover": {
-              background: "transparent",
-            },
-          }}
-        >
-          {t(stage.btnText)}
-          <Box className={classes.stageIconBox}>
-            <Image
-              src={"/icons/arrow-right.svg"}
-              width={18}
-              height={15}
-              alt={"icon"}
-              className={classes.stageIcon}
-            />
-          </Box>
-        </Button>
+        {stage.btnText && (
+          <Button
+            className={classes.stageBtn}
+            onClick={() => setForm({ open: true })}
+            disableRipple={true}
+            sx={{
+              "&:hover": {
+                background: "transparent",
+              },
+            }}
+          >
+            {t(stage.btnText)}
+            <Box className={classes.stageIconBox}>
+              <Image
+                src={"/icons/arrow-right.svg"}
+                width={18}
+                height={15}
+                alt={"icon"}
+                className={classes.stageIcon}
+              />
+            </Box>
+          </Button>
+        )}
+
+        {stage.linkText && (
+          <Link
+            href={"#calculator"}
+            className={classes.stageLink}
+            sx={{
+              "&:hover": {
+                background: "transparent",
+              },
+            }}
+          >
+            {t(stage.linkText)}
+            <Box className={classes.stageIconBox}>
+              <Image
+                src={"/icons/arrow-right.svg"}
+                width={18}
+                height={15}
+                alt={"icon"}
+                className={classes.stageIcon}
+              />
+            </Box>
+          </Link>
+        )}
 
         <Button
           aria-label="вперед"

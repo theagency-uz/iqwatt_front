@@ -25,18 +25,6 @@ function SliderItem({ lng, slider, ...props }) {
       <Box className={classes.sliderInfo}>
         <h2 className={classes.sliderTitle}>{t(slider.title)}</h2>
         <p className={classes.sliderText}>{t(slider.text)}</p>
-        <Link href={"/"} className={classes.sliderLink}>
-            {t("в каталог")}
-            <Box className={classes.sliderIconBox}>
-              <Image
-                src={"/icons/arrow-right.svg"}
-                width={18}
-                height={15}
-                alt={"icon"}
-                className={classes.sliderIcon}
-              />
-            </Box>
-          </Link>
       </Box>
     </Box>
   );

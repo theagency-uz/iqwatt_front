@@ -10,7 +10,7 @@ function NavList({ lng, setOpen, ...props }) {
     <ul className={classes.navList}>
       <li className={`${classes.navItem} ${classes.dropDown}`}>
         <Link
-          href={"/"}
+          href={"#catalog"}
           onClick={(e) => {
             setOpen(false);
           }}
@@ -88,7 +88,7 @@ function NavList({ lng, setOpen, ...props }) {
       </li>
       <li className={classes.navItem}>
         <Link
-          href={"/"}
+          href={"#calculator"}
           onClick={(e) => {
             setOpen(false);
           }}
@@ -138,7 +138,7 @@ function NavList({ lng, setOpen, ...props }) {
       </li>
       <li className={classes.navItem}>
         <Link
-          href={"/"}
+          href={"#contacts"}
           onClick={(e) => {
             setOpen(false);
           }}

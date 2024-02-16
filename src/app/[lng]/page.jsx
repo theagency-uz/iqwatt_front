@@ -1,3 +1,4 @@
+import Calculator from "@/Components/main/calculator";
 import Category from "@/Components/main/category";
 import Contacts from "@/Components/main/contacts";
 import Faq from "@/Components/main/faq";
@@ -18,6 +19,7 @@ export default function Home({ params: { lng }, ...props }) {
       <Category lng={lng} />
       <Info lng={lng} />
       <House lng={lng} />
+      <Calculator lng={lng} />
       <FormContent lng={lng} />
       <Reviews lng={lng} />
       <Portfolio lng={lng} />

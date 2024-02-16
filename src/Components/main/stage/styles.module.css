@@ -117,6 +117,25 @@ button.stageBtn {
   padding-left: 5px;
 }
 
+.stageLink {
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background: #ffa152;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font12);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
+  text-transform: lowercase;
+  width: 150px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 5px;
+}
+
 .stageIconBox {
   width: 25px;
   height: 25px;
@@ -201,6 +220,11 @@ button.btnNext > svg {
     width: 170px;
     height: 46px;
   }
+  .stageLink {
+    font-size: 14px;
+    width: 170px;
+    height: 46px;
+  }
 
   .stageIconBox {
     width: 32px;
@@ -221,6 +245,12 @@ button.btnNext > svg {
   button.stageBtn {
     font-size: var(--font14);
     width: 11.5vw;
+    height: 50px;
+  }
+
+  .stageLink {
+    font-size: var(--font14);
+    width: 10vw;
     height: 50px;
   }
 
