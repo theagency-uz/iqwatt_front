@@ -1,3 +1,4 @@
+"use client";
 import { createTheme } from "@mui/material";
 const theme = createTheme({
   breakpoints: {
@@ -24,8 +25,8 @@ const theme = createTheme({
           minWidth: "auto",
           padding: 0,
           "& .MuiAccordionSummary-content": {
-            flexGrow: 0
-          }
+            flexGrow: 0,
+          },
         },
       },
     },
@@ -34,18 +35,16 @@ const theme = createTheme({
         root: {
           background: "none",
           padding: 0,
-          margin: 0
+          margin: 0,
         },
       },
     },
     MuiSelect: {
       styleOverrides: {
-
         border: "none",
         "& fieldset": {
           border: "none",
         },
-
       },
     },
     // MuiTypography: {
@@ -56,8 +55,7 @@ const theme = createTheme({
 
     //   },
     // }
-
-  }
+  },
 });
 
 export { theme };

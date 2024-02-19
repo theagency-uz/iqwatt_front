@@ -52,8 +52,8 @@ function TrainingPage({ lng, ...props }) {
             </Box>
 
             <a
-              href="./directory/yourfile.pdf"
-              download="newfilename"
+              href={"./directory/yourfile.pdf"}
+              download={"newfilename"}
               className={classes.trainingLink}
             >
               <span>

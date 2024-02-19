@@ -65,7 +65,7 @@ function Calculator({ lng, ...props }) {
                 flexDirection: "row",
                 gap: "0",
                 border: "1px solid #FFA152",
-                borderRadius: "100px",
+                borderRadius: mdUp ? "100px" : "10px",
                 justifyContent: "space-between",
               }}
             >
@@ -78,9 +78,9 @@ function Calculator({ lng, ...props }) {
                   width: "50%",
 
                   "& .MuiFormControlLabel-label ": {
-                    padding: "8px 0px",
+                    padding: mdUp ? "8px 0px" : "13px 0px",
                     fontFamily: "Manrope",
-                    fontSize: "var(--font12)",
+                    fontSize: "var(--font14)",
                     fontStyle: "normal",
                     fontWeight: 600,
                     lineHeight: "150%",
@@ -96,7 +96,7 @@ function Calculator({ lng, ...props }) {
                     background: "#FFA152",
                     border: "none",
                     color: "#fff",
-                    borderRadius: "100px",
+                    borderRadius: mdUp ? "100px" : "10px",
                     borderTopRightRadius: 0,
                     borderBottomRightRadius: 0,
                   },
@@ -111,9 +111,9 @@ function Calculator({ lng, ...props }) {
                   width: "50%",
 
                   "& .MuiFormControlLabel-label ": {
-                    padding: "8px 0px",
+                    padding: mdUp ? "8px 0px" : "13px 0px",
                     fontFamily: "Manrope",
-                    fontSize: "var(--font12)",
+                    fontSize: "var(--font14)",
                     fontStyle: "normal",
                     fontWeight: 600,
                     lineHeight: "150%",
@@ -130,7 +130,7 @@ function Calculator({ lng, ...props }) {
                     background: "#FFA152",
                     border: "none",
                     color: "#fff",
-                    borderRadius: "100px",
+                    borderRadius: mdUp ? "100px" : "10px",
                     borderTopLeftRadius: 0,
                     borderBottomLeftRadius: 0,
                   },

@@ -11,6 +11,9 @@ import FormContext from "@/context/form.context";
 import LangSwitcher from "./langSwitcher";
 import NavList from "./navList";
 import MenuIcon from "./menuIcon";
+// import dynamic from "next/dynamic";
+
+// const LangSwitcher = dynamic(() => import("./langSwitcher"), { ssr: false });
 
 function Navbar({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
@@ -33,18 +36,20 @@ function Navbar({ lng, ...props }) {
           <LangSwitcher lng={lng} />
 
           <Box className={classes.socialLinkBox}>
-            <Link
+            <a
               href={"https://t.me/uz_iqwatt"}
               className={classes.socialLink}
+              target="_blank"
             >
               telegram
-            </Link>
-            <Link
+            </a>
+            <a
               href={"https://www.instagram.com/iqwatt"}
               className={classes.socialLink}
+              target="_blank"
             >
               instagram
-            </Link>
+            </a>
           </Box>
         </Box>
       )}

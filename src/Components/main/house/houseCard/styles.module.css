@@ -84,6 +84,7 @@
 .boxWrapperSixth {
   display: flex;
   align-items: flex-end;
+  flex-direction: row-reverse;
   position: absolute;
   bottom: 36%;
   left: 28%;
@@ -94,6 +95,7 @@
 .boxWrapperSeventh {
   display: flex;
   align-items: flex-end;
+  flex-direction: row-reverse;
   position: absolute;
   bottom: 19%;
   left: 28%;
@@ -188,7 +190,7 @@
 .cardSixth {
   position: relative;
   bottom: 35px;
-  right: 90%;
+  left: 40px;
   opacity: 0;
   transition: all 0.4s ease;
   visibility: hidden;
@@ -196,7 +198,7 @@
 .cardSeventh {
   position: relative;
   bottom: 35px;
-  right: 90%;
+  left: 40px;
   opacity: 0;
   transition: all 0.4s ease;
   visibility: hidden;
@@ -334,12 +336,12 @@
 
   .boxWrapperSixth {
     bottom: 34%;
-    left: 27%;
+    left: 10%;
   }
 
   .boxWrapperSeventh {
     bottom: 17%;
-    left: 28%;
+    left: 11%;
   }
 }
 
@@ -371,11 +373,11 @@
 
   .boxWrapperSixth {
     bottom: 36%;
-    left: 28%;
+    left: 11%;
   }
 
   .boxWrapperSeventh {
-    bottom: 19%;
-    left: 28%;
+    bottom: 18%;
+    left: 12%;
   }
 }

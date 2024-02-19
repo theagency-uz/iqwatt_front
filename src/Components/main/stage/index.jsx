@@ -27,7 +27,6 @@ function Stage({ lng, ...props }) {
       modules: [Scrollbar, Navigation],
       slidesPerView: 1.2,
       spaceBetween: 20,
-      loop: true,
       scrollbar: { draggable: true },
       navigation: {
         prevEl: prevRef.current,

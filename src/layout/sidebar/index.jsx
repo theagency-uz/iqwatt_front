@@ -21,6 +21,7 @@ function Sidebar({
           color: "#F8F8F8",
           // maxWidth: "400px",
           width: "100%",
+          paddingTop: "70px",
           maxWidth: maxWidth,
         },
       }}

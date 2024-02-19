@@ -6,8 +6,8 @@ import Sidebar from "../sidebar";
 import Form from "@/Components/common/form";
 import { useTranslation } from "@/app/i18n/client";
 
-function FormBar({ form, setForm, ...props }) {
-  const { t, i18n } = useTranslation();
+function FormBar({lng, form, setForm, ...props }) {
+  const { t, i18n } = useTranslation(lng);
 
   return (
     <Sidebar

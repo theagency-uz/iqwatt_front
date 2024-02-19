@@ -49,11 +49,6 @@ function PartnersPage({ lng, ...props }) {
             className={classes.stageBtn}
             onClick={() => setForm({ open: true })}
             disableRipple={true}
-            sx={{
-              "&:hover": {
-                background: "#FF8115",
-              },
-            }}
           >
             {t("оставить заявку")}
             <Box className={classes.stageIconBox}>

@@ -21,6 +21,16 @@ function SidebarMenu({ lng, ...props }) {
       <Box className={classes.sidebar}>
         <NavList setOpen={setOpen} lng={lng} />
 
+        <Box className={classes.navbarBtnBox}>
+          <Button
+            className={classes.navbarBtn}
+            onClick={() => setForm({ open: true })}
+            disableRipple={true}
+          >
+            {t("оставить заявку")}
+          </Button>
+        </Box>
+
         <Box className={classes.sidebarWrapper}>
           <LangSwitcher lng={lng} />
           <SocialMedia />

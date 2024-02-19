@@ -1,18 +1,20 @@
 .sideBarLang {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  color: #fff;
-  font-size: var(--font10);
+  color: #656565;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 9px;
+  margin-bottom: 20px;
 }
 
 .sidebarBtn {
   font-family: "Manrope";
-  color: #fff;
-  font-size: var(--font10);
+  color: #656565;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 9px;
@@ -23,4 +25,17 @@
 }
 .active {
   color: #f07d00;
+}
+
+@media (min-width: 992px) {
+  .sideBarLang {
+    justify-content: flex-start;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: var(--font14);
+  }
+  .sidebarBtn {
+    font-size: var(--font14);
+    color: #fff;
+  }
 }

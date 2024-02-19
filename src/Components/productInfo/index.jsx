@@ -1,15 +1,17 @@
 "use client";
 import { useTranslation } from "@/app/i18n/client";
 import { Box, Button, useMediaQuery } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import ProductAbout from "./productAbout";
 import ProductAccordion from "./productAccordion";
+import FormContext from "@/context/form.context";
 
 function ProductInfo({ lng, product, ...props }) {
   const { t } = useTranslation(lng);
+  const { form, setForm } = useContext(FormContext);
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
 
   return (
@@ -31,7 +33,11 @@ function ProductInfo({ lng, product, ...props }) {
           cableType={product.cableType}
           category={product.category}
         />
-        <Link href={"/"} className={classes.productLink}>
+        <Button
+          className={classes.productBtn}
+          onClick={() => setForm({ open: true })}
+          disableRipple={true}
+        >
           {t("оставить заявку")}
           <Box className={classes.productIconBox}>
             <Image
@@ -42,7 +48,7 @@ function ProductInfo({ lng, product, ...props }) {
               className={classes.productIcon}
             />
           </Box>
-        </Link>
+        </Button>
       </Box>
     </Box>
   );

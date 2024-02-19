@@ -5,7 +5,6 @@ import { Box, Button, useMediaQuery } from "@mui/material";
 
 import classes from "./styles.module.css";
 import { useTranslation } from "@/app/i18n/client";
-import LangSwitcher from "./langSwitcher";
 import ExtraLangSwitcher from "./extraLangSwitcher";
 
 function Footer({ lng, page, ...props }) {
@@ -35,7 +34,11 @@ function Footer({ lng, page, ...props }) {
                 />
                 {t("Адрес")}
               </Box>
-              <a href={"/"} className={classes.footerLink}>
+              <a
+                href={"https://yandex.uz/maps/-/CDB9nG8h"}
+                className={classes.footerLink}
+                target="_blank"
+              >
                 {t("г. Ташкент, ул. \n Янгишахар 3А")}
               </a>
               <span className={classes.footerTime}>
@@ -53,7 +56,11 @@ function Footer({ lng, page, ...props }) {
                 />
                 {t("Почта")}
               </Box>
-              <a href={"/"} className={classes.footerLink}>
+              <a
+                href={"mailto:info@iqwatt.uz"}
+                className={classes.footerLink}
+                target="_blank"
+              >
                 {t("info@iqwatt.uz")}
               </a>
             </li>
@@ -69,7 +76,11 @@ function Footer({ lng, page, ...props }) {
                 />
                 {t("Телефон")}
               </Box>
-              <a href={"tel +998 78 333 00 73"} className={classes.footerLink}>
+              <a
+                href={"tel: +998 78 333 00 73"}
+                className={classes.footerLink}
+                target="_blank"
+              >
                 {t("+998 78 333 00 73")}
               </a>
               <Box className={classes.footerSocialBox}>
@@ -232,7 +243,11 @@ function Footer({ lng, page, ...props }) {
               />
               {t("Адрес")}
             </Box>
-            <a href={"/"} className={classes.footerLink}>
+            <a
+              href={"https://yandex.uz/maps/-/CDB9nG8h"}
+              className={classes.footerLink}
+              target="_blank"
+            >
               {t("г. Ташкент, ул. \n Янгишахар 3А")}
             </a>
             <span className={classes.footerTime}>{t("Вт—Вс 09:00—18:00")}</span>
@@ -248,7 +263,11 @@ function Footer({ lng, page, ...props }) {
               />
               {t("Почта")}
             </Box>
-            <a href={"/"} className={classes.footerLink}>
+            <a
+              href={"mailto:info@iqwatt.uz"}
+              className={classes.footerLink}
+              target="_blank"
+            >
               {t("info@iqwatt.uz")}
             </a>
           </li>
@@ -264,7 +283,11 @@ function Footer({ lng, page, ...props }) {
               />
               {t("Телефон")}
             </Box>
-            <a href={"tel +998 78 333 00 73"} className={classes.footerLink}>
+            <a
+              href={"tel: +998 78 333 00 73"}
+              className={classes.footerLink}
+              target="_blank"
+            >
               {t("+998 78 333 00 73")}
             </a>
             <Box className={classes.footerSocialBox}>

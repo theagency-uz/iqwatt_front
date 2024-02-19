@@ -44,11 +44,6 @@ function StageItem({ lng, stage, nextItemRef, ...props }) {
             className={classes.stageBtn}
             onClick={() => setForm({ open: true })}
             disableRipple={true}
-            sx={{
-              "&:hover": {
-                background: "transparent",
-              },
-            }}
           >
             {t(stage.btnText)}
             <Box className={classes.stageIconBox}>
@@ -64,15 +59,7 @@ function StageItem({ lng, stage, nextItemRef, ...props }) {
         )}
 
         {stage.linkText && (
-          <Link
-            href={"#calculator"}
-            className={classes.stageLink}
-            sx={{
-              "&:hover": {
-                background: "transparent",
-              },
-            }}
-          >
+          <Link href={"#calculator"} className={classes.stageLink}>
             {t(stage.linkText)}
             <Box className={classes.stageIconBox}>
               <Image
@@ -85,19 +72,6 @@ function StageItem({ lng, stage, nextItemRef, ...props }) {
             </Box>
           </Link>
         )}
-
-        <Button
-          aria-label="вперед"
-          className={classes.btnNext}
-          ref={nextItemRef}
-          sx={{
-            "&:hover": {
-              background: "transparent",
-            },
-          }}
-        >
-          <ArrowForwardIosIcon />
-        </Button>
       </Box>
     </>
   );

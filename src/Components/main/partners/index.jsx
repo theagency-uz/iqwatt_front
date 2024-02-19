@@ -41,7 +41,7 @@ function Partners({ lng, ...props }) {
               )}
             </p>
           </Box>
-          <Link href={"/"} className={classes.partnersLink}>
+          <Link href={"/partners"} className={classes.partnersLink}>
             {t("подробнее")}
             <Box className={classes.partnersIconBox}>
               <Image

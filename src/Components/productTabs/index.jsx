@@ -36,7 +36,11 @@ function ProductTabs({ lng, product, ...props }) {
           <TabList
             onChange={handleChange}
             aria-label="product"
-            TabIndicatorProps={{ style: { display: "none" } }}
+            TabIndicatorProps={{
+              style: {
+                backgroundColor: "#ff8115",
+              },
+            }}
             variant="scrollable"
             sx={{
               "& .Mui-selected": {
@@ -64,6 +68,8 @@ function ProductTabs({ lng, product, ...props }) {
                 padding: 0,
                 border: "none",
                 minWidth: "auto",
+                maxWidth: "100%",
+                width: "50%",
               }}
               disableRipple={true}
             />
@@ -83,6 +89,8 @@ function ProductTabs({ lng, product, ...props }) {
                 padding: 0,
                 border: "none",
                 minWidth: "auto",
+                maxWidth: "100%",
+                width: "50%",
               }}
               disableRipple={true}
             />

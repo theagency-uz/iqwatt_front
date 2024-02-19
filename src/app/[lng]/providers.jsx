@@ -5,7 +5,7 @@ import SidebarContext from "@/context/sidebar.context";
 import FormContext from "@/context/form.context";
 import FormBar from "@/layout/formBar";
 
-export default function Providers({ children }) {
+export default function Providers({ lng, children }) {
   const [loading, setLoading] = useState(true);
   const [form, setForm] = useState(false);
   const [open, setOpen] = useState(false);
@@ -34,7 +34,7 @@ export default function Providers({ children }) {
       </AnimatePresence> */}
       <FormContext.Provider value={formValue}>
         <SidebarContext.Provider value={sidebarValue}>
-          <FormBar form={form} setForm={setForm} />
+          <FormBar form={form} setForm={setForm} lng={lng} />
           {children}
         </SidebarContext.Provider>
       </FormContext.Provider>

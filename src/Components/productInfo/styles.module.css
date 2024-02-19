@@ -51,7 +51,7 @@
   line-height: 100%;
 }
 
-.productLink {
+button.productBtn {
   border-radius: 50px;
   background: #f07d00;
   color: #fff;
@@ -66,6 +66,13 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  transition: all 0.4s ease;
+}
+
+button.productBtn:hover {
+  background: #fff;
+  color: #f07d00;
+  transition: all 0.4s ease;
 }
 
 .productIconBox {
@@ -132,7 +139,7 @@
   .productWrapper {
     padding: 40px 63px;
   }
-  
+
   .productTitle {
     font-size: var(--font25);
     max-width: 26.6vw;
@@ -142,7 +149,7 @@
     margin-bottom: 30px;
   }
 
-  .productLink {
+  button.productBtn {
     height: 46px;
   }
   .productIconBox {
@@ -153,21 +160,19 @@
     width: 40%;
     margin-bottom: 25px;
   }
-  
+
   .accordionDetails:global(.MuiAccordionDetails-root) {
     margin-bottom: 25px;
   }
-  
 }
 
-
 @media (min-width: 1440px) {
-  .productLink {
+  button.productBtn {
     width: 11vw;
     height: 46px;
     font-size: var(--font14);
   }
-  
+
   .productIconBox {
     width: 32px;
     height: 32px;

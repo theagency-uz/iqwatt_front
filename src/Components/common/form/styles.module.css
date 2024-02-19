@@ -164,7 +164,7 @@
 .checkbox :global(span.MuiFormControlLabel-label) {
   color: #8e8e8e;
   font-family: "Manrope";
-  font-size: var(--font12);
+  font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
   line-height: 128.571%;
@@ -251,7 +251,7 @@ button.submit {
   }
 
   button.submit {
-    width: 140px;
+    width: 150px;
     height: 50px;
   }
 
@@ -263,7 +263,7 @@ button.submit {
 
 @media (min-width: 1440px) {
   button.submit {
-    width: 9vw;
+    width: 10vw;
     font-size: var(--font14);
   }
   .formIconBox {

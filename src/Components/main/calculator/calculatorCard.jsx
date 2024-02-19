@@ -33,12 +33,10 @@ function CalculatorCard({ lng, ...props }) {
 
   return (
     <Box
-      sx={
-        {
-          width: mdUp ? "auto" : "100%",
-          // typography: "body1",
-        }
-      }
+      sx={{
+        width: mdUp ? "auto" : "100%",
+        // typography: "body1",
+      }}
     >
       <TabContext value={value}>
         <Box sx={{ borderBottom: 0, borderColor: "divider" }}>
@@ -82,7 +80,7 @@ function CalculatorCard({ lng, ...props }) {
                 borderBottomRightRadius: mdUp ? "0" : "10px",
                 minWidth: "auto",
                 width: mdUp ? "auto" : "100%",
-                maxWidth: mdUp ? "auto" : "50%"
+                maxWidth: mdUp ? "auto" : "50%",
               }}
               disableRipple={true}
             />
@@ -108,7 +106,7 @@ function CalculatorCard({ lng, ...props }) {
                 borderBottomRightRadius: mdUp ? "0" : "10px",
                 minWidth: "auto",
                 width: mdUp ? "auto" : "100%",
-                maxWidth: mdUp ? "auto" : "50%"
+                maxWidth: mdUp ? "auto" : "50%",
               }}
               disableRipple={true}
             />
@@ -134,7 +132,7 @@ function CalculatorCard({ lng, ...props }) {
                 borderBottomRightRadius: mdUp ? "0" : "10px",
                 minWidth: "auto",
                 width: mdUp ? "auto" : "100%",
-                maxWidth: mdUp ? "auto" : "100%"
+                maxWidth: mdUp ? "auto" : "100%",
               }}
               disableRipple={true}
             />
@@ -209,11 +207,6 @@ function CalculatorCard({ lng, ...props }) {
                 className={classes.stageBtn}
                 onClick={() => setForm({ open: true })}
                 disableRipple={true}
-                sx={{
-                  "&:hover": {
-                    background: "transparent",
-                  },
-                }}
               >
                 {t("оставить заявку")}
                 <Box className={classes.stageIconBox}>
@@ -288,11 +281,6 @@ function CalculatorCard({ lng, ...props }) {
                 className={classes.stageBtn}
                 onClick={() => setForm({ open: true })}
                 disableRipple={true}
-                sx={{
-                  "&:hover": {
-                    background: "transparent",
-                  },
-                }}
               >
                 {t("оставить заявку")}
                 <Box className={classes.stageIconBox}>
@@ -367,11 +355,6 @@ function CalculatorCard({ lng, ...props }) {
                 className={classes.stageBtn}
                 onClick={() => setForm({ open: true })}
                 disableRipple={true}
-                sx={{
-                  "&:hover": {
-                    background: "transparent",
-                  },
-                }}
               >
                 {t("оставить заявку")}
                 <Box className={classes.stageIconBox}>

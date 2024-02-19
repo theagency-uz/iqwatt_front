@@ -9,7 +9,7 @@
   flex-direction: column;
   border-radius: 10px;
   background: #ff8115;
-  padding: 20px;
+  padding: 30px 20px;
   padding-right: 0;
   width: 100%;
   gap: 20px;
@@ -104,13 +104,13 @@ button.stageBtn {
   background: #ffa152;
   color: #fff;
   font-family: "Manrope";
-  font-size: var(--font12);
+  font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 150px;
-  height: 35px;
+  width: 170px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -123,22 +123,35 @@ button.stageBtn {
   background: #ffa152;
   color: #fff;
   font-family: "Manrope";
-  font-size: var(--font12);
+  font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
   line-height: 128.571%;
   text-transform: lowercase;
   width: 150px;
-  height: 35px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding-left: 5px;
+  transition: all 0.4s ease;
+}
+
+button.stageBtn:hover {
+  background: #fff;
+  transition: all 0.4s ease;
+  color: #ffa152;
+}
+
+.stageLink:hover {
+  background: #fff;
+  transition: all 0.4s ease;
+  color: #ffa152;
 }
 
 .stageIconBox {
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: #fff;
   display: flex;
@@ -182,7 +195,7 @@ button.btnNext > svg {
     background-image: url("/static/site/bg-line.png");
     background-size: auto;
     background-position: left top;
-    background-position-y: -50px;
+    background-position: -50px -50px;
     background-repeat: no-repeat;
     gap: 0;
   }
@@ -217,7 +230,7 @@ button.btnNext > svg {
 
   button.stageBtn {
     font-size: 14px;
-    width: 170px;
+    width: 180px;
     height: 46px;
   }
   .stageLink {

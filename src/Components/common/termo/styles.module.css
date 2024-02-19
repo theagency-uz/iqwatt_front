@@ -59,17 +59,25 @@
   font-weight: 500;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 120px;
-  height: 32px;
+  width: 125px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding-left: 9px;
+  transition: all 0.4s ease;
+}
+
+.termoLink:hover {
+  background: #fff;
+  color: #f07d00;
+  transition: all 0.4s ease;
+  border: 1px solid #fff;
 }
 
 .termoIconBox {
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background: #fff;
   display: flex;
@@ -99,19 +107,22 @@
     max-width: 25.3vw;
   }
 
-  .termoItemLink {
-    width: 110px;
+  .termoLink {
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
   }
 
-  .termoItemIconBox {
-    width: 25px;
-    height: 25px;
+  .termoIconBox {
+    width: 28px;
+    height: 28px;
   }
 }
 
 @media (min-width: 1440px) {
-  .termoItemLink {
-    width: 7.5vw;
-    height: 36px;
+  .termoLink {
+    width: 8.5vw;
+    height: 45px;
+    font-size: var(--font14);
   }
 }

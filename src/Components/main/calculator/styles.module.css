@@ -18,6 +18,7 @@
 .calculatorWrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .calculatorTitle {
@@ -48,7 +49,7 @@
 
 .tabPanelTitle {
   color: #fff;
-  font-family: Manrope;
+  font-family: "Manrope";
   font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
@@ -57,8 +58,8 @@
 
 .tabPanelText {
   color: #fff;
-  font-family: Manrope;
-  font-size: var(--font12);
+  font-family: "Manrope";
+  font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
   line-height: 113.925%;
@@ -78,8 +79,8 @@
 
 .tabPanelDesc {
   color: #ffdfc4;
-  font-family: Manrope;
-  font-size: var(--font12);
+  font-family: "Manrope";
+  font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
@@ -143,22 +144,29 @@ button.stageBtn {
   background: #ffa152;
   color: #fff;
   font-family: "Manrope";
-  font-size: var(--font12);
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 150px;
-  height: 35px;
+  width: 180px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding-left: 5px;
+  transition: all 0.4s ease;
+}
+
+button.stageBtn:hover {
+  background: #fff;
+  color: #ff8115;
+  transition: all 0.4s ease;
 }
 
 .stageIconBox {
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: #fff;
   display: flex;
@@ -176,6 +184,10 @@ button.stageBtn {
     margin-bottom: 80px;
   }
 
+  .calculatorWrapper {
+    width: auto;
+  }
+
   .calculatorInner {
     align-items: flex-end;
     flex-direction: row;
@@ -184,7 +196,7 @@ button.stageBtn {
     background-image: url("/static/site/bg-line.png");
     background-size: auto;
     background-position: left top;
-    background-position-y: -50px;
+    background-position: -50px -50px;
     background-repeat: no-repeat;
   }
 
@@ -211,9 +223,9 @@ button.stageBtn {
   }
 
   button.stageBtn {
+    width: 190px;
+    height: 50px;
     font-size: 14px;
-    width: 170px;
-    height: 46px;
   }
 
   .stageIconBox {
@@ -225,8 +237,7 @@ button.stageBtn {
 @media (min-width: 1440px) {
   button.stageBtn {
     font-size: var(--font14);
-    width: 11.5vw;
-    height: 50px;
+    width: 12vw;
   }
 
   .stageIconBox {

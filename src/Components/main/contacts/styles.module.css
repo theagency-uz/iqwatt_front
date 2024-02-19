@@ -10,7 +10,7 @@
   justify-content: space-between;
   background: #f07d00;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px 20px;
   height: auto;
   width: 100%;
   background-image: url("/static/site/bg-line.png");
@@ -52,7 +52,15 @@
   align-items: center;
   justify-content: space-evenly;
   padding-left: 7px;
+  transition: all 0.4s ease;
 }
+
+.contactsLink:hover {
+  background: #fff;
+  color: #f07d00;
+  transition: all 0.4s ease;
+}
+
 
 .contactsIconBox {
   width: 22px;
