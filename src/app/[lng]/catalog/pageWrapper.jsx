@@ -28,11 +28,11 @@ function PageWrapper({ lng, ...props }) {
           </Box>
           <Box className={classes.productImgBox}>
             <Image
-              src={"/static/site/catalog-banner.png"}
-              width={620}
-              height={250}
+              src={"/images/category/category1.webp"}
+              width={461}
+              height={324}
               alt={"product-image"}
-              className={classes.productBanner}
+              className={classes.productBannerImg}
             />
           </Box>
         </Box>

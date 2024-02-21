@@ -69,8 +69,8 @@ function FaqAccordion({ lng, isOpen, setIsOpen, ...props }) {
                   <ExpandMoreIcon
                     style={{
                       color: "rgba(255, 129, 20, 1)",
-                      width: mdUp ? "45px" : "40px",
-                      height: mdUp ? "45px" : "40px",
+                      width: mdUp ? "60px" : "40px",
+                      height: mdUp ? "60px" : "40px",
                     }}
                   />
                 }
@@ -88,10 +88,10 @@ function FaqAccordion({ lng, isOpen, setIsOpen, ...props }) {
                     minHeight: "auto",
                   },
                   "& .MuiAccordionSummary-expandIconWrapper": {
-                    width: mdUp ? "50px" : "40px",
-                    height: mdUp ? "50px" : "40px",
+                    width: mdUp ? "60px" : "40px",
+                    height: mdUp ? "60px" : "40px",
                     borderRadius: "50%",
-                    backgroundColor: "#fff",
+                    backgroundColor: mdUp ? "#fff" : "transparent",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -110,7 +110,7 @@ function FaqAccordion({ lng, isOpen, setIsOpen, ...props }) {
                 <Typography
                   sx={{
                     fontWeight: 500,
-                    fontSize: mdUp ? "var(--font18)" : "var(--font16)",
+                    fontSize: lgUp ? "var(--font18)" : mdUp ? "18px" : "16px",
                     lineHeight: "100%",
                     fontFamily: "Manrope",
                     color: "#333",
@@ -129,7 +129,7 @@ function FaqAccordion({ lng, isOpen, setIsOpen, ...props }) {
                 <Typography
                   sx={{
                     fontWeight: 400,
-                    fontSize: "var(--font14)",
+                    fontSize: lgUp ? "var(--font14)" : "14px",
                     lineHeight: "128.5%",
                     fontFamily: "Manrope",
                     color: "#8E8E8E",

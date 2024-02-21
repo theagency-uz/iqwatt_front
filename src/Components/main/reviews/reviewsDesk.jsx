@@ -8,7 +8,7 @@ import { Scrollbar, Navigation } from "swiper/modules";
 import classes from "./styles.module.css";
 import Title from "@/Components/common/title";
 import CustomNavigation from "./CustomNavigation";
-import reviewsData from "@/data/reviewsData";
+import videosData from "@/data/videosData";
 import ReviewsItem from "./reviewsItem";
 
 function ReviewsDesk({ lng, ...props }) {
@@ -51,10 +51,10 @@ function ReviewsDesk({ lng, ...props }) {
 
       <Box className={classes.swiperWrapper}>
         <swiper-container ref={swiperRef} class={classes.mySwiper} init="false">
-          {reviewsData.map((reviews, index) => {
+          {videosData.map((videos, index) => {
             return (
-              <swiper-slide key={reviews.id} class={classes.swiperSlide}>
-                <ReviewsItem reviews={reviews} lng={lng} />
+              <swiper-slide key={videos.id} class={classes.swiperSlide}>
+                <ReviewsItem videos={videos} lng={lng} />
               </swiper-slide>
             );
           })}

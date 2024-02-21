@@ -62,6 +62,7 @@
   justify-content: space-evenly;
   padding-left: 7px;
   transition:  all 0.4s ease;
+  border: 1px solid #f07d00;
 }
 
 .partnersLink:hover {
@@ -94,6 +95,7 @@
   }
   .partnersInfo {
     padding: 50px;
+    justify-content: center;
   }
   
   .partnersTextBox {

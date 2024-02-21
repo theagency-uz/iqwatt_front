@@ -218,7 +218,7 @@ function Footer({ lng, page, ...props }) {
 
         <Box className={classes.footerMapBox}>
           <Image
-            src={"/static/site/map.webp"}
+            src={"/static/site/map.png"}
             width={1200}
             height={518}
             alt={"map"}
@@ -414,7 +414,7 @@ function Footer({ lng, page, ...props }) {
 
       <Box className={classes.footerMapBox}>
         <Image
-          src={"/static/site/map.webp"}
+          src={"/static/site/map.png"}
           width={1200}
           height={518}
           alt={"map"}

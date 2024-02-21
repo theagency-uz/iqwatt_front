@@ -22,7 +22,7 @@
   flex-direction: column;
   border-radius: 10px;
   background: #f8f8f8;
-  padding: 20px;
+  padding: 30px 20px;
   gap: 20px;
 }
 
@@ -76,6 +76,7 @@ button.stageBtn:hover {
   background: #fff;
   color: #ff8115;
   transition: all 0.4s ease;
+  border: 1px solid #ff8115;
 }
 .stageIconBox {
   width: 28px;
@@ -140,7 +141,7 @@ button.stageBtn:hover {
 
   button.stageBtn {
     font-size: 14px;
-    width: 170px;
+    width: 180px;
     height: 46px;
   }
 
@@ -156,7 +157,7 @@ button.stageBtn:hover {
 @media (min-width: 1440px) {
   button.stageBtn {
     font-size: var(--font14);
-    width: 11.5vw;
+    width: 12vw;
     height: 50px;
   }
 

@@ -15,7 +15,7 @@
   width: 100%;
   background-image: url("/static/site/bg-line.png");
   background-size: auto;
-  background-position: left center;
+  background-position: -50px -100px;
   background-repeat: no-repeat;
 }
 

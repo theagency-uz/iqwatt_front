@@ -31,11 +31,6 @@ function FileUpload({ name, lng, ...props }) {
         onClick={handleClick}
         className={classes.uploadBtn}
         disableRipple={true}
-        sx={{
-          "&:hover": {
-            background: "#FF8115",
-          },
-        }}
       >
         {t("добавить файлы")}
         <Box className={classes.uploadIconBox}>

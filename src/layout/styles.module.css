@@ -66,10 +66,13 @@ button.navbarBtn {
   border: 1px solid #ff8115;
   padding: 10px 17px;
   min-width: auto;
+  transition: all 0.4s ease;
 }
 
 button.navbarBtn:hover {
-  background: transparent;
+  background: #ff8115;
+  transition: all 0.4s ease;
+  color: #fff;
 }
 
 .footer {

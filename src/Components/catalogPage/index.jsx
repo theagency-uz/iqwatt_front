@@ -25,7 +25,10 @@ function CatalogPage({ lng, product, ...props }) {
               {t(product.subCategoryTitle)}
             </h4>
             <ul className={classes.catalogList}>
-              <li className={classes.catalogItem}>
+              <a
+                href={`/catalog/${product.id}`}
+                className={classes.catalogItem}
+              >
                 <Box className={classes.catalogItemBox}>
                   <Box className={classes.catalogWrapper}>
                     <p className={classes.catalogName}>{t(product.title)}</p>
@@ -58,7 +61,7 @@ function CatalogPage({ lng, product, ...props }) {
                 </Box>
 
                 <p className={classes.catalogText}>{product.text}</p>
-              </li>
+              </a>
             </ul>
           </Box>
         );

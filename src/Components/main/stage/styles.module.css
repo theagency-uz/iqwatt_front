@@ -9,7 +9,7 @@
   flex-direction: column;
   border-radius: 10px;
   background: #ff8115;
-  padding: 30px 20px;
+  padding: 50px 20px;
   padding-right: 0;
   width: 100%;
   gap: 20px;
@@ -53,7 +53,7 @@
   padding: 20px;
   border-radius: 10px;
   background: #ffa152;
-  min-height: 421px;
+  min-height: 350px;
   height: 100%;
 }
 
@@ -89,7 +89,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
-  line-height: 110.162%;
+  line-height: 130%;
 }
 
 .stageBtnBox {
@@ -187,9 +187,10 @@ button.btnNext > svg {
   }
 
   .stageInner {
-    align-items: center;
+    align-items: flex-end;
     flex-direction: row;
-    padding: 0 45px;
+    justify-content: space-between;
+    padding: 45px;
     min-height: 551px;
     padding-right: 0;
     background-image: url("/static/site/bg-line.png");
@@ -201,7 +202,7 @@ button.btnNext > svg {
   }
 
   .stageWrapper {
-    width: 40%;
+    width: 50%;
     padding-right: 0;
   }
 
@@ -213,11 +214,12 @@ button.btnNext > svg {
     max-width: 27.6vw;
   }
   .swiperWrapper {
-    width: 60%;
+    width: 45%;
   }
   .swiperSlide {
     padding: 25px 25px 40px;
-    min-height: 421px;
+    width: 500px;
+    min-height: 400px;
   }
 
   .stageInfoTitle {
@@ -270,5 +272,12 @@ button.btnNext > svg {
   .stageIconBox {
     width: 32px;
     height: 32px;
+  }
+  .swiperWrapper {
+    width: 35%;
+  }
+
+  .swiperSlide {
+    min-height: 500px;
   }
 }

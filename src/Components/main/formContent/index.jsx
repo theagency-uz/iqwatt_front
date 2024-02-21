@@ -13,7 +13,7 @@ function FormContent({ lng, ...props }) {
     <Box className={classes.formContent}>
       <Box className={classes.formContentImgBox}>
         <Image
-          src={"/static/site/form.png"}
+          src={"/static/site/form.webp"}
           width={570}
           height={597}
           alt={"image"}

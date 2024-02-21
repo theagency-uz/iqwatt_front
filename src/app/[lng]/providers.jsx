@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import SidebarContext from "@/context/sidebar.context";
 import FormContext from "@/context/form.context";
 import FormBar from "@/layout/formBar";
+import Loading from "@/Components/common/loading";
 
 export default function Providers({ lng, children }) {
   const [loading, setLoading] = useState(true);
@@ -18,7 +19,7 @@ export default function Providers({ lng, children }) {
 
   return (
     <>
-      {/* <AnimatePresence mode="sync">
+      <AnimatePresence mode="sync">
         <motion.div
           key={loading}
           initial={{ opacity: 1 }}
@@ -27,17 +28,17 @@ export default function Providers({ lng, children }) {
           transition={{ duration: 0.2 }}
         >
           {loading ? (
-            <Loading />
+            <Loading loading={loading} />
           ) : (
+            <FormContext.Provider value={formValue}>
+              <SidebarContext.Provider value={sidebarValue}>
+                <FormBar form={form} setForm={setForm} lng={lng} />
+                {children}
+              </SidebarContext.Provider>
+            </FormContext.Provider>
           )}
         </motion.div>
-      </AnimatePresence> */}
-      <FormContext.Provider value={formValue}>
-        <SidebarContext.Provider value={sidebarValue}>
-          <FormBar form={form} setForm={setForm} lng={lng} />
-          {children}
-        </SidebarContext.Provider>
-      </FormContext.Provider>
+      </AnimatePresence>
     </>
   );
 }

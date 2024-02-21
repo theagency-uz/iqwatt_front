@@ -25,10 +25,10 @@ function StageItem({ lng, stage, nextItemRef, ...props }) {
         />
 
         <Image
-          src={"/icons/grade.svg"}
+          src={stage.icon}
           width={38}
           height={38}
-          alt={"stage-grade"}
+          alt={"stage-icon"}
           className={classes.stageGrade}
         />
       </Box>

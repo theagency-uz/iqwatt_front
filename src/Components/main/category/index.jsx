@@ -27,7 +27,7 @@ function Category({ lng, ...props }) {
                 <h4 className={classes.categoryTitle}>{t(category.title)}</h4>
 
                 <Link href={category.link} className={classes.categoryItemLink}>
-                  {t("в каталог")}
+                  <span>{t("в каталог")}</span>
                   <Box className={classes.categoryItemIconBox}>
                     <Image
                       src={"/icons/arrow-right-white.svg"}
@@ -43,8 +43,8 @@ function Category({ lng, ...props }) {
               <Box className={classes.categoryImgBox}>
                 <Image
                   src={category.image}
-                  width={378}
-                  height={205}
+                  width={461}
+                  height={324}
                   alt={"category-image"}
                   className={classes.categoryImg}
                 />

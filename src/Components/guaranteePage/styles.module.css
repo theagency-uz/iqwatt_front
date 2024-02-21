@@ -22,7 +22,7 @@
   flex-direction: column;
   border-radius: 10px;
   background: #f8f8f8;
-  padding: 10px;
+  padding: 30px 20px;
   gap: 20px;
 }
 
@@ -153,6 +153,14 @@ button.uploadBtn {
   align-items: center;
   justify-content: space-evenly;
   padding-left: 5px;
+  transition: all 0.4s ease;
+}
+
+button.uploadBtn:hover {
+  background: #fff;
+  color: #ff8115;
+  border: 1px solid #ff8115;
+  transition: all 0.4s ease;
 }
 
 .uploadIconBox {
@@ -208,27 +216,37 @@ button.uploadBtn {
     padding: 30px;
   }
   .cardDesc {
-    max-width: 24.3vw;
+    max-width: 40vw;
     margin: 0 auto;
   }
 
   button.uploadBtn {
     font-size: 14px;
-    width: 170px;
+    width: 180px;
     height: 46px;
   }
+}
 
+@media (min-width: 1200px) {
+  .cardDesc {
+    max-width: 37vw;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1440px) {
   button.uploadBtn {
     font-size: var(--font14);
-    width: 11.5vw;
+    width: 12vw;
     height: 50px;
   }
 
   .uploadIconBox {
     width: 32px;
     height: 32px;
+  }
+  .cardDesc {
+    max-width: 23vw;
+    margin: 0 auto;
   }
 }

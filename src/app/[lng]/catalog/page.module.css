@@ -43,9 +43,9 @@
   display: flex;
 }
 
-.productBanner {
+.productBannerImg {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -78,5 +78,6 @@
   }
   .productBannerWrapper {
     padding: 40px;
+    padding-right: 0;
   }  
 }
