@@ -58,7 +58,7 @@
   font-weight: 600;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 150px;
+  width: 180px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -111,7 +111,7 @@
 
 @media (min-width: 1440px) {
   .newsLink {
-    width: 10vw;
+    width: 12vw;
     height: 50px;
     font-size: var(--font14);
   }

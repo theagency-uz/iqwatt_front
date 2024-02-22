@@ -157,7 +157,7 @@
 
 @media (min-width: 1440px) {
   .catalogItemLink {
-    width: 8vw;
+    width: 7.5vw;
     height: 40px;
     font-size: var(--font14);
   }

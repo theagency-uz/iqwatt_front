@@ -131,7 +131,7 @@ function AccordionContent({ lng, ...props }) {
         </div>
         <div>
           <CustomCheckbox
-            label={t("Системы для крыш")}
+            label={t("Системы для крыши")}
             // value={formik.values.services.includes(SERVICES[3])}
             // onChange={(e, checked) => {
             //   formik.setFieldValue(

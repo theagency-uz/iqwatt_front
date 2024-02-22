@@ -67,7 +67,7 @@
   }
 
   .editorLink {
-    width: 110px;
+    width: 120px;
     height: 36px;
     border: 1px solid #9a9a9a;
     background: #f9f9f9;
@@ -78,7 +78,7 @@
 @media (min-width: 1440px) {
   .editorLink {
     border: 1px solid #9a9a9a;
-    width: 7vw;
+    width: 8vw;
     height: 36px;
     font-size: var(--font14);
   }

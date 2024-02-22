@@ -67,12 +67,14 @@ button.productBtn {
   align-items: center;
   justify-content: space-evenly;
   transition: all 0.4s ease;
+  border: 1px solid #f07d00;
 }
 
 button.productBtn:hover {
   background: #fff;
   color: #f07d00;
   transition: all 0.4s ease;
+  border: 1px solid #f07d00;
 }
 
 .productIconBox {

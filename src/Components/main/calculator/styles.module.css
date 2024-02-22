@@ -209,10 +209,6 @@ button.stageBtn:hover {
     margin-bottom: 30px;
   }
 
-  .tabPanelTitle {
-    font-size: 40px;
-  }
-
   .tabPanelText {
     font-size: var(--font14);
     line-height: 128.571%;
@@ -239,7 +235,6 @@ button.stageBtn:hover {
     font-size: var(--font14);
     width: 12vw;
   }
-
   .stageIconBox {
     width: 32px;
     height: 32px;

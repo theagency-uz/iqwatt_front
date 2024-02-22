@@ -147,7 +147,7 @@ function Footer({ lng, page, ...props }) {
 
                 <Box className={classes.footerBox}>
                   <Link href={"/"} className={classes.footerBoxItem}>
-                    {t("Системы для крыш")}
+                    {t("Системы для крыши")}
                   </Link>
                   <Link href={"/"} className={classes.footerBoxItem}>
                     {t("Системы для труб")}
@@ -338,7 +338,7 @@ function Footer({ lng, page, ...props }) {
             <Box className={classes.footerItemLink}>
               <Box className={classes.footerBox}>
                 <Link href={"/"} className={classes.footerBoxItem}>
-                  {t("Системы для крыш")}
+                  {t("Системы для крыши")}
                 </Link>
                 <Link href={"/"} className={classes.footerBoxItem}>
                   {t("Системы для труб")}

@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 10px;
   margin-bottom: 30px;
+  padding-left: 10px;
 }
 
 .infoWrapper h3 {
@@ -75,6 +76,7 @@
 
   .infoWrapper {
     gap: 20px;
+    padding: 0;
     margin-bottom: 40px;
   }
 

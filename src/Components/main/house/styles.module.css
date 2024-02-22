@@ -89,12 +89,4 @@
   .houseIcon {
     object-fit: cover;
   }
-
-  .houseTitle {
-    max-width: 11.1vw;
-  }
-
-  .houseText {
-    max-width: 17.8vw;
-  }
 }

@@ -241,7 +241,7 @@ function CalculatorCard({ lng, ...props }) {
             <Box className={classes.tabInputBox}>
               <Box className={classes.tabPanelTextBox}>
                 <p className={classes.tabPanelText}>
-                  {t("Длинна и радиус трубы ")}
+                  {t("Длинна и радиус трубы")}
                 </p>
                 <span className={classes.tabPanelDesc}>
                   {t(

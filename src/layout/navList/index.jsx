@@ -47,7 +47,7 @@ function NavList({ lng, setOpen, ...props }) {
                 setOpen(false);
               }}
             >
-              {t("Системы для крыш")}
+              {t("Системы для крыши")}
               <span className={classes.icon}>{">"}</span>
             </Link>
           </li>
@@ -143,7 +143,7 @@ function NavList({ lng, setOpen, ...props }) {
             setOpen(false);
           }}
         >
-          {t("контакты")}
+          {t("Контакты")}
         </Link>
       </li>
     </ul>

@@ -106,7 +106,7 @@
 
   .trainingLink {
     border: 1px solid #7a7a7a;
-    width: 110px;
+    width: 120px;
     height: 36px;
     padding-left: 5px;
     transition: all 0.4s ease;
@@ -127,8 +127,8 @@
 
 @media (min-width: 1440px) {
   .trainingLink {
-    width: 6.5vw;
-    height: 36px;
+    width: 7.5vw;
+    height: 40px;
     font-size: var(--font14);
   }
 }

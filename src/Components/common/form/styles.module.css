@@ -263,7 +263,7 @@ button.submit {
 
 @media (min-width: 1440px) {
   button.submit {
-    width: 10vw;
+    width: 9vw;
     font-size: var(--font14);
   }
   .formIconBox {

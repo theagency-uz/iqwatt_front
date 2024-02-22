@@ -60,7 +60,7 @@ function CatalogPage({ lng, product, ...props }) {
                   </Box>
                 </Box>
 
-                <p className={classes.catalogText}>{product.text}</p>
+                <p className={classes.catalogText}>{t(product.text)}</p>
               </a>
             </ul>
           </Box>
