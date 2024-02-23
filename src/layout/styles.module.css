@@ -1,79 +1,5 @@
-.navbarTop {
-  width: 100%;
-  background: #333;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 25px;
-}
 
-.socialLinkBox {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
 
-.socialLink {
-  color: #fff;
-  font-family: "Manrope";
-  font-size: var(--font14);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 9px;
-  letter-spacing: 0.45px;
-  text-transform: uppercase;
-}
-
-.navbar {
-  padding: 0px 25px;
-  position: relative;
-  z-index: 17;
-}
-
-.navbarWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 0px;
-}
-
-.navbarImage {
-  border: none;
-  padding: 0;
-  display: flex;
-  background: transparent;
-}
-
-.navbarBtnBox {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 25px;
-}
-.navbarLogo {
-  width: 80px;
-  height: 30px;
-  object-fit: contain;
-}
-
-button.navbarBtn {
-  color: #333;
-  font-family: "Manrope";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 14px;
-  border-radius: 30px;
-  border: 1px solid #ff8115;
-  padding: 10px 17px;
-  min-width: auto;
-  transition: all 0.4s ease;
-}
-
-button.navbarBtn:hover {
-  background: #ff8115;
-  transition: all 0.4s ease;
-  color: #fff;
-}
 
 .footer {
   padding: 0 10px;
@@ -105,7 +31,7 @@ button.navbarBtn:hover {
   border-radius: 50px;
   background: #ff8115;
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 600;
@@ -120,7 +46,7 @@ button.navbarBtn:hover {
 
 .footerLink {
   color: #333;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
@@ -130,7 +56,7 @@ button.navbarBtn:hover {
 
 .footerTime {
   color: #8e8e8e;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
@@ -170,7 +96,7 @@ button.navbarBtn:hover {
 
 .footerBoxItem {
   color: #8e8e8e;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
@@ -181,7 +107,7 @@ button.navbarBtn:hover {
 }
 .footerPolicy {
   color: #8e8e8e;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
@@ -201,15 +127,6 @@ button.navbarBtn:hover {
 }
 
 @media (min-width: 992px) {
-  .navbar {
-    margin-bottom: 15px;
-    z-index: initial;
-  }
-
-  .navbarWrapper {
-    border-bottom: 1px solid #efefef;
-  }
-  
   .footer {
     padding: 0 20px;
     margin-bottom: 30px;
@@ -249,12 +166,5 @@ button.navbarBtn:hover {
 
   .footerPolicy {
     justify-content: flex-end;
-  }
-}
-
-@media (min-width: 1440px) {
-  button.navbarBtn {
-    font-size: var(--font14);
-    padding: 13px 17px;
   }
 }
