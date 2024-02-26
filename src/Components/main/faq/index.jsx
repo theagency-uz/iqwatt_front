@@ -1,19 +1,19 @@
-"use client";
-import React, { useState } from "react";
-import classes from "./styles.module.css";
-import { Box, useMediaQuery } from "@mui/material";
-import Title from "@/Components/common/title";
-import { useTranslation } from "@/app/i18n/client";
-import FaqAccordion from "./faqAccordion";
+'use client';
+import { Box, useMediaQuery } from '@mui/material';
+import Title from '@/Components/common/title';
+import { useTranslation } from '@/app/i18n/client';
+import FaqAccordion from './faqAccordion';
+
+import classes from './styles.module.css';
 
 function Faq({ lng, isOpen, setIsOpen, ...props }) {
   const { t, i18n } = useTranslation(lng);
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
 
   return (
     <Box className={classes.faq}>
       <Box className={classes.faqInner}>
-        <Title title={"Ответы \n на частые вопросы"} lng={lng} />
+        <Title title={'Ответы \n на частые вопросы'} lng={lng} />
         {/* <p className={classes.faqText}>
           {t(
             "Собрали самые популярные вопросы от наших покупателей и подробно ответили на них"

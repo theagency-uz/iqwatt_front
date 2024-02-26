@@ -1,0 +1,107 @@
+.accordion {
+  padding: 20px 10px;
+
+  margin-bottom: 15px;
+
+  border-radius: 10px;
+  background: #f8f8f8;
+  box-shadow: none;
+}
+
+.accordion::before {
+  display: none;
+}
+
+.accordionSummary {
+  border-radius: 0;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  font-size: 20px;
+  min-height: auto;
+}
+
+.accordionSummary:global(.Mui-expanded) {
+  min-height: auto;
+}
+
+.accordionSummary :global(.MuiAccordionSummary-expandIconWrapper) {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordionSummary :global(.muiaccordionsummary-content.mui-expanded) {
+  margin: 0;
+}
+
+.accordionSummary :global(.muiaccordionsummary-content) {
+  margin: 0;
+}
+.accordionDetails {
+  padding: 0;
+  padding-top: 15px;
+}
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  font-family: 'Manrope';
+  color: #333;
+  font-style: normal;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 128.5%;
+  font-family: 'Manrope';
+  color: #8e8e8e;
+  font-style: normal;
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  .accordion {
+    padding: 30px 15px;
+
+    margin-bottom: 15px;
+  }
+
+  .accordionSummary :global(.MuiAccordionSummary-expandIconWrapper) {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .text {
+    max-width: 45.4vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .accordion {
+    padding: 40px 40px 25px 50px;
+
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: var(--font18);
+  }
+
+  .text {
+    font-size: var(--font14);
+  }
+}

@@ -1,9 +1,9 @@
-"use client";
-import React from "react";
-import { useTranslation } from "@/app/i18n/client";
-import { useContext, useRef, useState } from "react";
-import { TabContext, TabList, TabPanel } from "@mui/lab";
-import { NumericFormat } from "react-number-format";
+'use client';
+import React from 'react';
+import { useTranslation } from '@/app/i18n/client';
+import { useContext, useRef, useState } from 'react';
+import { TabContext, TabList, TabPanel } from '@mui/lab';
+import { NumericFormat } from 'react-number-format';
 
 import {
   Box,
@@ -12,17 +12,18 @@ import {
   Tab,
   Typography,
   useTheme,
-} from "@mui/material";
-import Image from "next/image";
-import classes from "./styles.module.css";
-import FormContext from "@/context/form.context";
+} from '@mui/material';
+import Image from 'next/image';
+import FormContext from '@/context/form.context';
+
+import classes from './styles.module.css';
 
 function CalculatorCard({ lng, ...props }) {
   const { t, i18n } = useTranslation(lng);
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const { form, setForm } = useContext(FormContext);
 
-  const [value, setValue] = useState("1");
+  const [value, setValue] = useState('1');
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -34,105 +35,107 @@ function CalculatorCard({ lng, ...props }) {
   return (
     <Box
       sx={{
-        width: mdUp ? "auto" : "100%",
+        width: mdUp ? 'auto' : '100%',
         // typography: "body1",
       }}
     >
       <TabContext value={value}>
-        <Box sx={{ borderBottom: 0, borderColor: "divider" }}>
+        <Box sx={{ borderBottom: 0, borderColor: 'divider' }}>
           <TabList
             onChange={handleChange}
-            aria-label="product"
-            TabIndicatorProps={{ style: { display: "none" } }}
-            variant="scrollable"
+            aria-label='product'
+            TabIndicatorProps={{ style: { display: 'none' } }}
+            variant='scrollable'
             sx={{
-              "& .Mui-selected": {
-                color: "white!important",
-                background: "#FFA152",
+              '& .Mui-selected': {
+                color: 'white!important',
+                background: '#FFA152',
               },
-              "& .MuiTabs-flexContainer": {
-                justifyContent: "space-between",
-                margin: "0",
-                marginBottom: mdUp ? "0" : "30px",
-                flexWrap: mdUp ? "nowrap" : "wrap",
-                padding: "0",
+              '& .MuiTabs-flexContainer': {
+                justifyContent: 'space-between',
+                margin: '0',
+                marginBottom: mdUp ? '0' : '30px',
+                flexWrap: mdUp ? 'nowrap' : 'wrap',
+                padding: '0',
               },
             }}
           >
             <Tab
-              label={t("теплый пол")}
-              value="1"
+              label={t('теплый пол')}
+              value='1'
               sx={{
-                fontFamily: "Manrope",
-                fontStyle: "normal",
+                fontFamily: 'Manrope',
+                fontStyle: 'normal',
                 fontWeight: 600,
-                fontSize: "var(--font12)",
-                lineHeight: "130%",
-                color: "#fff",
-                textTransform: "uppercase",
-                lineHeight: "130%",
-                padding: mdUp ? "0 22px" : "0",
-                letterSpacing: "1.44px",
-                border: "2px solid #FFA152",
-                borderBottom: "none",
-                borderRadius: "10px",
-                borderBottomLeftRadius: mdUp ? "0" : "10px",
-                borderBottomRightRadius: mdUp ? "0" : "10px",
-                minWidth: "auto",
-                width: mdUp ? "auto" : "100%",
-                maxWidth: mdUp ? "auto" : "50%",
+                fontSize: 'var(--font12)',
+                lineHeight: '130%',
+                color: '#fff',
+                textTransform: 'uppercase',
+                lineHeight: '130%',
+                padding: mdUp ? '0 22px' : '0',
+                letterSpacing: '1.44px',
+                border: '2px solid #FFA152',
+                borderBottom: 'none',
+                borderRadius: '10px',
+                borderBottomLeftRadius: mdUp ? '0' : '10px',
+                borderBottomRightRadius: mdUp ? '0' : '10px',
+                minWidth: 'auto',
+                width: mdUp ? 'auto' : '100%',
+                maxWidth: mdUp ? 'auto' : '50%',
+              }}
+              disableRipple={true}
+
+              className={classes.tabTitle}
+            />
+
+            <Tab
+              label={t('обогрев труб')}
+              value='2'
+              sx={{
+                fontFamily: 'Manrope',
+                fontStyle: 'normal',
+                fontWeight: 600,
+                fontSize: 'var(--font12)',
+                lineHeight: '130%',
+                color: '#fff',
+                textTransform: 'uppercase',
+                lineHeight: '130%',
+                padding: mdUp ? '0 22px' : '0',
+                letterSpacing: '1.44px',
+                border: '2px solid #FFA152',
+                borderBottom: 'none',
+                borderRadius: '10px',
+                borderBottomLeftRadius: mdUp ? '0' : '10px',
+                borderBottomRightRadius: mdUp ? '0' : '10px',
+                minWidth: 'auto',
+                width: mdUp ? 'auto' : '100%',
+                maxWidth: mdUp ? 'auto' : '50%',
               }}
               disableRipple={true}
             />
 
             <Tab
-              label={t("обогрев труб")}
-              value="2"
+              label={t('система антиобледенения')}
+              value='3'
               sx={{
-                fontFamily: "Manrope",
-                fontStyle: "normal",
+                fontFamily: 'Manrope',
+                fontStyle: 'normal',
                 fontWeight: 600,
-                fontSize: "var(--font12)",
-                lineHeight: "130%",
-                color: "#fff",
-                textTransform: "uppercase",
-                lineHeight: "130%",
-                padding: mdUp ? "0 22px" : "0",
-                letterSpacing: "1.44px",
-                border: "2px solid #FFA152",
-                borderBottom: "none",
-                borderRadius: "10px",
-                borderBottomLeftRadius: mdUp ? "0" : "10px",
-                borderBottomRightRadius: mdUp ? "0" : "10px",
-                minWidth: "auto",
-                width: mdUp ? "auto" : "100%",
-                maxWidth: mdUp ? "auto" : "50%",
-              }}
-              disableRipple={true}
-            />
-
-            <Tab
-              label={t("система антиобледенения")}
-              value="3"
-              sx={{
-                fontFamily: "Manrope",
-                fontStyle: "normal",
-                fontWeight: 600,
-                fontSize: "var(--font12)",
-                lineHeight: "130%",
-                color: "#fff",
-                textTransform: "uppercase",
-                lineHeight: "130%",
-                padding: mdUp ? "0 22px" : "0",
-                letterSpacing: "1.44px",
-                border: "2px solid #FFA152",
-                borderBottom: mdUp ? "none" : "",
-                borderRadius: "10px",
-                borderBottomLeftRadius: mdUp ? "0" : "10px",
-                borderBottomRightRadius: mdUp ? "0" : "10px",
-                minWidth: "auto",
-                width: mdUp ? "auto" : "100%",
-                maxWidth: mdUp ? "auto" : "100%",
+                fontSize: 'var(--font12)',
+                lineHeight: '130%',
+                color: '#fff',
+                textTransform: 'uppercase',
+                lineHeight: '130%',
+                padding: mdUp ? '0 22px' : '0',
+                letterSpacing: '1.44px',
+                border: '2px solid #FFA152',
+                borderBottom: mdUp ? 'none' : '',
+                borderRadius: '10px',
+                borderBottomLeftRadius: mdUp ? '0' : '10px',
+                borderBottomRightRadius: mdUp ? '0' : '10px',
+                minWidth: 'auto',
+                width: mdUp ? 'auto' : '100%',
+                maxWidth: mdUp ? 'auto' : '100%',
               }}
               disableRipple={true}
             />
@@ -141,44 +144,45 @@ function CalculatorCard({ lng, ...props }) {
 
         <Box
           sx={{
-            borderRadius: "10px",
-            borderTopLeftRadius: mdUp ? "0" : "10px",
-            borderTopRightRadius: mdUp ? "0" : "10px",
-            background: "#FFA152",
-            padding: mdUp ? "35px" : "30px 15px",
+            borderRadius: '10px',
+            borderTopLeftRadius: mdUp ? '0' : '10px',
+            borderTopRightRadius: mdUp ? '0' : '10px',
+            background: '#FFA152',
+            padding: mdUp ? '35px' : '30px 15px',
           }}
+          className={classes.tab}
         >
           <TabPanel
-            value="1"
+            value='1'
             sx={{
-              padding: "0",
-              display: "flex",
-              flexDirection: "column",
-              gap: mdUp ? "50px" : "30px",
+              padding: '0',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: mdUp ? '50px' : '30px',
             }}
           >
             <Box className={classes.tabPanel}>
-              <h4 className={classes.tabPanelTitle}>{t("Теплый пол")}</h4>
+              <h4 className={classes.tabPanelTitle}>{t('Теплый пол')}</h4>
               <p className={classes.tabPanelText}>
-                {t("Введите данные для расчета:")}
+                {t('Введите данные для расчета:')}
               </p>
             </Box>
 
             <Box className={classes.tabInputBox}>
               <Box className={classes.tabPanelTextBox}>
                 <p className={classes.tabPanelText}>
-                  {t("S, площадь помещения")}
+                  {t('S, площадь помещения')}
                 </p>
                 <span className={classes.tabPanelDesc}>
                   {t(
-                    "без площади с мебелью, система не устанавливается под ней"
+                    'без площади с мебелью, система не устанавливается под ней'
                   )}
                 </span>
               </Box>
 
               <Box className={classes.tabInput}>
                 <input
-                  type="number"
+                  type='number'
                   // placeholder={t("0")}
                   value={number}
                   onChange={(e) => {
@@ -186,21 +190,21 @@ function CalculatorCard({ lng, ...props }) {
                     setPrice(number * cost);
                   }}
                 />
-                <span className={classes.tabInputMetre}>{t("кв м")}</span>
+                <span className={classes.tabInputMetre}>{t('кв м')}</span>
               </Box>
             </Box>
 
             <Box className={classes.tabPriceInfo}>
               <Box className={classes.tabPriceBox}>
-                <p className={classes.tabPanelText}>{t("Стоимость от:")}</p>
+                <p className={classes.tabPanelText}>{t('Стоимость от:')}</p>
                 <p className={classes.tabPanelPrice}>
                   <NumericFormat
                     value={price}
-                    displayType="text"
-                    thousandSeparator=" "
-                    prefix=""
-                  />{" "}
-                  {t("сум")}
+                    displayType='text'
+                    thousandSeparator=' '
+                    prefix=''
+                  />{' '}
+                  {t('сум')}
                 </p>
               </Box>
               <Button
@@ -208,13 +212,13 @@ function CalculatorCard({ lng, ...props }) {
                 onClick={() => setForm({ open: true })}
                 disableRipple={true}
               >
-                {t("оставить заявку")}
+                {t('оставить заявку')}
                 <Box className={classes.stageIconBox}>
                   <Image
-                    src={"/icons/arrow-right.svg"}
+                    src={'/icons/arrow-right.svg'}
                     width={18}
                     height={15}
-                    alt={"icon"}
+                    alt={'icon'}
                     className={classes.stageIcon}
                   />
                 </Box>
@@ -223,36 +227,36 @@ function CalculatorCard({ lng, ...props }) {
           </TabPanel>
 
           <TabPanel
-            value="2"
+            value='2'
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: mdUp ? "50px" : "30px",
-              padding: "0",
+              display: 'flex',
+              flexDirection: 'column',
+              gap: mdUp ? '50px' : '30px',
+              padding: '0',
             }}
           >
             <Box className={classes.tabPanel}>
-              <h4 className={classes.tabPanelTitle}>{t("Обогрев труб")}</h4>
+              <h4 className={classes.tabPanelTitle}>{t('Обогрев труб')}</h4>
               <p className={classes.tabPanelText}>
-                {t("Введите данные для расчета:")}
+                {t('Введите данные для расчета:')}
               </p>
             </Box>
 
             <Box className={classes.tabInputBox}>
               <Box className={classes.tabPanelTextBox}>
                 <p className={classes.tabPanelText}>
-                  {t("Длинна и радиус трубы")}
+                  {t('Длинна и радиус трубы')}
                 </p>
                 <span className={classes.tabPanelDesc}>
                   {t(
-                    "без площади с мебелью, система не устанавливается под ней"
+                    'без площади с мебелью, система не устанавливается под ней'
                   )}
                 </span>
               </Box>
 
               <Box className={classes.tabInput}>
                 <input
-                  type="number"
+                  type='number'
                   // placeholder={t("0")}
                   value={number}
                   onChange={(e) => {
@@ -260,21 +264,21 @@ function CalculatorCard({ lng, ...props }) {
                     setPrice(number * cost);
                   }}
                 />
-                <span className={classes.tabInputMetre}>{t("кв м")}</span>
+                <span className={classes.tabInputMetre}>{t('кв м')}</span>
               </Box>
             </Box>
 
             <Box className={classes.tabPriceInfo}>
               <Box className={classes.tabPriceBox}>
-                <p className={classes.tabPanelText}>{t("Стоимость от:")}</p>
+                <p className={classes.tabPanelText}>{t('Стоимость от:')}</p>
                 <p className={classes.tabPanelPrice}>
                   <NumericFormat
                     value={price}
-                    displayType="text"
-                    thousandSeparator=" "
-                    prefix=""
-                  />{" "}
-                  {t("сум")}
+                    displayType='text'
+                    thousandSeparator=' '
+                    prefix=''
+                  />{' '}
+                  {t('сум')}
                 </p>
               </Box>
               <Button
@@ -282,13 +286,13 @@ function CalculatorCard({ lng, ...props }) {
                 onClick={() => setForm({ open: true })}
                 disableRipple={true}
               >
-                {t("оставить заявку")}
+                {t('оставить заявку')}
                 <Box className={classes.stageIconBox}>
                   <Image
-                    src={"/icons/arrow-right.svg"}
+                    src={'/icons/arrow-right.svg'}
                     width={18}
                     height={15}
-                    alt={"icon"}
+                    alt={'icon'}
                     className={classes.stageIcon}
                   />
                 </Box>
@@ -297,36 +301,36 @@ function CalculatorCard({ lng, ...props }) {
           </TabPanel>
 
           <TabPanel
-            value="3"
+            value='3'
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: mdUp ? "50px" : "30px",
-              padding: "0",
+              display: 'flex',
+              flexDirection: 'column',
+              gap: mdUp ? '50px' : '30px',
+              padding: '0',
             }}
           >
             <Box className={classes.tabPanel}>
               <h4 className={classes.tabPanelTitle}>
-                {t("Система антиобледенения")}
+                {t('Система антиобледенения')}
               </h4>
               <p className={classes.tabPanelText}>
-                {t("Введите данные для расчета:")}
+                {t('Введите данные для расчета:')}
               </p>
             </Box>
 
             <Box className={classes.tabInputBox}>
               <Box className={classes.tabPanelTextBox}>
                 <p className={classes.tabPanelText}>
-                  {t("S, площадь обьекта")}
+                  {t('S, площадь обьекта')}
                 </p>
                 <span className={classes.tabPanelDesc}>
-                  {t("поверхность двора или лестницы")}
+                  {t('поверхность двора или лестницы')}
                 </span>
               </Box>
 
               <Box className={classes.tabInput}>
                 <input
-                  type="number"
+                  type='number'
                   // placeholder={t("0")}
                   value={number}
                   onChange={(e) => {
@@ -334,21 +338,21 @@ function CalculatorCard({ lng, ...props }) {
                     setPrice(number * cost);
                   }}
                 />
-                <span className={classes.tabInputMetre}>{t("кв м")}</span>
+                <span className={classes.tabInputMetre}>{t('кв м')}</span>
               </Box>
             </Box>
 
             <Box className={classes.tabPriceInfo}>
               <Box className={classes.tabPriceBox}>
-                <p className={classes.tabPanelText}>{t("Стоимость от:")}</p>
+                <p className={classes.tabPanelText}>{t('Стоимость от:')}</p>
                 <p className={classes.tabPanelPrice}>
                   <NumericFormat
                     value={price}
-                    displayType="text"
-                    thousandSeparator=" "
-                    prefix=""
-                  />{" "}
-                  {t("сум")}
+                    displayType='text'
+                    thousandSeparator=' '
+                    prefix=''
+                  />{' '}
+                  {t('сум')}
                 </p>
               </Box>
               <Button
@@ -356,13 +360,13 @@ function CalculatorCard({ lng, ...props }) {
                 onClick={() => setForm({ open: true })}
                 disableRipple={true}
               >
-                {t("оставить заявку")}
+                {t('оставить заявку')}
                 <Box className={classes.stageIconBox}>
                   <Image
-                    src={"/icons/arrow-right.svg"}
+                    src={'/icons/arrow-right.svg'}
                     width={18}
                     height={15}
-                    alt={"icon"}
+                    alt={'icon'}
                     className={classes.stageIcon}
                   />
                 </Box>
