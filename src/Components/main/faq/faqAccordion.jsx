@@ -69,8 +69,8 @@ function FaqAccordion({ lng, isOpen, setIsOpen, ...props }) {
                   <ExpandMoreIcon
                     style={{
                       color: "rgba(255, 129, 20, 1)",
-                      width: mdUp ? "60px" : "40px",
-                      height: mdUp ? "60px" : "40px",
+                      width: mdUp ? "50px" : "40px",
+                      height: mdUp ? "50px" : "40px",
                     }}
                   />
                 }

@@ -61,8 +61,8 @@ button.productBtn {
   font-weight: 600;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 170px;
-  height: 40px;
+  width: 180px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -151,9 +151,6 @@ button.productBtn:hover {
     margin-bottom: 30px;
   }
 
-  button.productBtn {
-    height: 46px;
-  }
   .productIconBox {
     width: 28px;
     height: 28px;
@@ -170,8 +167,7 @@ button.productBtn:hover {
 
 @media (min-width: 1440px) {
   button.productBtn {
-    width: 11vw;
-    height: 46px;
+    width: 12vw;
     font-size: var(--font14);
   }
 

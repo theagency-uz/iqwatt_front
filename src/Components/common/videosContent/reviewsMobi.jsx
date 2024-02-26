@@ -11,7 +11,7 @@ import CustomNavigation from "./CustomNavigation";
 import videosData from "@/data/videosData";
 import ReviewsItem from "./reviewsItem";
 
-function ReviewsDesk({ lng, ...props }) {
+function ReviewsMobi({ lng, videos, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
   const { t, i18n } = useTranslation(lng);
 
@@ -24,7 +24,7 @@ function ReviewsDesk({ lng, ...props }) {
 
     const params = {
       modules: [Scrollbar, Navigation],
-      slidesPerView: 4,
+      slidesPerView: 1.2,
       spaceBetween: 20,
       loop: true,
       scrollbar: { draggable: true },
@@ -51,7 +51,7 @@ function ReviewsDesk({ lng, ...props }) {
 
       <Box className={classes.swiperWrapper}>
         <swiper-container ref={swiperRef} class={classes.mySwiper} init="false">
-          {videosData.map((videos, index) => {
+          {videos.map((videos, index) => {
             return (
               <swiper-slide key={videos.id} class={classes.swiperSlide}>
                 <ReviewsItem videos={videos} lng={lng} />
@@ -64,4 +64,4 @@ function ReviewsDesk({ lng, ...props }) {
   );
 }
 
-export default ReviewsDesk;
+export default ReviewsMobi;

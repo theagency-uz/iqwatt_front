@@ -44,8 +44,8 @@ function House({ lng, ...props }) {
                 <Box className={classes.houseImgBox}>
                   <Image
                     src={house.icon}
-                    width={35}
-                    height={35}
+                    width={38}
+                    height={38}
                     alt={"icon"}
                     className={classes.houseIcon}
                   />

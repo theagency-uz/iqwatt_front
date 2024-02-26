@@ -8,7 +8,7 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: space-between;
-  background: #f07d00;
+  background: #ff8115;
   border-radius: 10px;
   padding: 30px 20px;
   height: auto;
@@ -38,7 +38,7 @@
 .contactsLink {
   border-radius: 50px;
   border: 1px solid #fff;
-  background: #f07d00;
+  background: transparent;
   color: #fff;
   font-family: "Manrope";
   font-size: var(--font14);
@@ -57,10 +57,10 @@
 
 .contactsLink:hover {
   background: #fff;
-  color: #f07d00;
+  color: #ff8115;
+  border: 1px solid #ff8115;
   transition: all 0.4s ease;
 }
-
 
 .contactsIconBox {
   width: 22px;
@@ -101,7 +101,7 @@
     height: 46px;
     font-size: 14px;
   }
-  
+
   .contactsIconBox {
     width: 27px;
     height: 27px;
@@ -114,7 +114,7 @@
     height: 50px;
     font-size: var(--font14);
   }
-  
+
   .contactsIconBox {
     width: 32px;
     height: 32px;
