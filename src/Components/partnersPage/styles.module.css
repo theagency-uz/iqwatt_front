@@ -186,6 +186,13 @@ button.stageBtn:hover {
   justify-content: center;
 }
 
+
+.closeBtn {
+  position: absolute;
+  top: 26px;
+  right: 20px;
+  z-index: 100;
+}
 @media (min-width: 768px) {
   .viewerSwiper {
     width: 100%;

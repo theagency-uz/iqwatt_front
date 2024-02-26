@@ -58,7 +58,64 @@
   display: none;
 }
 
+.tabMain {
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 60px;
+}
+
+.tabContext {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.tabList :global(.Mui-selected) {
+  color: black!important;
+}
+
+.tabList :global(.MuiTabs-flexContainer) {
+  justify-content: space-between;
+  margin-bottom:0; 
+  padding: 0;
+}
+
+.tabLabel {
+  font-family: "Manrope";
+  font-style: "normal";
+  font-weight: 500;
+  font-size: var(--font14);
+  line-height: 130%;
+  color: #BFBFBF;
+  text-transform: none;
+  line-height: 100%;
+  padding: 0;
+  border: none;
+  min-width: 100%;
+  max-width: 100%;
+  width: 50%;
+}
+
+.tabPanel {
+  padding: 0;
+  padding-top: 15px;
+}
+
 @media (min-width: 992px) {
+  .tabMain {
+    width: 100%;
+    padding: 0 50px;
+    margin-bottom: 80px;
+  }
+
+  .tabList :global(.MuiTabs-flexContainer) {
+    justify-content: space-around;
+    margin-bottom: 15px;
+  }
+
+  .tabPanel {
+    padding: 0 65px;
+    padding-top: 30px;
+  }
+
   .editor {
     max-width: 52.2vw;
   }
@@ -74,7 +131,6 @@
   }
 }
 
-
 @media (min-width: 1440px) {
   .editorLink {
     border: 1px solid #9a9a9a;
@@ -85,5 +141,4 @@
   .editor {
     font-size: var(--font14);
   }
-  
 }

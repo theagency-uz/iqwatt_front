@@ -15,7 +15,7 @@ export default function LabelInput({
 }) {
   return (
     <label>
-      <p className={classes.label}>{label}</p>
+      {!type === "textarea" && <p className={classes.label}>{label}</p>}
 
       <TextField
         color="#fff"
@@ -33,7 +33,7 @@ export default function LabelInput({
         }`}
         InputProps={{ disableUnderline: true }}
         placeholder={placeholder}
-        rows={4 }
+        rows={4}
         multiline={type === "textarea"}
       />
     </label>

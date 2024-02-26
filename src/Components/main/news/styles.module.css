@@ -65,12 +65,14 @@
   justify-content: space-evenly;
   padding-left: 7px;
   transition: all 0.4s ease;
+  border: 1px solid #f07d00;
 }
 
 .newsLink:hover {
   background: #fff;
   color: #f07d00;
   transition: all 0.4s ease;
+  border: 1px solid #f07d00;
 }
 
 .newsIconBox {

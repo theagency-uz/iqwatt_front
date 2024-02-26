@@ -30,6 +30,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
+  height: auto;
   line-height: 128.571%;
 }
 .input :global(.MuiFormHelperText-root.Mui-error) {
@@ -220,6 +221,9 @@ button.submit {
   padding-left: 10px;
 }
 
+button.submit:hover {
+  background: #f16f00;
+}
 .formIconBox {
   width: 25px;
   height: 25px;
@@ -234,6 +238,86 @@ button.submit {
   object-fit: cover;
 }
 
+.notifBox {
+  position: absolute;
+  background-color: #ff8115;
+  border: 1px solid #ff8115;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  padding: 45px 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  max-width: 100%;
+  outline: "none";
+}
+
+button.notifBtn {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 0;
+}
+
+.notifText {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  max-width: 100%;
+}
+
+.accordionSvg {
+  position: relative;
+  top: 1px;
+  color: #ff8115;
+  font-size: var(--font24);
+}
+
+.accordionSummary {
+  padding: 11px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  flex-grow: 0;
+  min-height: auto;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Manrope";
+  gap: 7px;
+}
+
+.accordionSummary :global(.MuiAccordionSummary-content) {
+  flex-grow: 0;
+  margin: 0;
+  color: #8E8E8E;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
+}
+
+.accordionSummary :global(.MuiAccordionSummary-expandIconWrapper.Mui-expanded) {
+  transform: rotate(90deg);
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+@media (min-width: 768px) {
+  .fadeBox {
+    width: 403px;
+  }
+}
 @media (min-width: 992px) {
   .formInputBox {
     width: 70%;
@@ -258,6 +342,17 @@ button.submit {
   .formIconBox {
     width: 27px;
     height: 27px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .accordionSvg {
+    top: 2px;
+  }
+
+  .accordionSummary :global(.MuiAccordionSummary-expandIconWrapper.Mui-expanded) {
+    top: 2px;
+    left: 2px
   }
 }
 

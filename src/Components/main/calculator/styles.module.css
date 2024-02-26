@@ -23,7 +23,7 @@
 
 .calculatorTitle {
   color: #fff;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-size: var(--font24);
   font-style: normal;
   font-weight: 500;
@@ -33,7 +33,7 @@
 
 .calculatorText {
   color: #fff;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -49,7 +49,7 @@
 
 .tabPanelTitle {
   color: #fff;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
@@ -58,7 +58,7 @@
 
 .tabPanelText {
   color: #fff;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -79,7 +79,7 @@
 
 .tabPanelDesc {
   color: #ffdfc4;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -98,7 +98,7 @@
   height: 36px;
   border: none;
   color: #fff;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -110,7 +110,7 @@
 }
 .tabInputMetre {
   color: #fff;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -131,7 +131,7 @@
 
 .tabPanelPrice {
   color: #fff;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
@@ -143,7 +143,7 @@ button.stageBtn {
   border: 1px solid #fff;
   background: #ffa152;
   color: #fff;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -180,19 +180,60 @@ button.stageBtn:hover {
 
 .formLabel {
   color: #fff;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-size: var(--font14);
   font-style: normal;
   font-weight: 700;
   line-height: 128.571%;
   margin-bottom: 12px;
 }
-.formLabelInner {
-  /* padding: '8px 0px'; */
+
+.tabContextBox {
+  border-bottom: 0;
+  border-color: rgba(0, 0, 0, 0.12);
 }
-.tabTitle {
-  padding: 0 22px;
+
+.tabLabel {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--font12);
+  line-height: 130%;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 130%;
+  padding: 0;
+  letter-spacing: 1.44px;
+  border: 2px solid #ffa152;
+  border-bottom: none;
+  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  min-width: auto;
+  width: 100%;
+  max-width: 50%;
 }
+
+.tabLabelThird {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--font12);
+  line-height: 130%;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 130%;
+  padding: 0;
+  letter-spacing: 1.44px;
+  border: 2px solid #ffa152;
+  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  min-width: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
 .tab {
   padding: 35px;
 }
@@ -205,12 +246,170 @@ button.stageBtn:hover {
   justify-content: space-between;
 }
 
+.tabMainBox {
+  width: 100%;
+}
+
+.tabList :global(.Mui-selected) {
+  color: white !important;
+  background: #ffa152;
+}
+
+.tabList :global(.MuiTabs-flexContainer) {
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  padding: "0";
+}
+
+.tabPanelMain {
+  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #ffa152;
+  padding: 30px 15px;
+}
+
+.tabPanelWrapper {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formControlLabelLeft, 
+.formControlLabelRight {
+  margin: 0;
+  width: 50%;
+}
+
+.formControlLabelLeft :global(.MuiFormControlLabel-label) {
+  padding: 13px 0px;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.formControlLabelRight :global(.MuiFormControlLabel-label) {
+  padding: 13px 0px;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.formControlLabelLeft :global(.Mui-checked + .MuiFormControlLabel-label) {
+  background: #ffa152;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+.formControlLabelLeft :global(.Mui-checked + .MuiFormControlLabel-label) {
+  background: #ffa152;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.formControlLabelRight :global(.Mui-checked + .MuiFormControlLabel-label) {
+  background: #ffa152;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.radioControl {
+  display: none;
+}
+
 @media (min-width: 992px) {
+  .formControlLabelLeft :global(.MuiFormControlLabel-label) {
+    padding: 8px 0px;
+  }
+
+  .formControlLabelLeft :global(.Mui-checked + .MuiFormControlLabel-label) {
+    border-radius: 100px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .formControlLabelRight :global(.MuiFormControlLabel-label) {
+    padding: 8px 0px;
+  }
+
+  .formControlLabelRight :global(.Mui-checked + .MuiFormControlLabel-label) {
+    border-radius: 100px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .tabPanelWrapper {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .tabPanelMain {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 35px;
+  }
+
+  .tabList :global(.MuiTabs-flexContainer) {
+    margin-bottom: 0;
+    flex-wrap: nowrap;
+  }
+
+  .tabLabel {
+    padding: 0 22px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .tabLabelThird {
+    padding: 0 22px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: auto;
+    max-width: 100%;
+  }
+
   .calculator {
     padding: 0 20px;
     margin-bottom: 80px;
   }
-
+  .tabMainBox {
+    width: auto;
+  }
   .calculatorWrapper {
     width: auto;
   }
@@ -220,7 +419,7 @@ button.stageBtn:hover {
     flex-direction: row;
     padding: 60px 45px;
     min-height: 551px;
-    background-image: url('/static/site/bg-line.png');
+    background-image: url("/static/site/bg-line.png");
     background-size: auto;
     background-position: left top;
     background-position: -50px -50px;
@@ -237,7 +436,7 @@ button.stageBtn:hover {
   }
 
   .tabPanelText {
-    font-size: var(--font14);
+    font-size: var(--font16);
     line-height: 128.571%;
   }
 
@@ -256,7 +455,7 @@ button.stageBtn:hover {
     height: 32px;
   }
   .tabPanelDesc {
-    max-width: 25vw;
+    max-width: 30vw;
   }
 
   .radioGroup {
