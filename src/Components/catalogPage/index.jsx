@@ -1,15 +1,15 @@
-"use client";
-import { useTranslation } from "@/app/i18n/client";
-import { Box, Button, useMediaQuery } from "@mui/material";
-import React from "react";
-import classes from "./styles.module.css";
-import Image from "next/image";
-import Link from "next/link";
-import Termo from "../common/termo";
+'use client';
+import { useTranslation } from '@/app/i18n/client';
+import { Box, Button, useMediaQuery } from '@mui/material';
+import React from 'react';
+import classes from './styles.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import Termo from '../common/termo';
 
 function CatalogPage({ lng, product, ...props }) {
   const { t } = useTranslation(lng);
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   return (
     <>
@@ -26,23 +26,23 @@ function CatalogPage({ lng, product, ...props }) {
             </h4>
             <ul className={classes.catalogList}>
               <a
-                href={`/catalog/${product.id}`}
+                href={`/product/${product.id}`}
                 className={classes.catalogItem}
               >
                 <Box className={classes.catalogItemBox}>
                   <Box className={classes.catalogWrapper}>
                     <p className={classes.catalogName}>{t(product.title)}</p>
                     <Link
-                      href={`/catalog/${product.id}`}
+                      href={`/product/${product.id}`}
                       className={classes.catalogItemLink}
                     >
-                      {t("смотреть")}
+                      {t('смотреть')}
                       <Box className={classes.catalogItemIconBox}>
                         <Image
-                          src={"/icons/arrow-right-white.svg"}
+                          src={'/icons/arrow-right-white.svg'}
                           width={18}
                           height={15}
-                          alt={"icon"}
+                          alt={'icon'}
                           className={classes.catalogIcon}
                         />
                       </Box>
@@ -54,7 +54,7 @@ function CatalogPage({ lng, product, ...props }) {
                       src={product.image}
                       width={194}
                       height={194}
-                      alt={"catalog-image"}
+                      alt={'catalog-image'}
                       className={classes.catalogImg}
                     />
                   </Box>

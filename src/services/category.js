@@ -17,11 +17,16 @@ async function getCategories({ lng = "ru" } = { lng: "ru" }) {
 }
 async function getCategory({ lng = "ru", slug } = { lng: "ru" }) {
   try {
-    const result = await strapi.get("/categories", {
+    const result = await strapi.get("/categories/slug/" + slug, {
       params: {
         locale: lng,
-        populate: ['image'],
-        // sort: ['createdAt:desc'],
+        populate: {
+          image: true,
+          subcategory: {
+            populate:
+              { subcategory2: true }
+          },
+        }
       }
     });
     return result.data.data;
