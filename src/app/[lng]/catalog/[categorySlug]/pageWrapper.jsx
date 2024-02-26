@@ -7,7 +7,7 @@ import productData from "@/data/productData";
 import Image from "next/image";
 import CatalogPage from "@/Components/catalogPage";
 import Portfolio from "@/Components/main/portfolio";
-import classes from "./page.module.css";
+import classes from "./styles.module.css";
 
 function PageWrapper({ lng, ...props }) {
   const { t } = useTranslation(lng);

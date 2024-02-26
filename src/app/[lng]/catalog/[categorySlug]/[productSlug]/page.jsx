@@ -1,13 +1,13 @@
-"use client";
-import Title from "@/Components/common/title";
-import { useTranslation } from "@/app/i18n/client";
-import { Box, Button } from "@mui/material";
-import React, { useState } from "react";
-import productData from "@/data/productData";
-import ProductImages from "@/Components/productImages";
-import ProductInfo from "@/Components/productInfo";
-import ProductTabs from "@/Components/productTabs";
-import classes from "../page.module.css";
+'use client';
+import Title from '@/Components/common/title';
+import { useTranslation } from '@/app/i18n/client';
+import { Box, Button } from '@mui/material';
+import React, { useState } from 'react';
+import productData from '@/data/productData';
+import ProductImages from '@/Components/productImages';
+import ProductInfo from '@/Components/productInfo';
+import ProductTabs from '@/Components/productTabs';
+import classes from './styles.module.css';
 
 function Product({ params: { lng, id }, ...props }) {
   const { t } = useTranslation(lng);

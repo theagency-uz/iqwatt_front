@@ -63,7 +63,6 @@ function Slider({ lng, ...props }) {
   useEffect(() => {
     async function fetchAll() {
       const tempSlider = await getSlider({ lng });
-      console.log({ tempSlider });
       setSlider(tempSlider.attributes.slide.filter((s) => s.is_active));
     }
     fetchAll();

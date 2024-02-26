@@ -21,7 +21,6 @@ function Category({ lng, ...props }) {
   useEffect(() => {
     async function fetchAll() {
       const tempCategories = await getCategories({ lng });
-      console.log({ tempCategories });
       setCategories(tempCategories);
     }
     fetchAll();
