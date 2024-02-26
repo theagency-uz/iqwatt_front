@@ -23,39 +23,16 @@ function ModalContent({ open, setOpen, lng, id, ...props }) {
       onClose={() => setOpen(false)}
       // disablePortal={true}
     >
-      <Box
-        sx={{
-          // userSelect: "none",
-          // pointerEvents: "none",
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-          minHeight: "100vh",
-          // backgroundColor: "#000",
-          padding: "30px 0px"
-        }}
-      >
+      <Box className={classes.modalContentBox}>
         <Fade in={open}>
           <Box className={classes.modalContent}>
             <Button
               onClick={() => {
                 setOpen(false);
               }}
-              sx={{
-                padding: "0",
-                pointerEvents: "auto",
-                borderRadius: "0",
-                minWidth: "auto",
-                position: "absolute",
-                top: mdUp ? "20px" : "15px",
-                right: mdUp ? "30px" : "10px",
-              }}
+              className={classes.modalContentBtn}
             >
-              <CloseIcon
-                sx={{ color: "#cbcbcb", fontSize: mdUp ? "2.5rem" : "2rem" }}
-              />
+              <CloseIcon className={classes.modalContentIcon} />
             </Button>
             <video
               // ref={videoRef}

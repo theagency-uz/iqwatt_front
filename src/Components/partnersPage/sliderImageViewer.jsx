@@ -106,15 +106,7 @@ const SliderImageViewer = forwardRef(function SliderImageViewer(
           ))}
         </swiper-container>
       </Box>
-      <Button
-        onClick={closeImageViewer}
-        sx={{
-          position: "absolute",
-          top: "26px",
-          right: "20px",
-          zIndex: "10000",
-        }}
-      >
+      <Button onClick={closeImageViewer} className={classes.closeBtn}>
         <CloseIcon
           fontSize="medium"
           style={{ color: "#fff", width: "50px", height: "50px" }}

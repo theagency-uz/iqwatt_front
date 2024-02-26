@@ -18,6 +18,9 @@
   justify-content: center;
   border: 1px solid #ff8115;
 }
+.sliderNavigation > button:hover {
+  background: transparent;
+}
 
 .sliderNavigation > button > svg {
   color: #ff8115;

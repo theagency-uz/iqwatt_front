@@ -19,7 +19,7 @@ function AccordionContent({ lng, ...props }) {
   const [expanded, setExpanded] = useState(false);
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
   const smUp = useMediaQuery((theme) => theme.breakpoints.up("sm"));
-  
+
   return (
     <Accordion
       // ref={accordionRef}
@@ -29,45 +29,10 @@ function AccordionContent({ lng, ...props }) {
       className={classes.accordion}
     >
       <AccordionSummary
-        expandIcon={
-          <ChevronRightIcon
-            sx={{
-              position: "relative",
-              top: lgUp ? "2px" : "1px",
-              color: "#FF8115",
-              fontSize: "var(--font24)",
-            }}
-          />
-        }
+        expandIcon={<ChevronRightIcon className={classes.accordionSvg} />}
         aria-controls="panel1a-content"
         id="panel1a-header"
-        sx={{
-          padding: "11px 15px",
-          backgroundColor: "#fff",
-          borderRadius: "5px",
-          flexGrow: 0,
-          minHeight: "auto",
-          justifyContent: "space-between",
-          alignItems: "center",
-          fontFamily: "Manrope",
-          gap: "7px",
-          "& .MuiAccordionSummary-content": {
-            flexGrow: 0,
-            margin: "0",
-            color: "#8E8E8E",
-            fontFamily: "Manrope",
-            fontSize: "var(--font14)",
-            fontStyle: "normal",
-            fontWeight: 500,
-            lineHeight: "128.571%",
-          },
-          "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-            transform: "rotate(90deg)",
-            position: "relative",
-            top: lgUp ? "2px" : "1px",
-            left: lgUp ? "2px" : "1px",
-          },
-        }}
+        className={classes.accordionSummary}
       >
         {t("Выберите услуги")}
       </AccordionSummary>

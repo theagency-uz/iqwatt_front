@@ -1,12 +1,12 @@
 "use client";
 import { Drawer } from "@mui/material";
+import classes from "./styles.module.css";
 
 function Sidebar({
   open,
   setOpen,
   children,
   isForm = false,
-  maxWidth = "600px",
   ...props
 }) {
   return (
@@ -15,17 +15,8 @@ function Sidebar({
       anchor="right"
       onClose={() => setOpen(false)}
       open={open}
-      PaperProps={{
-        sx: {
-          background: "#F8F8F8",
-          color: "#F8F8F8",
-          // maxWidth: "400px",
-          width: "100%",
-          paddingTop: "70px",
-          maxWidth: maxWidth,
-        },
-      }}
       sx={{ zIndex: isForm ? 15 : 12 }}
+      className={classes.sidebar}
       variant="temporary"
     >
       {children}

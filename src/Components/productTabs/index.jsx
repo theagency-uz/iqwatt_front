@@ -23,16 +23,9 @@ function ProductTabs({ lng, product, ...props }) {
   };
 
   return (
-    <Box
-      sx={{
-        width: "100%",
-        typography: "body1",
-        padding: mdUp ? "0 50px" : "0 10px",
-        marginBottom: mdUp ? "80px" : "60px",
-      }}
-    >
+    <Box className={classes.tabMain}>
       <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Box className={classes.tabContext}>
           <TabList
             onChange={handleChange}
             aria-label="product"
@@ -42,69 +35,26 @@ function ProductTabs({ lng, product, ...props }) {
               },
             }}
             variant="scrollable"
-            sx={{
-              "& .Mui-selected": {
-                color: "black!important",
-              },
-              "& .MuiTabs-flexContainer": {
-                justifyContent: mdUp ? "space-around" : "space-between",
-                marginBottom: mdUp ? "15px" : "0",
-                padding: "0",
-              },
-            }}
+            className={classes.tabList}
           >
             <Tab
               label={t("Описание")}
               value="1"
-              sx={{
-                fontFamily: "Manrope",
-                fontStyle: "normal",
-                fontWeight: 500,
-                fontSize: "var(--font14)",
-                lineHeight: "130%",
-                color: "#BFBFBF",
-                textTransform: "none",
-                lineHeight: "100%",
-                padding: 0,
-                border: "none",
-                minWidth: "auto",
-                maxWidth: "100%",
-                width: "50%",
-              }}
+              className={classes.tabLabel}
               disableRipple={true}
             />
 
             <Tab
               label={t("Инструкция")}
               value="2"
-              sx={{
-                fontFamily: "Manrope",
-                fontStyle: "normal",
-                fontWeight: 500,
-                fontSize: "var(--font14)",
-                lineHeight: "130%",
-                color: "#BFBFBF",
-                textTransform: "none",
-                lineHeight: "100%",
-                padding: 0,
-                border: "none",
-                minWidth: "auto",
-                maxWidth: "100%",
-                width: "50%",
-              }}
+              className={classes.tabLabel}
               disableRipple={true}
             />
           </TabList>
         </Box>
 
         <Box>
-          <TabPanel
-            value="1"
-            sx={{
-              padding: mdUp ? "0 65px" : "0",
-              paddingTop: mdUp ? "30px" : "15px",
-            }}
-          >
+          <TabPanel value="1" className={classes.tabPanel}>
             <div
               dangerouslySetInnerHTML={{
                 __html: product.description,
@@ -113,13 +63,7 @@ function ProductTabs({ lng, product, ...props }) {
             ></div>
           </TabPanel>
 
-          <TabPanel
-            value="2"
-            sx={{
-              padding: mdUp ? "0 65px" : "0",
-              paddingTop: mdUp ? "30px" : "15px",
-            }}
-          >
+          <TabPanel value="2" className={classes.tabPanel}>
             <div
               // dangerouslySetInnerHTML={{
               //   __html: product.description[i18n.language],

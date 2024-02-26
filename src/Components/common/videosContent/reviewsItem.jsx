@@ -44,7 +44,6 @@ function ReviewsItem({ lng, videos, ...props }) {
           onClick={(e) => {
             setModal({ open: true, id: videos.id });
           }}
-          sx={{ display: "flex" }}
         >
           <PlayArrowIcon style={{ color: "#fff", fontSize: "50px" }} />
         </Button>

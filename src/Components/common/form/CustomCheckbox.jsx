@@ -33,9 +33,6 @@ export default function CustomCheckbox({ label, value, onChange }) {
           }
         />
       }
-      sx={{
-        color: "#EDEDED",
-      }}
       label={label}
       checked={value}
       onChange={onChange}

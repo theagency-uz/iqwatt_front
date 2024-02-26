@@ -139,16 +139,7 @@ function Form({ lng, ...props }) {
           placeholder={t("Комментарий (по желанию)")}
         />
       </Box>
-      <Button
-        className={classes.submit}
-        disableRipple={true}
-        type="submit"
-        sx={{
-          "&:hover": {
-            background: "#F16F00",
-          },
-        }}
-      >
+      <Button className={classes.submit} disableRipple={true} type="submit">
         {t("отправить")}
         <Box className={classes.formIconBox}>
           <Image
@@ -161,7 +152,7 @@ function Form({ lng, ...props }) {
         </Box>
         {/* {loading && (
           <span style={{ transform: "skew(25deg)" }}>
-            <CircularProgress sx={{ color: "#fff" }} size={20} />
+            <CircularProgress size={20} />
           </span>
         )} */}
       </Button>

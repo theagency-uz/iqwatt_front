@@ -21,6 +21,10 @@
   background: #ff9f54;
 }
 
+.sliderNavigation > button:hover {
+  background: #ff9f54;
+}
+
 .sliderNavigation > button > svg {
   color: #fff;
   font-size: var(--font20);

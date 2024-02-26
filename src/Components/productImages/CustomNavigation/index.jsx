@@ -6,28 +6,10 @@ import classes from "./styles.module.css";
 export default function CustomNavigation({ prevRef, nextRef }) {
   return (
     <div className={classes.sliderNavigation}>
-      <Button
-        aria-label="назад"
-        className={classes.btnPrev}
-        ref={prevRef}
-        sx={{
-          "&:hover": {
-            background: "#FF9F54",
-          },
-        }}
-      >
+      <Button aria-label="назад" className={classes.btnPrev} ref={prevRef}>
         <ArrowBackIosNewIcon />
       </Button>
-      <Button
-        aria-label="вперед"
-        className={classes.btnNext}
-        ref={nextRef}
-        sx={{
-          "&:hover": {
-            background: "#FF9F54",
-          },
-        }}
-      >
+      <Button aria-label="вперед" className={classes.btnNext} ref={nextRef}>
         <ArrowForwardIosIcon />
       </Button>
     </div>
