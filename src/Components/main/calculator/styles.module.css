@@ -10,7 +10,7 @@
   flex-direction: column;
   border-radius: 10px;
   background: #ff8115;
-  padding: 50px 20px 40px; 
+  padding: 50px 20px 40px;
   width: 100%;
   gap: 40px;
 }
@@ -178,6 +178,25 @@ button.stageBtn:hover {
   object-fit: cover;
 }
 
+.formLabel {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 128.571%;
+  margin-bottom: 12px;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  border: 1px solid #ffa152;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
 @media (min-width: 992px) {
   .calculator {
     padding: 0 20px;
@@ -230,6 +249,10 @@ button.stageBtn:hover {
   }
   .tabPanelDesc {
     max-width: 25vw;
+  }
+
+  .radioGroup {
+    border-radius: 100px;
   }
 }
 
