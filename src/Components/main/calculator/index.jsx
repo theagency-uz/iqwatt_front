@@ -41,18 +41,7 @@ function Calculator({ lng, ...props }) {
           </p>
 
           <FormControl>
-            <FormLabel
-              id="calculate"
-              sx={{
-                fontFamily: "Manrope",
-                fontStyle: "normal",
-                fontWeight: 700,
-                fontSize: "var(--font14)",
-                lineHeight: "128.571%",
-                color: "#fff",
-                marginBottom: "12px",
-              }}
-            >
+            <FormLabel id="calculate" className={classes.formLabel}>
               {t("Выберите, что вы хотите рассчитать:")}
             </FormLabel>
             <RadioGroup
@@ -60,14 +49,7 @@ function Calculator({ lng, ...props }) {
               name="calculate"
               value={value}
               onChange={handleChange}
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                gap: "0",
-                border: "1px solid #FFA152",
-                borderRadius: mdUp ? "100px" : "10px",
-                justifyContent: "space-between",
-              }}
+              className={classes.radioGroup}
             >
               <FormControlLabel
                 value="installation"
@@ -139,7 +121,6 @@ function Calculator({ lng, ...props }) {
             </RadioGroup>
           </FormControl>
         </Box>
-
 
         <CalculatorCard lng={lng} />
       </Box>
