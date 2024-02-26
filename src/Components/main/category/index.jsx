@@ -22,7 +22,7 @@ function Category({ lng, ...props }) {
     async function fetchAll() {
       const tempCategories = await getCategories({ lng });
       console.log({ tempCategories });
-      // setCategories(tempCategories);
+      setCategories(tempCategories);
     }
     fetchAll();
   }, [lng]);
@@ -46,7 +46,26 @@ function Category({ lng, ...props }) {
           })
         ) : (
           <Box className={classes.loaderWrapper}>
-            <Skeleton variant='rounded' className={classes.loaderItem} />
+            <Skeleton
+              variant='rounded'
+              className={classes.loaderItem}
+              height={200}
+            />
+            <Skeleton
+              variant='rounded'
+              className={classes.loaderItem}
+              height={200}
+            />
+            <Skeleton
+              variant='rounded'
+              className={classes.loaderItem}
+              height={200}
+            />
+            <Skeleton
+              variant='rounded'
+              className={classes.loaderItem}
+              height={200}
+            />
           </Box>
         )}
       </ul>
