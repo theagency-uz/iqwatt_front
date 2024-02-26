@@ -196,8 +196,9 @@ function Footer({ lng, page, settings, ...props }) {
 
             <li className={classes.footerItem}>
               <Link
-                href={'/'}
+                href={"https://theagency.uz/"}
                 onClick={goToTop}
+                target="_blank"
                 className={classes.footerBoxItem}
               >
                 {t('Разработка сайта')}
@@ -392,8 +393,9 @@ function Footer({ lng, page, settings, ...props }) {
             </Link>
             <Box className={classes.footerLinkBox}>
               <Link
-                href={'/'}
+                href={"https://theagency.uz/"}
                 onClick={goToTop}
+                target="_blank"
                 className={classes.footerBoxItem}
               >
                 {t('Разработка сайта')}

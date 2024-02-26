@@ -228,6 +228,9 @@ button.stageBtn:hover {
     width: 32px;
     height: 32px;
   }
+  .tabPanelDesc {
+    max-width: 25vw;
+  }
 }
 
 @media (min-width: 1440px) {

@@ -214,7 +214,7 @@ button.btnNext > svg {
     max-width: 27.6vw;
   }
   .swiperWrapper {
-    width: 45%;
+    width: 50%;
   }
   .swiperSlide {
     padding: 25px 25px 40px;
@@ -274,7 +274,7 @@ button.btnNext > svg {
     height: 32px;
   }
   .swiperWrapper {
-    width: 35%;
+    width: 40%;
   }
 
   .swiperSlide {

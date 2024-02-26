@@ -20,6 +20,7 @@
 .partnersInfo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   border-radius: 10px;
   background: #f8f8f8;
   padding: 30px 20px;
@@ -124,6 +125,93 @@ button.stageBtn:hover {
   font-weight: 500;
   line-height: 128.571%;
 }
+
+.viewerBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+}
+
+.viewerMain {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewerSwiper::part(button-prev),
+.viewerSwiper::part(button-next) {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  color: #fff;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewerSwiper::part(button-prev) {
+  background: rgba(85, 85, 85, 0.5);
+  backdrop-filter: blur(40px);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  left: 0;
+}
+.viewerSwiper::part(button-next) {
+  background: rgba(85, 85, 85, 0.5);
+  backdrop-filter: blur(40px);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  right: 0;
+}
+.viewerSwiper {
+  width: 100%;
+  height: 80%;
+}
+
+.viewerSwiper_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .viewerSwiper {
+    width: 100%;
+    height: 100%;
+  }
+  .viewerSwiper::part(button-prev) {
+    background: none;
+    backdrop-filter: blur(0px);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .viewerSwiper::part(button-next) {
+    background: none;
+    backdrop-filter: blur(0px);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .viewerBox {
+    padding: 100px;
+  }
+}
+
+
 
 @media (min-width: 992px) {
   .partnersInner {

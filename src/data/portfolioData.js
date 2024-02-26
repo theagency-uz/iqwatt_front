@@ -2,7 +2,7 @@ const portfolioData = [
   {
     id: 1,
     image: "/images/portfolio/akay.webp",
-    text: "ЖК Akay City"
+    text: "ЖК Akay City, г.Ташкент"
   },
   {
     id: 2,

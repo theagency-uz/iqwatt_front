@@ -33,7 +33,7 @@
 }
 
 .categoryBox {
-  padding: 15px 0 25px 1 0px;
+  padding: 15px 0 15px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,8 +42,8 @@
 
 .categoryTitle {
   color: #4e4e4e;
-  font-family: 'Manrope';
-  font-size: var(--font16);
+  font-family: "Manrope";
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 125%;
@@ -90,6 +90,11 @@
   transition: all 0.4s ease;
 }
 
+.categoryItemLink:hover span {
+  color: #fff;
+  transition:  all 0.4s ease;
+}
+
 .categoryItemIconBox {
   width: 24px;
   height: 24px;
@@ -111,14 +116,17 @@
 
 .categoryImg {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
   border-radius: 10px;
 }
 
 @media (min-width: 400px) {
   .categoryImg {
-    height: 100%;
+    object-fit: cover;
+  }
+  .categoryTitle {
+    font-size: var(--font16);
   }
 }
 @media (min-width: 992px) {
@@ -163,6 +171,7 @@
     font-weight: 500;
     line-height: 150%;
     text-transform: lowercase;
+    transition:  all 0.4s ease;
   }
   f .categoryItemIconBox {
     width: 25px;
