@@ -1,57 +1,54 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { Box, useMediaQuery } from "@mui/material";
+'use client';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Box, useMediaQuery, Skeleton } from '@mui/material';
 
-import { useTranslation } from "@/app/i18n/client";
+import { useTranslation } from '@/app/i18n/client';
 
-import classes from "./styles.module.css";
-import Title from "@/Components/common/title";
-import categoryData from "@/data/categoryData";
+import classes from './styles.module.css';
+import Title from '@/Components/common/title';
+import categoryData from '@/data/categoryData';
+import { useEffect, useState } from 'react';
+import { getCategories } from '@/services/category';
+import CategoryItem from './categoryItem';
 
 function Category({ lng, ...props }) {
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const { t, i18n } = useTranslation(lng);
 
+  const [categories, setCategories] = useState();
+
+  useEffect(() => {
+    async function fetchAll() {
+      const tempCategories = await getCategories({ lng });
+      console.log({ tempCategories });
+      // setCategories(tempCategories);
+    }
+    fetchAll();
+  }, [lng]);
+
   return (
-    <Box className={classes.category} id="catalog">
+    <Box className={classes.category} id='catalog'>
       <Box className={classes.categoryWrapper}>
-        <Title title={"Каталог"} lng={lng} />
+        <Title title={'Каталог'} lng={lng} />
       </Box>
 
       <ul className={classes.categoryList}>
-        {categoryData.map((category, index) => {
-          return (
-            <li className={classes.categoryItem} key={category.id}>
-              <Box className={classes.categoryBox}>
-                <h4 className={classes.categoryTitle}>{t(category.title)}</h4>
-
-                <Link href={category.link} className={classes.categoryItemLink}>
-                  <span>{t("в каталог")}</span>
-                  <Box className={classes.categoryItemIconBox}>
-                    <Image
-                      src={"/icons/arrow-right-white.svg"}
-                      width={18}
-                      height={15}
-                      alt={"icon"}
-                      className={classes.categoryIcon}
-                    />
-                  </Box>
-                </Link>
-              </Box>
-
-              <Box className={classes.categoryImgBox}>
-                <Image
-                  src={category.image}
-                  width={461}
-                  height={324}
-                  alt={"category-image"}
-                  className={classes.categoryImg}
-                />
-              </Box>
-            </li>
-          );
-        })}
+        {categories ? (
+          categories.map((category, index) => {
+            return (
+              <CategoryItem
+                key={category.id}
+                category={category.attributes}
+                lng={lng}
+              />
+            );
+          })
+        ) : (
+          <Box className={classes.loaderWrapper}>
+            <Skeleton variant='rounded' className={classes.loaderItem} />
+          </Box>
+        )}
       </ul>
     </Box>
   );

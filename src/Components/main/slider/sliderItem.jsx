@@ -11,9 +11,12 @@ import { strapiImageUrl } from '@/utils/endpoints';
 function SliderItem({ lng, slider, ...props }) {
   const smUp = useMediaQuery((theme) => theme.breakpoints.up('sm'));
   const { t, i18n } = useTranslation(lng);
-
   return (
-    <Box className={classes.sliderImgBox}>
+    <Link
+      className={classes.sliderImgBox}
+      href={slider.link || ''}
+      target={slider.isExternal ? '_blank' : '_self'}
+    >
       <Image
         src={
           strapiImageUrl +
@@ -32,7 +35,7 @@ function SliderItem({ lng, slider, ...props }) {
         <h2 className={classes.sliderTitle}>{slider.title}</h2>
         <p className={classes.sliderText}>{slider.description}</p>
       </Box>
-    </Box>
+    </Link>
   );
 }
 
