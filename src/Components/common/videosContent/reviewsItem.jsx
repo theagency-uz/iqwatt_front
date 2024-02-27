@@ -1,11 +1,40 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Box, useMediaQuery, Fade, Modal, Button } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import classes from "./styles.module.css";
 import { useTranslation } from "@/app/i18n/client";
 import ModalContent from "./modalContent";
+
+function useOutsideAlerter(ref, fn) {
+  useEffect(() => {
+    /**
+     * Alert if clicked on outside of element
+     */
+    function handleClickOutside(event) {
+      let check = false;
+
+      for (let i = 0; i < ref.length; i++) {
+        if (ref[i].current && !ref[i].current.contains(event.target)) {
+          check = true;
+        } else {
+          check = false;
+          break;
+        }
+      }
+      if (check) {
+        fn(event);
+      }
+    }
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref, fn]);
+}
 
 function ReviewsItem({ lng, videos, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
@@ -14,6 +43,8 @@ function ReviewsItem({ lng, videos, ...props }) {
 
   const [modal, setModal] = useState({ open: false, id: null });
   const [stop, setStop] = useState(false);
+
+  useOutsideAlerter([videoRef], () => setModal(false));
 
   const handleVideo = () => {
     setStop(!stop);

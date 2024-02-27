@@ -39,8 +39,6 @@ function PageWrapper({ lng, ...props }) {
 
         <CatalogPage lng={lng} product={product} />
       </Box>
-
-      <Portfolio lng={lng} />
     </>
   );
 }

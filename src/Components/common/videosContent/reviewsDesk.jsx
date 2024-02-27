@@ -45,7 +45,7 @@ function ReviewsDesk({ lng, videos, ...props }) {
   return (
     <Box className={classes.reviews}>
       <Box className={classes.reviewsWrapper}>
-        <Title title={"Портфолио"} lng={lng} />
+        <Title title={"IQ WATT в деле"} lng={lng} />
         <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
       </Box>
 
