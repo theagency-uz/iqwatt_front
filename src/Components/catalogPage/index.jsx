@@ -25,17 +25,14 @@ function CatalogPage({ lng, product, ...props }) {
               {t(product.subCategoryTitle)}
             </h4>
             <ul className={classes.catalogList}>
-              <a
+              <Link
                 href={`/product/${product.id}`}
                 className={classes.catalogItem}
               >
                 <Box className={classes.catalogItemBox}>
                   <Box className={classes.catalogWrapper}>
                     <p className={classes.catalogName}>{t(product.title)}</p>
-                    <Link
-                      href={`/product/${product.id}`}
-                      className={classes.catalogItemLink}
-                    >
+                    <Box className={`${classes.catalogItemLink} buttonHover`}>
                       {t('смотреть')}
                       <Box className={classes.catalogItemIconBox}>
                         <Image
@@ -46,7 +43,7 @@ function CatalogPage({ lng, product, ...props }) {
                           className={classes.catalogIcon}
                         />
                       </Box>
-                    </Link>
+                    </Box>
                   </Box>
 
                   <Box className={classes.catalogImgBox}>
@@ -61,7 +58,7 @@ function CatalogPage({ lng, product, ...props }) {
                 </Box>
 
                 <p className={classes.catalogText}>{t(product.text)}</p>
-              </a>
+              </Link>
             </ul>
           </Box>
         );

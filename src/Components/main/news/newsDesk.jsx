@@ -1,20 +1,20 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { Box, useMediaQuery } from "@mui/material";
-import { register } from "swiper/element";
-import { useTranslation } from "@/app/i18n/client";
-import { useEffect, useRef, useState } from "react";
-import { Scrollbar, Navigation } from "swiper/modules";
+'use client';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Box, useMediaQuery } from '@mui/material';
+import { register } from 'swiper/element';
+import { useTranslation } from '@/app/i18n/client';
+import { useEffect, useRef, useState } from 'react';
+import { Scrollbar, Navigation } from 'swiper/modules';
 
-import classes from "./styles.module.css";
-import Title from "@/Components/common/title";
-import CustomNavigation from "./CustomNavigation";
-import NewsItem from "./newsItem";
-import newsData from "@/data/newsData";
+import classes from './styles.module.css';
+import Title from '@/Components/common/title';
+import CustomNavigation from './CustomNavigation';
+import NewsItem from './newsItem';
+import newsData from '@/data/newsData';
 
 function NewsDesk({ lng, ...props }) {
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const { t, i18n } = useTranslation(lng);
 
   const swiperRef = useRef(null);
@@ -33,7 +33,7 @@ function NewsDesk({ lng, ...props }) {
       navigation: {
         prevEl: prevRef.current,
         nextEl: nextRef.current,
-        disabledClass: "disabled",
+        disabledClass: 'disabled',
       },
 
       injectStyles: [],
@@ -47,12 +47,12 @@ function NewsDesk({ lng, ...props }) {
   return (
     <Box className={classes.news}>
       <Box className={classes.newsWrapper}>
-        <Title title={"Новости и статьи"} lng={lng} />
+        <Title title={t('Новости и статьи')} />
         <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
       </Box>
 
       <Box className={classes.swiperWrapper}>
-        <swiper-container ref={swiperRef} class={classes.mySwiper} init="false">
+        <swiper-container ref={swiperRef} class={classes.mySwiper} init='false'>
           {newsData.map((news, index) => {
             return (
               <swiper-slide key={news.id} class={classes.swiperSlide}>
@@ -64,14 +64,14 @@ function NewsDesk({ lng, ...props }) {
       </Box>
 
       <Box className={classes.newsBox}>
-        <Link href={"/articles"} className={classes.newsLink}>
-          {t("смотреть всё")}
+        <Link href={'/articles'} className={classes.newsLink}>
+          {t('смотреть всё')}
           <Box className={classes.newsIconBox}>
             <Image
-              src={"/icons/arrow-right.svg"}
+              src={'/icons/arrow-right.svg'}
               width={18}
               height={15}
-              alt={"icon"}
+              alt={'icon'}
               className={classes.newsIcon}
             />
           </Box>

@@ -29,7 +29,7 @@ function Category({ lng, ...props }) {
   return (
     <Box className={classes.category} id='catalog'>
       <Box className={classes.categoryWrapper}>
-        <Title title={'Каталог'} lng={lng} />
+        <Title title={t('Каталог')} />
       </Box>
 
       <ul className={classes.categoryList}>

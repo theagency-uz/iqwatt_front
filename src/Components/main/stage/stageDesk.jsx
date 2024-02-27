@@ -1,18 +1,18 @@
-"use client";
-import { Box, useMediaQuery } from "@mui/material";
-import { register } from "swiper/element";
-import { useTranslation } from "@/app/i18n/client";
-import { useEffect, useRef, useState } from "react";
-import { Scrollbar, Navigation } from "swiper/modules";
+'use client';
+import { Box, useMediaQuery } from '@mui/material';
+import { register } from 'swiper/element';
+import { useTranslation } from '@/app/i18n/client';
+import { useEffect, useRef, useState } from 'react';
+import { Scrollbar, Navigation } from 'swiper/modules';
 
-import classes from "./styles.module.css";
-import Title from "@/Components/common/title";
-import CustomNavigation from "./CustomNavigation";
-import StageItem from "./stageItem";
-import stageData from "@/data/stageData";
+import classes from './styles.module.css';
+import Title from '@/Components/common/title';
+import CustomNavigation from './CustomNavigation';
+import StageItem from './stageItem';
+import stageData from '@/data/stageData';
 
 function StageDesk({ lng, ...props }) {
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const { t, i18n } = useTranslation(lng);
 
   const swiperRef = useRef(null);
@@ -32,7 +32,7 @@ function StageDesk({ lng, ...props }) {
         prevEl: prevRef.current,
         nextEl: nextRef.current,
         nextItemEl: nextItemRef.current,
-        disabledClass: "disabled",
+        disabledClass: 'disabled',
       },
 
       injectStyles: [],
@@ -46,10 +46,10 @@ function StageDesk({ lng, ...props }) {
     <Box className={classes.stage}>
       <Box className={classes.stageInner}>
         <Box className={classes.stageWrapper}>
-          <Title title={"4 этапа \n до нового \n уровня комфорта"} lng={lng} />
+          <Title title={t('4 этапа \n до нового \n уровня комфорта')} />
           <p className={classes.stageText}>
             {t(
-              "Вся работа делится на 4 этапа - подписание договора, замеры и выбор схемы, установка и оплата. По окончанию всех работ мы также выдаем гарантию на 20 лет."
+              'Вся работа делится на 4 этапа - подписание договора, замеры и выбор схемы, установка и оплата. По окончанию всех работ мы также выдаем гарантию на 20 лет.'
             )}
           </p>
           <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
@@ -59,7 +59,7 @@ function StageDesk({ lng, ...props }) {
           <swiper-container
             ref={swiperRef}
             class={classes.mySwiper}
-            init="false"
+            init='false'
           >
             {stageData.map((stage, index) => {
               return (

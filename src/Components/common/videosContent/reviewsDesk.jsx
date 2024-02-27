@@ -1,18 +1,18 @@
-"use client";
-import { Box, useMediaQuery } from "@mui/material";
-import { register } from "swiper/element";
-import { useTranslation } from "@/app/i18n/client";
-import { useEffect, useRef, useState } from "react";
-import { Scrollbar, Navigation } from "swiper/modules";
+'use client';
+import { Box, useMediaQuery } from '@mui/material';
+import { register } from 'swiper/element';
+import { useTranslation } from '@/app/i18n/client';
+import { useEffect, useRef, useState } from 'react';
+import { Scrollbar, Navigation } from 'swiper/modules';
 
-import classes from "./styles.module.css";
-import Title from "@/Components/common/title";
-import CustomNavigation from "./CustomNavigation";
-import videosData from "@/data/videosData";
-import ReviewsItem from "./reviewsItem";
+import classes from './styles.module.css';
+import Title from '@/Components/common/title';
+import CustomNavigation from './CustomNavigation';
+import videosData from '@/data/videosData';
+import ReviewsItem from './reviewsItem';
 
 function ReviewsDesk({ lng, videos, ...props }) {
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const { t, i18n } = useTranslation(lng);
 
   const swiperRef = useRef(null);
@@ -31,7 +31,7 @@ function ReviewsDesk({ lng, videos, ...props }) {
       navigation: {
         prevEl: prevRef.current,
         nextEl: nextRef.current,
-        disabledClass: "disabled",
+        disabledClass: 'disabled',
       },
 
       injectStyles: [],
@@ -45,12 +45,12 @@ function ReviewsDesk({ lng, videos, ...props }) {
   return (
     <Box className={classes.reviews}>
       <Box className={classes.reviewsWrapper}>
-        <Title title={"Портфолио"} lng={lng} />
+        <Title title={t('Портфолио')} />
         <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
       </Box>
 
       <Box className={classes.swiperWrapper}>
-        <swiper-container ref={swiperRef} class={classes.mySwiper} init="false">
+        <swiper-container ref={swiperRef} class={classes.mySwiper} init='false'>
           {videos.map((videos, index) => {
             return (
               <swiper-slide key={videos.id} class={classes.swiperSlide}>

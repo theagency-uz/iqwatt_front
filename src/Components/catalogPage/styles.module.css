@@ -30,7 +30,7 @@
 
 .catalogName {
   color: #333;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
@@ -41,7 +41,7 @@
   border-radius: 50px;
   background: transparent;
   color: #7a7a7a;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -57,7 +57,7 @@
   transition: all 0.4s ease;
 }
 
-.catalogItemLink:hover {
+.catalog :global(:hover > .buttonHover) {
   background: #ff8115;
   color: #fff;
   transition: all 0.4s ease;
@@ -91,7 +91,7 @@
 
 .catalogText {
   color: #a0a0a0;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -101,7 +101,7 @@
 
 .catalogMainTitle {
   color: #333;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
@@ -111,7 +111,7 @@
 
 .catalogTitle {
   color: #242424;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font16);
   font-style: normal;
   font-weight: 500;
@@ -144,7 +144,7 @@
     width: 28px;
     height: 28px;
   }
-  
+
   .catalogMainTitle {
     font-size: var(--font40);
     margin-bottom: 30px;

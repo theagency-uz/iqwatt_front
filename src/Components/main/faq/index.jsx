@@ -13,7 +13,7 @@ function Faq({ lng, isOpen, setIsOpen, ...props }) {
   return (
     <Box className={classes.faq}>
       <Box className={classes.faqInner}>
-        <Title title={'Ответы \n на частые вопросы'} lng={lng} />
+        <Title title={t('Ответы \n на частые вопросы')} />
         {/* <p className={classes.faqText}>
           {t(
             "Собрали самые популярные вопросы от наших покупателей и подробно ответили на них"

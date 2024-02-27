@@ -15,12 +15,12 @@ export async function generateMetadata({
   ...props
 }) {
   const category = await getCategory({ lng, slug: categorySlug });
-
+  console.log({ strapiImageUrl });
   return {
-    metadataBase: '',
+    metadataBase: new URL(strapiImageUrl),
     title: category.attributes.name,
     openGraph: {
-      images: [strapiImageUrl + category.attributes.image.data.attributes.url],
+      images: [category.attributes.image.data.attributes.url],
     },
   };
 }
@@ -34,7 +34,7 @@ async function Catalog({ params: { lng, categorySlug }, ...props }) {
     <div>
       <div className={classes.productInfo}>
         <div className={classes.productWrapper}>
-          <Title title={'Каталог'} lng={lng} />
+          <Title title={t('Каталог')} />
           <span className={classes.border}></span>
         </div>
 

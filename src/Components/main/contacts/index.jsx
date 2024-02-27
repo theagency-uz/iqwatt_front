@@ -1,17 +1,17 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { Box, useMediaQuery } from "@mui/material";
+'use client';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Box, useMediaQuery } from '@mui/material';
 
-import { useTranslation } from "@/app/i18n/client";
-import { useContext, useRef, useState } from "react";
+import { useTranslation } from '@/app/i18n/client';
+import { useContext, useRef, useState } from 'react';
 
-import classes from "./styles.module.css";
-import Title from "@/Components/common/title";
-import { NumericFormat } from "react-number-format";
+import classes from './styles.module.css';
+import Title from '@/Components/common/title';
+import { NumericFormat } from 'react-number-format';
 
 function Contacts({ lng, ...props }) {
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const { t, i18n } = useTranslation(lng);
 
   const cost = 5000;
@@ -20,26 +20,26 @@ function Contacts({ lng, ...props }) {
   let number;
 
   return (
-    <Box className={classes.contacts} id="contacts">
+    <Box className={classes.contacts} id='contacts'>
       <Box className={classes.contactsWrapper}>
-        <Title title={"Свяжитесь \n с нами"} lng={lng} />
+        <Title title={t('Свяжитесь \n с нами')} />
 
         <Box className={classes.contactsInfo}>
           <p className={classes.contactsText}>
             {t(
-              "Полное сопровождение проекта - фотоотчеты каждую неделю и выезды на строительные обьекты"
+              'Полное сопровождение проекта - фотоотчеты каждую неделю и выезды на строительные обьекты'
             )}
           </p>
 
           <Box className={classes.contactsBox}>
-            <Link href={"/"} className={classes.contactsLink}>
-              {t("telegram")}
+            <Link href={'/'} className={classes.contactsLink}>
+              {t('telegram')}
               <Box className={classes.contactsIconBox}>
                 <Image
-                  src={"/icons/arrow-right.svg"}
+                  src={'/icons/arrow-right.svg'}
                   width={18}
                   height={15}
-                  alt={"icon"}
+                  alt={'icon'}
                   className={classes.contactsIcon}
                 />
               </Box>
