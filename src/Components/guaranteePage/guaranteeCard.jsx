@@ -4,8 +4,6 @@ import { Box, Button, useMediaQuery } from "@mui/material";
 import React from "react";
 import classes from "./styles.module.css";
 import Image from "next/image";
-import Link from "next/link";
-import FileUpload from "./fileUpload";
 
 function GuaranteeCard({ lng, ...props }) {
   const { t } = useTranslation(lng);
@@ -13,87 +11,74 @@ function GuaranteeCard({ lng, ...props }) {
 
   return (
     <Box className={classes.cardWrapper}>
-      <h2 className={classes.cardTitle}>
-        {t("Регистрация гарантийного талона")}
-      </h2>
+      <Box className={classes.cardTextBox}>
+        <h2 className={classes.cardTitle}>
+          {t("Регистрация гарантийного талона")}
+        </h2>
+        <p
+          className={classes.cardText}
+          style={{ maxWidth: mdUp ? "27vw" : "100%" }}
+        >
+          {t(
+            "Для регистрации гарантии напишите нашему менеджеру в Telegram и пришлите нам две фотографии."
+          )}
+        </p>
+      </Box>
 
-      <ul className={classes.cardList}>
-        <li className={classes.cardItem}>
-          <Box className={classes.cardIconBox}>
-            <Image
-              src={"/icons/guarant-step.svg"}
-              width={50}
-              height={20}
-              alt={"icon-staps"}
-              className={classes.cardStep}
-            />
+      <Box className={classes.cardItem}>
+        <Box className={classes.cardInner}>
+          <h3 className={classes.cardItemTitle}>
+            {t("Отправьте две фотографии нам в Telegram")}
+          </h3>
+          <Box className={classes.cardBox}>
+            <Box className={classes.cardBoxWrapper}>
+              <Image
+                src={"/icons/training-icon.svg"}
+                width={17}
+                height={17}
+                alt={"icon"}
+                className={classes.cardCircleIcon}
+              />
+              <p className={classes.cardText}>
+                {t("фотографию заполненного монтажником гарантийного талона")}
+              </p>
+            </Box>
+            <Box className={classes.cardBoxWrapper}>
+              <Image
+                src={"/icons/training-icon.svg"}
+                width={17}
+                height={17}
+                alt={"icon"}
+                className={classes.cardCircleIcon}
+              />
+              <p className={classes.cardText}>
+                {t("фотографию выполненной работы")}
+              </p>
+            </Box>
           </Box>
-          <Box className={classes.cardInner}>
-            <h3 className={classes.cardItemTitle}>
-              {t("Авторизуйтесь в Telegram")}
-            </h3>
-            <p
-              className={classes.cardText}
-              style={{ maxWidth: mdUp ? "21.1vw" : "100%" }}
-            >
+
+          <Box className={classes.uploadBox}>
+            <a href={"/"} className={classes.uploadBtn} target="_blank">
+              telegram
+              <Box className={classes.uploadIconBox}>
+                <Image
+                  src={"/icons/arrow-right.svg"}
+                  width={18}
+                  height={15}
+                  alt={"icon"}
+                  className={classes.uploadIcon}
+                />
+              </Box>
+            </a>
+
+            <p className={classes.cardDesc}>
               {t(
                 "После проверки отправленных вами файлов, мы оповестим вас о регистрации гарантии."
               )}
             </p>
-            <div></div>
           </Box>
-        </li>
-        <li className={classes.cardItem}>
-          <Box className={classes.cardIconBox}>
-            <Image
-              src={"/icons/guarant-step2.svg"}
-              width={50}
-              height={20}
-              alt={"icon-staps"}
-              className={classes.cardStep}
-            />
-          </Box>
-          <Box className={classes.cardInner}>
-            <h3 className={classes.cardItemTitle}>
-              {t("Отправьте две фотографии:")}
-            </h3>
-            <Box className={classes.cardBox}>
-              <p className={classes.cardText}>
-                {t("По кнопке ниже прикрепите две фотографии:")}
-              </p>
-
-              <Box className={classes.cardBoxWrapper}>
-                <Image
-                  src={"/icons/training-icon.svg"}
-                  width={17}
-                  height={17}
-                  alt={"icon"}
-                  className={classes.cardCircleIcon}
-                />
-                <p className={classes.cardText}>
-                  {t("фотографию заполненного монтажником гарантийного талона")}
-                </p>
-              </Box>
-              <Box className={classes.cardBoxWrapper}>
-                <Image
-                  src={"/icons/training-icon.svg"}
-                  width={17}
-                  height={17}
-                  alt={"icon"}
-                  className={classes.cardCircleIcon}
-                />
-                <p className={classes.cardText}>
-                  {t("фотографию выполненной работы")}
-                </p>
-              </Box>
-            </Box>
-
-            <FileUpload name="file" lng={lng} />
-          </Box>
-        </li>
-      </ul>
-
-      <p className={classes.cardDesc}>{t("После проверки мы пришлем вам сообщение, подтверждающее, что гарантия зарегистрирована.")}</p>
+        </Box>
+      </Box>
     </Box>
   );
 }

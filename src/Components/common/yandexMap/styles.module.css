@@ -1,0 +1,126 @@
+/* .map :global(.ymaps-2-1-79-inner-panes) {
+  filter: invert(100%);
+  -ms-filter: invert(100%);
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  -o-filter: invert(100%);
+}
+
+.map :global(.ymaps-2-1-79-balloon) {
+  padding: 0;
+  box-shadow: none;
+}
+
+.map :global(.ymaps-2-1-79-balloon__layout) {
+  background: #fff;
+  margin: 0 !important;
+  min-width: auto;
+  height: 190px;
+  min-height: auto;
+  width: 340px;
+  border-radius: 25px;
+  padding: 0 25px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.map :global(.ymaps-2-1-79-balloon__content) {
+  padding: 0px !important;
+  background: #fff;
+  margin: 0 !important;
+  min-width: auto;
+  height: auto;
+  min-height: auto;
+}
+
+.map :global(.ymaps-2-1-79-balloon__tail) {
+  display: none;
+}
+
+.mapBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.map :global(.ymaps-2-1-79-balloon__content) > ymaps {
+  height: auto !important;
+  width: auto !important;
+}
+.map :global(.ymaps-2-1-79-balloon__content) > ymaps > ymaps {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.map :global(.ymaps-2-1-79-balloon__close) {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  float: initial;
+}
+
+.map :global(.ymaps-2-1-79-balloon__close-button) {
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+  background: url("/icons/close.svg") no-repeat;
+  background-size: 30px;
+}
+
+.mapBox p {
+  color: #20207a;
+  font-family: "Manrope";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: 1.228px;
+}
+
+.mapText {
+  color: #20207a;
+  font-family: "Manrope";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: 1.228px;
+}
+
+
+@media (max-width: 446px) {
+  .map :global(.ymaps-2-1-79-balloon__content) > ymaps > ymaps {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px;
+  }
+  
+  .map :global(.ymaps-2-1-79-balloon__close) {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    float: initial;
+  }
+
+  .mapBox p {
+    color: #20207a;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: 1.228px;
+  }
+  
+  .mapText {
+    color: #20207a;
+    font-family: "Manrope";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: 1.228px;
+  }
+} */

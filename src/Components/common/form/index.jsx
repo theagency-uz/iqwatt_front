@@ -128,7 +128,7 @@ function Form({ lng, ...props }) {
 
       <AccordionContent lng={lng} />
 
-      <Box className={classes.comment}>
+      {/* <Box className={classes.comment}>
         <LabelInput
           label={""}
           name="comment"
@@ -138,7 +138,7 @@ function Form({ lng, ...props }) {
           type="textarea"
           placeholder={t("Комментарий (по желанию)")}
         />
-      </Box>
+      </Box> */}
       <Button className={classes.submit} disableRipple={true} type="submit">
         {t("отправить")}
         <Box className={classes.formIconBox}>

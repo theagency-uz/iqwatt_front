@@ -56,7 +56,6 @@
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
-  margin-bottom: 20px;
 }
 
 .cardList {
@@ -106,7 +105,7 @@
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
-  line-height: 120%;
+  line-height: 150%;
 }
 
 .cardBox {
@@ -121,42 +120,42 @@
 }
 
 .cardDesc {
-  color: #171717;
-  text-align: center;
+  color: #a4a4a4;
   font-family: "Manrope";
-  font-size: var();
+  font-size: var(--font14);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 120%;
   line-height: 128.571%;
 }
 
 .uploadBox {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   flex-direction: column;
 }
 
-button.uploadBtn {
+.uploadBtn {
   border-radius: 50px;
   border: 1px solid #fff;
   background: #ff8115;
   color: #fff;
   font-family: "Manrope";
-  font-size: var(--font14);
+  font-size: var(--font18);
   font-style: normal;
   font-weight: 600;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 170px;
-  height: 40px;
+  width: 155px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding-left: 5px;
+  padding-left: 7px;
   transition: all 0.4s ease;
 }
 
-button.uploadBtn:hover {
+.uploadBtn:hover {
   background: #fff;
   color: #ff8115;
   border: 1px solid #ff8115;
@@ -177,7 +176,26 @@ button.uploadBtn:hover {
   object-fit: cover;
 }
 
+.cardTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 @media (min-width: 992px) {
+  .cardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
   .guaranteeInner {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 90px;
@@ -202,7 +220,6 @@ button.uploadBtn:hover {
   }
   .cardTitle {
     font-size: var(--font40);
-    margin-bottom: 30px;
     max-width: 35.4vw;
   }
 
@@ -216,37 +233,26 @@ button.uploadBtn:hover {
     padding: 30px;
   }
   .cardDesc {
-    max-width: 40vw;
-    margin: 0 auto;
+    max-width: 22vw;
   }
 
-  button.uploadBtn {
-    font-size: 14px;
-    width: 180px;
-    height: 46px;
+  .cardItemTitle {
+    max-width: 19vw;
   }
-}
 
-@media (min-width: 1200px) {
-  .cardDesc {
-    max-width: 37vw;
-    margin: 0 auto;
+  .uploadBox {
+    margin-top: 15px;
+    flex-direction: row;
   }
 }
 
 @media (min-width: 1440px) {
-  button.uploadBtn {
+  .uploadBtn {
     font-size: var(--font14);
-    width: 12vw;
-    height: 50px;
   }
 
   .uploadIconBox {
     width: 32px;
     height: 32px;
-  }
-  .cardDesc {
-    max-width: 23vw;
-    margin: 0 auto;
   }
 }

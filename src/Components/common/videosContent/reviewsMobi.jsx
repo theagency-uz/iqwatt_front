@@ -45,7 +45,7 @@ function ReviewsMobi({ lng, videos, ...props }) {
   return (
     <Box className={classes.reviews}>
       <Box className={classes.reviewsWrapper}>
-        <Title title={t('Портфолио')} />
+        <Title title={"IQ WATT в деле"} lng={lng} />
         <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
       </Box>
 
