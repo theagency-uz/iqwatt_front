@@ -1,21 +1,20 @@
 import { strapi } from './httpService';
 
-async function getSlider({ lng = "ru" } = { lng: "ru" }) {
+async function getProducts({ lng = "ru", category } = { lng: "ru" }) {
   try {
-    const result = await strapi.get("/slider", {
+    const result = await strapi.get("/products", {
       params: {
         locale: lng,
         populate: {
-          slide: {
-            populate: ['image_desktop', 'image_mobile']
-          }
+          preview_image: true,
+          // slide: {
+          //   populate: ['preview_image']
+          // }
         },
         // sort: ['createdAt:desc'],
         filters: {
-          slide: {
-            is_active: {
-              "$eq": true
-            }
+          category: {
+            id: category
           }
         }
       }
@@ -28,5 +27,5 @@ async function getSlider({ lng = "ru" } = { lng: "ru" }) {
 }
 
 export {
-  getSlider
+  getProducts
 };

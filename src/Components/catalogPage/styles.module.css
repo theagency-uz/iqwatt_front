@@ -99,7 +99,7 @@
   text-align: center;
 }
 
-.catalogMainTitle {
+.subcategoryName {
   color: #333;
   font-family: 'Manrope';
   font-size: var(--font30);
@@ -109,7 +109,7 @@
   margin-bottom: 10px;
 }
 
-.catalogTitle {
+.subcategory2Name {
   color: #242424;
   font-family: 'Manrope';
   font-size: var(--font16);
@@ -145,12 +145,12 @@
     height: 28px;
   }
 
-  .catalogMainTitle {
+  .subcategoryName {
     font-size: var(--font40);
     margin-bottom: 30px;
   }
 
-  .catalogTitle {
+  .subcategory2Name {
     font-size: var(--font20);
   }
 }

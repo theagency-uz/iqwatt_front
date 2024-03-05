@@ -1,21 +1,35 @@
-'use client';
-import { useTranslation } from '@/app/i18n/client';
-import { Box, Button, useMediaQuery } from '@mui/material';
-import React from 'react';
+import { useTranslation } from '@/app/i18n';
 import classes from './styles.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import Termo from '../common/termo';
+import CatalogProducts from './catalogProducts';
+import { getProducts } from '@/services/product';
 
-function CatalogPage({ lng, product, ...props }) {
-  const { t } = useTranslation(lng);
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-
+async function CatalogPage({ lng, product, category, ...props }) {
+  const { t } = await useTranslation(lng);
+  const products = await getProducts({ lng: lng, category: category.id });
+  console.log(products);
   return (
     <>
+      {category.attributes.subcategory.data.map((subcategory) => (
+        <div key={subcategory.id}>
+          <div className={classes.subcategoryName}>
+            {subcategory.attributes.name}
+          </div>
+          {subcategory.attributes.subcategory2.data.map((subcategory2) => (
+            <div key={subcategory2.id}>
+              <div className={classes.subcategory2Name}>
+                {subcategory2.attributes.name}
+              </div>
+              <CatalogProducts lng={lng} subcategory2={subcategory2} />
+            </div>
+          ))}
+        </div>
+      ))}
       {product.map((product, index) => {
         return (
-          <Box key={product.id} className={classes.catalog}>
+          <div key={product.id} className={classes.catalog}>
             {product.categoryTitle && (
               <h3 className={classes.catalogMainTitle}>
                 {t(product.categoryTitle)}
@@ -29,12 +43,12 @@ function CatalogPage({ lng, product, ...props }) {
                 href={`/product/${product.id}`}
                 className={classes.catalogItem}
               >
-                <Box className={classes.catalogItemBox}>
-                  <Box className={classes.catalogWrapper}>
+                <div className={classes.catalogItemBox}>
+                  <div className={classes.catalogWrapper}>
                     <p className={classes.catalogName}>{t(product.title)}</p>
-                    <Box className={`${classes.catalogItemLink} buttonHover`}>
+                    <div className={`${classes.catalogItemLink} buttonHover`}>
                       {t('смотреть')}
-                      <Box className={classes.catalogItemIconBox}>
+                      <div className={classes.catalogItemIconBox}>
                         <Image
                           src={'/icons/arrow-right-white.svg'}
                           width={18}
@@ -42,11 +56,11 @@ function CatalogPage({ lng, product, ...props }) {
                           alt={'icon'}
                           className={classes.catalogIcon}
                         />
-                      </Box>
-                    </Box>
-                  </Box>
+                      </div>
+                    </div>
+                  </div>
 
-                  <Box className={classes.catalogImgBox}>
+                  <div className={classes.catalogImgBox}>
                     <Image
                       src={product.image}
                       width={194}
@@ -54,13 +68,13 @@ function CatalogPage({ lng, product, ...props }) {
                       alt={'catalog-image'}
                       className={classes.catalogImg}
                     />
-                  </Box>
-                </Box>
+                  </div>
+                </div>
 
                 <p className={classes.catalogText}>{t(product.text)}</p>
               </Link>
             </ul>
-          </Box>
+          </div>
         );
       })}
 
