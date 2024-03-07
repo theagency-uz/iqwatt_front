@@ -8,10 +8,10 @@ import { Scrollbar, Navigation } from 'swiper/modules';
 import classes from './styles.module.css';
 import Title from '@/Components/common/title';
 import CustomNavigation from './CustomNavigation';
-import PortfolioItem from './portfolioItem';
+import PortfolioItem from './galleryItem';
 import portfolioData from '@/data/portfolioData';
 
-function PortfolioMobi({ lng, ...props }) {
+function PortfolioDesk({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const { t, i18n } = useTranslation(lng);
 
@@ -21,11 +21,11 @@ function PortfolioMobi({ lng, ...props }) {
 
   useEffect(() => {
     register();
-
+    /** @type {import('swiper/types').SwiperOptions} */
     const params = {
       modules: [Scrollbar, Navigation],
-      slidesPerView: 1.2,
-      spaceBetween: 10,
+      slidesPerView: 3,
+      spaceBetween: 20,
       centeredSlides: true,
       loop: true,
       scrollbar: { draggable: true },
@@ -65,4 +65,4 @@ function PortfolioMobi({ lng, ...props }) {
   );
 }
 
-export default PortfolioMobi;
+export default PortfolioDesk;

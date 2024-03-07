@@ -17,7 +17,6 @@ export default function FaqItem({ item, expanded, handleChange, index, lng }) {
 
   return (
     <Accordion
-      key={item.id}
       expanded={expanded === `panel${index}`}
       onChange={handleChange(`panel${index}`)}
       className={classes.accordion}
@@ -37,11 +36,11 @@ export default function FaqItem({ item, expanded, handleChange, index, lng }) {
         className={classes.accordionSummary}
       >
         <Typography className={classes.title}>
-          {item.id}. {t(item.title)}
+          {index + 1}. {item.question}
         </Typography>
       </AccordionSummary>
       <AccordionDetails className={classes.accordionDetails}>
-        <Typography className={classes.text}>{t(item.text)}</Typography>
+        <Typography className={classes.text}>{item.answer}</Typography>
       </AccordionDetails>
     </Accordion>
   );

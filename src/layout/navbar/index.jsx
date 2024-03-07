@@ -55,7 +55,7 @@ function Navbar({ lng, settings, ...props }) {
 
       <Box className={classes.navbar}>
         <Box className={classes.navbarWrapper}>
-          <Link href={'/'} className={classes.navbarImage}>
+          <Link href={`/${lng}`} className={classes.navbarImage}>
             <Image
               src={
                 strapiImageUrl +

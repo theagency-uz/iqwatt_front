@@ -1,5 +1,4 @@
 .contacts {
-  padding: 0px 10px;
   margin-bottom: 20px;
 }
 
@@ -13,7 +12,7 @@
   padding: 30px 20px;
   height: auto;
   width: 100%;
-  background-image: url("/static/site/bg-line.png");
+  background-image: url('/static/site/bg-line.png');
   background-size: auto;
   background-position: -50px -100px;
   background-repeat: no-repeat;
@@ -27,7 +26,7 @@
 
 .contactsText {
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -40,7 +39,7 @@
   border: 1px solid #fff;
   background: transparent;
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -81,7 +80,6 @@
 }
 @media (min-width: 992px) {
   .contacts {
-    padding: 0px 20px;
   }
   .contactsWrapper {
     flex-direction: row;

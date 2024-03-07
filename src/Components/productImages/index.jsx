@@ -1,28 +1,22 @@
-"use client";
-import { useTranslation } from "@/app/i18n/client";
-import { Box, Button, useMediaQuery } from "@mui/material";
-import React, { useEffect, useRef, useState } from "react";
-import classes from "./styles.module.css";
-import Image from "next/image";
-import { Scrollbar, Navigation } from "swiper/modules";
-import { register } from "swiper/element";
-import CustomNavigation from "./CustomNavigation";
+'use client';
+import { Box } from '@mui/material';
+import React, { useEffect, useRef } from 'react';
+import classes from './styles.module.css';
+import Image from 'next/image';
+import { Scrollbar, Navigation } from 'swiper/modules';
+import { register } from 'swiper/element';
+import CustomNavigation from './CustomNavigation';
+import { strapiImageUrl } from '@/utils/endpoints';
 
-function ProductImages({ productImage, ...props }) {
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
-
+function ProductImages({ images, ...props }) {
   const swiperRef = useRef(null);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const [images, setImages] = useState(productImage);
-
-  useEffect(() => {
-    setImages(productImage);
-  }, [productImage]);
 
   useEffect(() => {
     register();
 
+    /** @type {import('swiper/react').SwiperProps} */
     const params = {
       modules: [Scrollbar, Navigation],
       slidesPerView: 1,
@@ -32,7 +26,7 @@ function ProductImages({ productImage, ...props }) {
       navigation: {
         prevEl: prevRef.current,
         nextEl: nextRef.current,
-        disabledClass: "disabled",
+        disabledClass: 'disabled',
       },
 
       injectStyles: [],
@@ -46,7 +40,7 @@ function ProductImages({ productImage, ...props }) {
   return (
     <Box className={classes.productImages}>
       <swiper-container
-        init="false"
+        init='false'
         ref={swiperRef}
         class={classes.productMainSwiper}
       >
@@ -54,10 +48,10 @@ function ProductImages({ productImage, ...props }) {
           return (
             <swiper-slide class={classes.productMainSwiperItem} key={index}>
               <Image
-                src={image}
+                src={strapiImageUrl + image.attributes.url}
                 width={570}
                 height={533}
-                alt={"Product image"}
+                alt={'Product image'}
                 className={classes.productMainImg}
               />
             </swiper-slide>

@@ -1,102 +1,12 @@
-.catalog {
-  margin-bottom: 30px;
-}
-.catalogList {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-}
-
-.catalogItem {
+.subcategoryWrapper {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 60px;
 }
-
-.catalogItemBox {
-  border-radius: 20px;
-  background: #f8f8f8;
-  padding: 20px;
+.subcategory2Wrapper {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.catalogWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.catalogName {
-  color: #333;
-  font-family: 'Manrope';
-  font-size: var(--font14);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-}
-
-.catalogItemLink {
-  border-radius: 50px;
-  background: transparent;
-  color: #7a7a7a;
-  font-family: 'Manrope';
-  font-size: var(--font14);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 128.571%;
-  text-transform: lowercase;
-  border: 1px solid #7a7a7a;
-  width: 125px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding-left: 7px;
-  transition: all 0.4s ease;
-}
-
-.catalog :global(:hover > .buttonHover) {
-  background: #ff8115;
-  color: #fff;
-  transition: all 0.4s ease;
-  border: 1px solid #ff8115;
-}
-
-.catalogItemIconBox {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #ff8115;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.catalogIcon {
-  object-fit: cover;
-}
-
-.catalogImgBox {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.catalogImg {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-}
-
-.catalogText {
-  color: #a0a0a0;
-  font-family: 'Manrope';
-  font-size: var(--font14);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 100%;
-  text-align: center;
+  gap: 40px;
 }
 
 .subcategoryName {
@@ -120,31 +30,6 @@
 }
 
 @media (min-width: 992px) {
-  .catalog {
-    margin-bottom: 40px;
-  }
-  .catalogWrapper {
-    gap: 20px;
-  }
-
-  .catalogList {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .catalogItemBox {
-    padding: 20px 20px 12px 30px;
-  }
-  .catalogItemLink {
-    width: 125px;
-    height: 35px;
-    font-size: 14px;
-  }
-
-  .catalogItemIconBox {
-    width: 28px;
-    height: 28px;
-  }
-
   .subcategoryName {
     font-size: var(--font40);
     margin-bottom: 30px;
@@ -156,9 +41,4 @@
 }
 
 @media (min-width: 1440px) {
-  .catalogItemLink {
-    width: 7.5vw;
-    height: 40px;
-    font-size: var(--font14);
-  }
 }

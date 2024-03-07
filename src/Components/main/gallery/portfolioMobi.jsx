@@ -8,10 +8,10 @@ import { Scrollbar, Navigation } from 'swiper/modules';
 import classes from './styles.module.css';
 import Title from '@/Components/common/title';
 import CustomNavigation from './CustomNavigation';
-import videosData from '@/data/videosData';
-import ReviewsItem from './reviewsItem';
+import PortfolioItem from './galleryItem';
+import portfolioData from '@/data/portfolioData';
 
-function ReviewsMobi({ lng, videos, ...props }) {
+function PortfolioMobi({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const { t, i18n } = useTranslation(lng);
 
@@ -25,7 +25,8 @@ function ReviewsMobi({ lng, videos, ...props }) {
     const params = {
       modules: [Scrollbar, Navigation],
       slidesPerView: 1.2,
-      spaceBetween: 20,
+      spaceBetween: 10,
+      centeredSlides: true,
       loop: true,
       scrollbar: { draggable: true },
       navigation: {
@@ -43,18 +44,18 @@ function ReviewsMobi({ lng, videos, ...props }) {
   }, []);
 
   return (
-    <Box className={classes.reviews}>
-      <Box className={classes.reviewsWrapper}>
-        <Title title={"IQ WATT в деле"} lng={lng} />
+    <Box className={classes.portfolio}>
+      <Box className={classes.portfolioWrapper}>
+        <Title title={t('Галерея объектов')} />
         <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
       </Box>
 
       <Box className={classes.swiperWrapper}>
         <swiper-container ref={swiperRef} class={classes.mySwiper} init='false'>
-          {videos.map((videos, index) => {
+          {portfolioData.map((portfolio, index) => {
             return (
-              <swiper-slide key={videos.id} class={classes.swiperSlide}>
-                <ReviewsItem videos={videos} lng={lng} />
+              <swiper-slide key={portfolio.id} class={classes.swiperSlide}>
+                <PortfolioItem portfolio={portfolio} lng={lng} />
               </swiper-slide>
             );
           })}
@@ -64,4 +65,4 @@ function ReviewsMobi({ lng, videos, ...props }) {
   );
 }
 
-export default ReviewsMobi;
+export default PortfolioMobi;

@@ -1,3 +1,10 @@
 .breadCrumbs {
   color: #a0a0a0;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .breadCrumbs {
+    display: block;
+  }
 }

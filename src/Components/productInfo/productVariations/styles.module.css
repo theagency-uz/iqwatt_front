@@ -1,0 +1,65 @@
+.wrapper {
+}
+.wrapper .radio {
+  display: none;
+}
+.select {
+  background: #fff;
+  height: 40px;
+  padding-right: 40px;
+  padding-left: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #8e8e8e;
+  font-size: 14px;
+
+  font-family: 'Manrope';
+  font-weight: 500;
+  min-width: 170px;
+}
+.icon {
+  color: #ff8115;
+}
+
+.variationItem {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 100%;
+  font-size: 14px;
+  color: #8e8e8e;
+  font-family: 'Manrope';
+  font-weight: 500;
+}
+.variationItem:global(.Mui-selected) {
+  background: none;
+}
+
+.radio {
+  border-radius: 50%;
+  border: 1px solid #ededed;
+  width: 17px;
+  height: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioChecked {
+  border-radius: 50%;
+
+  background: #ff8115;
+  width: 5px;
+  height: 5px;
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1440px) {
+}

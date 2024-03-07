@@ -38,7 +38,7 @@
 
 .houseTitle {
   color: #333;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font16);
   font-style: normal;
   font-weight: 600;
@@ -47,17 +47,15 @@
 
 .houseText {
   color: #333;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
   line-height: 128.571%;
 }
 
-
 @media (min-width: 992px) {
   .house {
-    padding: 0 20px;
     margin-bottom: 80px;
   }
 

@@ -1,5 +1,4 @@
 .partners {
-  padding: 0 10px;
   margin-bottom: 50px;
 }
 
@@ -38,7 +37,7 @@
 
 .partnersText {
   color: #7a7a7a;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
@@ -49,7 +48,7 @@
   border-radius: 50px;
   background: #f07d00;
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 600;
@@ -61,12 +60,12 @@
   align-items: center;
   justify-content: space-evenly;
   padding-left: 7px;
-  transition:  all 0.4s ease;
+  transition: all 0.4s ease;
   border: 1px solid #f07d00;
 }
 
 .partnersLink:hover {
-  transition:  all 0.4s ease;
+  transition: all 0.4s ease;
   background: #fff;
   color: #f07d00;
 }
@@ -85,10 +84,8 @@
   object-fit: cover;
 }
 
-
 @media (min-width: 992px) {
   .partners {
-    padding: 0 20px;
   }
   .partnersWrapper {
     grid-template-columns: repeat(2, 1fr);
@@ -97,7 +94,7 @@
     padding: 50px;
     justify-content: center;
   }
-  
+
   .partnersTextBox {
     max-width: 28.1vw;
   }
@@ -107,7 +104,7 @@
     height: 46px;
     font-size: 14px;
   }
-  
+
   .partnersIconBox {
     width: 27px;
     height: 27px;
@@ -120,7 +117,7 @@
     height: 50px;
     font-size: var(--font14);
   }
-  
+
   .partnersIconBox {
     width: 32px;
     height: 32px;

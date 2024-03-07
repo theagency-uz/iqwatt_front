@@ -1,24 +1,31 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Product from '../product';
 
-export default function CatalogProducts({ lng, subcategory2, category }) {
-  const [products, setProducts] = useState();
+import classes from './styles.module.css';
 
-  useEffect(() => {
-    async function fetchAll() {
-      
+export default function CatalogProducts({
+  lng,
+  products,
+  category,
+  subcategory,
+  subcategory2,
+}) {
+  const filteredProducts = products.filter((p) => {
+    if (subcategory2) {
+      return p.attributes.subcategory_2.data.id === subcategory2.id;
     }
-    fetchAll();
-  }, [subcategory2]);
+    return p.attributes.subcategory.data.id === subcategory.id;
+  });
 
   return (
-    <div>
-      {products ? (
-        products.map((product) => <div key={product.id}></div>)
-      ) : (
-        <div>no product</div>
-      )}
+    <div className={classes.productsWrapper}>
+      {filteredProducts?.length > 0
+        ? filteredProducts.map((product) => (
+            <Product key={product.id} product={product} />
+          ))
+        : null}
     </div>
   );
 }

@@ -13,7 +13,7 @@
 
 .label {
   color: #333;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -26,26 +26,17 @@
   background: #fff;
   padding: 11px 19px;
   color: #8e8e8e;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
   height: auto;
   line-height: 128.571%;
 }
-.input :global(.MuiFormHelperText-root.Mui-error) {
-  color: #8e8e8e;
-  font-family: "Manrope";
-  font-size: var(--font14);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 128.571%;
-  margin-top: 5px;
-}
-
-.helperText {
-  color: #8e8e8e;
-  font-family: "Manrope";
+.helperText,
+.input :global(.Mui-error) {
+  color: #ff8115;
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
@@ -58,7 +49,7 @@
   background: #fff;
   padding: 11px 19px;
   color: #8e8e8e;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
@@ -76,7 +67,7 @@
   background: transparent;
   border: none;
   color: #8e8e8e;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
@@ -102,7 +93,7 @@
 
 .input :global(.MuiInput-input::placeholder) {
   color: #8e8e8e;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
@@ -119,7 +110,7 @@
   background: #fff;
   padding: 15px;
   color: #8e8e8e;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
@@ -127,7 +118,7 @@
 }
 .textarea :global(textarea::placeholder) {
   color: #8e8e8e;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
@@ -137,7 +128,7 @@
 
 .accordion:global(.MuiAccordion-root) {
   color: #8e8e8e;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -164,7 +155,7 @@
 }
 .checkbox :global(span.MuiFormControlLabel-label) {
   color: #8e8e8e;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -193,21 +184,21 @@
   color: #ededed;
 }
 
-.formInputBox :global(.MuiFormHelperText-root) {
-  color: #8e8e8e !important;
-  font-family: "Manrope";
+/* .formInputBox :global(.MuiFormHelperText-root) {
+  color: #8e8e8e;
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 400;
   line-height: 128.571%;
   margin-top: 5px;
-}
+} */
 
 button.submit {
   border-radius: 50px;
   background: #f07d00;
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -254,7 +245,7 @@ button.submit:hover {
   transform: translate(-50%, -50%);
   z-index: 10;
   max-width: 100%;
-  outline: "none";
+  outline: 'none';
 }
 
 button.notifBtn {
@@ -270,7 +261,7 @@ button.notifBtn {
   color: #fff;
   text-align: center;
   font-size: 18px;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
@@ -292,15 +283,15 @@ button.notifBtn {
   min-height: auto;
   justify-content: space-between;
   align-items: center;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   gap: 7px;
 }
 
 .accordionSummary :global(.MuiAccordionSummary-content) {
   flex-grow: 0;
   margin: 0;
-  color: #8E8E8E;
-  font-family: "Manrope";
+  color: #8e8e8e;
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -351,9 +342,10 @@ button.notifBtn {
     top: 2px;
   }
 
-  .accordionSummary :global(.MuiAccordionSummary-expandIconWrapper.Mui-expanded) {
+  .accordionSummary
+    :global(.MuiAccordionSummary-expandIconWrapper.Mui-expanded) {
     top: 2px;
-    left: 2px
+    left: 2px;
   }
 }
 

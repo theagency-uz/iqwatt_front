@@ -5,10 +5,22 @@ import { useTranslation } from '@/app/i18n/client';
 import FaqAccordion from './faqAccordion';
 
 import classes from './styles.module.css';
+import { useEffect, useState } from 'react';
+import { getFaq } from '@/services/faq';
 
 function Faq({ lng, isOpen, setIsOpen, ...props }) {
   const { t, i18n } = useTranslation(lng);
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
+
+  const [faq, setFaq] = useState();
+
+  useEffect(() => {
+    async function fetchAll() {
+      const tempFaq = await getFaq({ lng, limit: 10, page: 1 });
+      setFaq(tempFaq);
+    }
+    fetchAll();
+  }, [lng]);
 
   return (
     <Box className={classes.faq}>
@@ -21,7 +33,7 @@ function Faq({ lng, isOpen, setIsOpen, ...props }) {
         </p> */}
       </Box>
 
-      <FaqAccordion lng={lng} isOpen={isOpen} setIsOpen={setIsOpen} />
+      <FaqAccordion lng={lng} isOpen={isOpen} setIsOpen={setIsOpen} faq={faq} />
     </Box>
   );
 }

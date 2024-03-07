@@ -1,17 +1,21 @@
-"use client";
-import { useMediaQuery } from "@mui/material";
-import { useTranslation } from "@/app/i18n/client";
-import PortfolioDesk from "./portfolioDesk";
-import PortfolioMobi from "./portfolioMobi";
+'use client';
+import VideosContent from '@/Components/common/videosContent';
+import videosData from '@/data/videosData';
+import { getPortfolios } from '@/services/portfolio';
+import { useEffect, useState } from 'react';
 
 function Portfolio({ lng, ...props }) {
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
-  const { t, i18n } = useTranslation(lng);
+  const [videos, setVideos] = useState();
 
-  if (mdUp) {
-    return <PortfolioDesk lng={lng} />;
-  }
-  return <PortfolioMobi lng={lng} />;
+  useEffect(() => {
+    async function fetchAll() {
+      const tempVideos = await getPortfolios({ lng, limit: 10, page: 1 });
+      setVideos(tempVideos);
+    }
+    fetchAll();
+  }, [lng]);
+
+  return <VideosContent lng={lng} videos={videos} />;
 }
 
 export default Portfolio;

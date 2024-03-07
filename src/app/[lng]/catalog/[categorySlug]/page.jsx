@@ -10,6 +10,7 @@ import Portfolio from '@/Components/main/portfolio';
 
 import classes from './styles.module.css';
 import BreadCrumbs from '@/Components/common/breadCrumbs';
+import Container from '@/Container';
 
 export async function generateMetadata({
   params: { lng, categorySlug },
@@ -40,7 +41,7 @@ async function Catalog({ params: { lng, categorySlug }, ...props }) {
   ];
 
   return (
-    <div>
+    <Container>
       <div className={classes.productInfo}>
         <BreadCrumbs lng={lng} links={links} />
         <div className={classes.productWrapper}>
@@ -71,7 +72,7 @@ async function Catalog({ params: { lng, categorySlug }, ...props }) {
       </div>
 
       <Portfolio lng={lng} />
-    </div>
+    </Container>
   );
 }
 

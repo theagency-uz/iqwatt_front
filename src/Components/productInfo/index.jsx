@@ -1,50 +1,48 @@
-"use client";
-import { useTranslation } from "@/app/i18n/client";
-import { Box, Button, useMediaQuery } from "@mui/material";
-import React, { useContext } from "react";
-import classes from "./styles.module.css";
-import Image from "next/image";
-import Link from "next/link";
-import ProductAbout from "./productAbout";
-import ProductAccordion from "./productAccordion";
-import FormContext from "@/context/form.context";
+'use client';
+import { useTranslation } from '@/app/i18n/client';
+import { Box, Button } from '@mui/material';
+import React, { useContext, useState } from 'react';
+import classes from './styles.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import FormContext from '@/context/form.context';
+import ProductVariations from './productVariations';
+import ProductCharacteristics from './productCharacteristics';
 
 function ProductInfo({ lng, product, ...props }) {
   const { t } = useTranslation(lng);
   const { form, setForm } = useContext(FormContext);
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  const [selectedVariation, setSelectedVariation] = useState('');
 
   return (
     <Box className={classes.productBox}>
-      <Box key={product.id} className={classes.productWrapper}>
-        <h3 className={classes.productTitle}>{t(product.title)}</h3>
-        {product.footage && (
-          <ProductAccordion footage={product.footage} lng={lng} />
+      <Box className={classes.productWrapper}>
+        <h3 className={classes.productTitle}>{product.name}</h3>
+        {product.variation?.length > 0 && (
+          <ProductVariations
+            variations={product.variation}
+            lng={lng}
+            selectedVariation={selectedVariation}
+            setSelectedVariation={setSelectedVariation}
+          />
         )}
-        <ProductAbout
+        <ProductCharacteristics
+          product={product}
           lng={lng}
-          series={product.series}
-          packaging={product.packaging}
-          weight={product.weight}
-          length={product.length}
-          sectionPower={product.sectionPower}
-          pipelinePower={product.pipelinePower}
-          mounting={product.mounting}
-          cableType={product.cableType}
-          category={product.category}
+          selectedVariation={selectedVariation}
         />
         <Button
           className={classes.productBtn}
           onClick={() => setForm({ open: true })}
           disableRipple={true}
         >
-          {t("оставить заявку")}
+          {t('оставить заявку')}
           <Box className={classes.productIconBox}>
             <Image
-              src={"/icons/arrow-right.svg"}
+              src={'/icons/arrow-right.svg'}
               width={18}
               height={15}
-              alt={"icon"}
+              alt={'icon'}
               className={classes.productIcon}
             />
           </Box>

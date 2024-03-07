@@ -11,6 +11,7 @@ export default function CategoryItem({ lng, category }) {
 
   return (
     <li className={classes.categoryItem}>
+      <a href={`/${lng}/catalog/${category.slug}`}>
       <Box className={classes.categoryBox}>
         <h4 className={classes.categoryTitle}>{category.name}</h4>
 
@@ -40,6 +41,8 @@ export default function CategoryItem({ lng, category }) {
           className={classes.categoryImg}
         />
       </Box>
+
+      </a>
     </li>
   );
 }

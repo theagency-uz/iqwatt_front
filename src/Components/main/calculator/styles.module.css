@@ -1,5 +1,4 @@
 .calculator {
-  padding: 0 10px;
   margin-bottom: 60px;
 }
 
@@ -23,7 +22,7 @@
 
 .calculatorTitle {
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font24);
   font-style: normal;
   font-weight: 500;
@@ -33,7 +32,7 @@
 
 .calculatorText {
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -49,7 +48,7 @@
 
 .tabPanelTitle {
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
@@ -58,7 +57,7 @@
 
 .tabPanelText {
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -79,7 +78,7 @@
 
 .tabPanelDesc {
   color: #ffdfc4;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -98,7 +97,7 @@
   height: 36px;
   border: none;
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -110,7 +109,7 @@
 }
 .tabInputMetre {
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
@@ -131,7 +130,7 @@
 
 .tabPanelPrice {
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
@@ -143,7 +142,7 @@ button.stageBtn {
   border: 1px solid #fff;
   background: #ffa152;
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -180,7 +179,7 @@ button.stageBtn:hover {
 
 .formLabel {
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 700;
@@ -194,7 +193,7 @@ button.stageBtn:hover {
 }
 
 .tabLabel {
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
   font-size: var(--font12);
@@ -215,7 +214,7 @@ button.stageBtn:hover {
 }
 
 .tabLabelThird {
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
   font-size: var(--font12);
@@ -260,7 +259,7 @@ button.stageBtn:hover {
   margin: 0;
   margin-bottom: 30px;
   flex-wrap: wrap;
-  padding: "0";
+  padding: '0';
 }
 
 .tabPanelMain {
@@ -278,7 +277,7 @@ button.stageBtn:hover {
   gap: 30px;
 }
 
-.formControlLabelLeft, 
+.formControlLabelLeft,
 .formControlLabelRight {
   margin: 0;
   width: 50%;
@@ -286,7 +285,7 @@ button.stageBtn:hover {
 
 .formControlLabelLeft :global(.MuiFormControlLabel-label) {
   padding: 13px 0px;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 600;
@@ -302,7 +301,7 @@ button.stageBtn:hover {
 
 .formControlLabelRight :global(.MuiFormControlLabel-label) {
   padding: 13px 0px;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 600;
@@ -324,7 +323,6 @@ button.stageBtn:hover {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-
 
 .formControlLabelLeft :global(.Mui-checked + .MuiFormControlLabel-label) {
   background: #ffa152;
@@ -404,7 +402,6 @@ button.stageBtn:hover {
   }
 
   .calculator {
-    padding: 0 20px;
     margin-bottom: 80px;
   }
   .tabMainBox {
@@ -419,7 +416,7 @@ button.stageBtn:hover {
     flex-direction: row;
     padding: 60px 45px;
     min-height: 551px;
-    background-image: url("/static/site/bg-line.png");
+    background-image: url('/static/site/bg-line.png');
     background-size: auto;
     background-position: left top;
     background-position: -50px -50px;

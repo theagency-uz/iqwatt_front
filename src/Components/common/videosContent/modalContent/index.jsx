@@ -1,19 +1,17 @@
-"use client";
-import { Box, Button, Fade, Modal, useMediaQuery } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
-import classes from "../styles.module.css";
+'use client';
+import { Box, Button, Fade, Modal, useMediaQuery } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import classes from '../styles.module.css';
 
-import { useState } from "react";
-import videosData from "@/data/videosData";
-import { useTranslation } from "@/app/i18n/client";
+import { useState } from 'react';
+import videosData from '@/data/videosData';
+import { useTranslation } from '@/app/i18n/client';
 
-function ModalContent({ open, setOpen, lng, id, ...props }) {
+function ModalContent({ open, setOpen, video, lng, ...props }) {
   const { t, i18n } = useTranslation(lng);
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
 
-  const videoContent = videosData.find((d) => d.id === id);
-
-  if (!videoContent) {
+  if (!video) {
     return null;
   }
 
@@ -36,9 +34,9 @@ function ModalContent({ open, setOpen, lng, id, ...props }) {
             </Button>
             <video
               // ref={videoRef}
-              src={videoContent.video}
+              src={video}
               // poster={videoContent.poster}
-              type="video/mp4"
+              type='video/mp4'
               // onClick={handleVideo}
               className={classes.modalVideo}
               controls

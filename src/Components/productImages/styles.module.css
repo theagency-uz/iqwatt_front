@@ -1,17 +1,20 @@
 .productImages {
   width: 100%;
   position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .productMainSwiperItem {
   display: flex;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .productMainImg {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 10px;
 }
 
 .productBottomSwiperItem {

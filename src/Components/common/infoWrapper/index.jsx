@@ -15,14 +15,13 @@ const infoData = [
 
 function InfoWrapper({ lng, title, text, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
-  const { t, i18n } = useTranslation(lng);
 
   return (
     <Box className={classes.info}>
       <Box className={classes.infoWrapper}>
-        <Title title={t(title)} />
+        <Title title={title} />
         <span className={classes.border}></span>
-        <p className={classes.infoText}>{t(text)}</p>
+        <p className={classes.infoText}>{text}</p>
       </Box>
 
       <ul className={classes.infoList}>
@@ -30,7 +29,7 @@ function InfoWrapper({ lng, title, text, ...props }) {
           return (
             <li className={classes.infoItem} key={index}>
               <span className={classes.infoNumber}>{item.number}</span>
-              <span className={classes.infoItemText}>{t(item.text)}</span>
+              <span className={classes.infoItemText}>{item.text}</span>
             </li>
           );
         })}

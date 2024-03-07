@@ -1,6 +1,6 @@
-import { TextField } from "@mui/material";
+import { TextField } from '@mui/material';
 
-import classes from "./styles.module.css";
+import classes from './styles.module.css';
 export default function LabelInput({
   label,
   name,
@@ -15,26 +15,29 @@ export default function LabelInput({
 }) {
   return (
     <label>
-      {!type === "textarea" && <p className={classes.label}>{label}</p>}
+      {type !== 'textarea' && <p className={classes.label}>{label}</p>}
 
       <TextField
-        color="#fff"
-        variant="standard"
-        // name={name}
-        // id={name}
-        // value={value}
-        // onChange={onChange}
-        // onBlur={onBlur}
-        // error={error}
-        // helperText={helperText}
+        color='#fff'
+        variant='standard'
+        name={name}
+        id={name}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+        error={error}
+        helperText={helperText}
         fullWidth
         className={`${classes.input} ${
-          type === "textarea" ? classes.textarea : ""
+          type === 'textarea' ? classes.textarea : ''
         }`}
         InputProps={{ disableUnderline: true }}
         placeholder={placeholder}
         rows={4}
-        multiline={type === "textarea"}
+        multiline={type === 'textarea'}
+        sx={{
+
+        }}
       />
     </label>
   );

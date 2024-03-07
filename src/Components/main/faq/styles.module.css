@@ -1,5 +1,14 @@
+.loaderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loaderItem {
+  width: 100%;
+}
+
 .faq {
-  padding: 0 10px;
   margin-bottom: 60px;
 }
 
@@ -28,7 +37,6 @@
 
 @media (min-width: 992px) {
   .faq {
-    padding: 0 20px;
     margin-bottom: 80px;
   }
   .faqInner {

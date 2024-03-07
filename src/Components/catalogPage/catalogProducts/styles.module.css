@@ -1,0 +1,28 @@
+.productsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.productsWrapper > a {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .productsWrapper {
+    gap: 15px;
+  }
+
+  .productsWrapper > a {
+    width: calc(100% / 2 - 15px / 2);
+  }
+}
+@media (min-width: 992px) {
+  .productsWrapper {
+    gap: 20px;
+  }
+
+  .productsWrapper > a {
+    width: calc(100% / 3 - 40px / 3);
+  }
+}

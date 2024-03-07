@@ -1,6 +1,14 @@
+.tabList {
+  /* height: 100%; */
+  /* align-items: flex-start; */
+}
+.tabList :global(.MuiTabs-flexContainer) {
+  height: 100%;
+  align-items: flex-start;
+}
 .editor {
   color: #333;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -23,7 +31,7 @@
   border-radius: 50px;
   background: transparent;
   color: #9a9a9a;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -68,30 +76,22 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-.tabList :global(.Mui-selected) {
-  color: black!important;
-}
-
-.tabList :global(.MuiTabs-flexContainer) {
-  justify-content: space-between;
-  margin-bottom:0; 
-  padding: 0;
-}
-
 .tabLabel {
-  font-family: "Manrope";
-  font-style: "normal";
+  font-family: 'Manrope';
+  font-style: 'normal';
   font-weight: 500;
   font-size: var(--font14);
   line-height: 130%;
-  color: #BFBFBF;
+  color: #bfbfbf;
   text-transform: none;
   line-height: 100%;
   padding: 0;
   border: none;
-  min-width: 100%;
-  max-width: 100%;
   width: 50%;
+  height: 100%;
+  max-width: none;
+  min-height: auto;
+  padding-bottom: 20px;
 }
 
 .tabPanel {
@@ -102,13 +102,8 @@
 @media (min-width: 992px) {
   .tabMain {
     width: 100%;
-    padding: 0 50px;
+    padding: 0 30px;
     margin-bottom: 80px;
-  }
-
-  .tabList :global(.MuiTabs-flexContainer) {
-    justify-content: space-around;
-    margin-bottom: 15px;
   }
 
   .tabPanel {
@@ -117,7 +112,8 @@
   }
 
   .editor {
-    max-width: 52.2vw;
+    /* max-width: 750px; */
+    width: 100%;
   }
   .editorLink span {
     display: block;

@@ -1,9 +1,9 @@
-.portfolio {
+.reviews {
   padding: 0 10px;
   margin-bottom: 60px;
 }
 
-.portfolioWrapper {
+.reviewsWrapper {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -20,44 +20,55 @@
   cursor: grab;
 }
 
-.portfolioImg {
+
+.sliderVideoBox {
+  position: relative;
+  display: flex;
+}
+
+button.videoBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  min-width: auto;
+  border: 1px solid #ff8115;
+}
+button.videoBtn:hover {
+  background-color: transparent;
+}
+
+.sliderVideo {
   width: 100%;
-  height: auto;
+  border-radius: 10px;
   object-fit: cover;
+  height: 423px;
+}
+
+.modalVideo {
+  width: 100%;
+  height: 600px;
   border-radius: 10px;
 }
 
-.swiperSlide {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-  align-items: center;
-}
-.portfolioText {
-  color: #333;
-  font-family: "Manrope";
-  font-size: var(--font14);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%;
-  max-width: 249px;
-}
-
 @media (min-width: 992px) {
-  .portfolio {
+  .reviews {
     padding: 0 20px;
     margin-bottom: 80px;
   }
-  .swiperSlide {
-    gap: 20px;
-  }
 
-  .portfolioWrapper {
+  .reviewsWrapper {
     margin-bottom: 40px;
   }
 
-  .portfolioText {
-    max-width: 100%;
+  .sliderVideo {
+    height: 623px;
+  }
+  .modalVideo {
+    height: 800px;
   }
 }

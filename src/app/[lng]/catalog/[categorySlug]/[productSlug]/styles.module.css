@@ -1,0 +1,98 @@
+.productWrapper {
+  padding-top: 45px;
+}
+
+.productInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.productInfo {
+  margin-bottom: 60px;
+}
+
+.productWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.border {
+  width: 100%;
+  height: 1px;
+  background: #e8e8e8;
+  display: block;
+}
+
+.productBannerBox {
+  border-radius: 20px;
+  background: #f8f8f8;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  overflow: hidden;
+
+  min-height: 150px;
+}
+
+.productBannerWrapper {
+  padding: 20px;
+}
+
+.productBannerTitle {
+  color: #333;
+  font-family: 'Manrope';
+  font-size: var(--font16);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100.781%;
+}
+
+.productImgBox {
+  display: flex;
+}
+
+.productBannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+  .productInfoWrapper {
+    flex-direction: row;
+    margin-bottom: 80px;
+  }
+  .productBannerBox {
+    min-height: 250px;
+  }
+
+  .productInfo {
+    margin-bottom: 80px;
+    padding-top: 45px;
+  }
+
+  .productWrapper {
+    gap: 20px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+  }
+  .productBannerTitle {
+    font-size: 40px;
+  }
+  .productBannerWrapper {
+    padding: 40px;
+    padding-right: 0;
+  }
+}
+@media (min-width: 1200px) {
+}

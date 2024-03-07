@@ -1,19 +1,104 @@
-"use client";
-import { useMediaQuery } from "@mui/material";
-import { useTranslation } from "@/app/i18n/client";
+'use client';
+import { useMediaQuery, Box, Skeleton } from '@mui/material';
+import { useTranslation } from '@/app/i18n/client';
 
-import ReviewsMobi from "./reviewsMobi";
-import ReviewsDesk from "./reviewsDesk";
+import { register } from 'swiper/element';
+import { useEffect, useRef, useState } from 'react';
+import { Scrollbar, Navigation } from 'swiper/modules';
+
+import classes from './styles.module.css';
+import Title from '@/Components/common/title';
+import CustomNavigation from './CustomNavigation';
+import ReviewsItem from './reviewsItem';
+import ModalContent from './modalContent';
 
 function VideosContent({ lng, videos, ...props }) {
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const { t, i18n } = useTranslation(lng);
 
-  if (mdUp) {
-    return <ReviewsDesk lng={lng} videos={videos} />;
-  }
+  const [modal, setModal] = useState({ open: false, video: null });
 
-  return <ReviewsMobi lng={lng} videos={videos} />;
+  const swiperRef = useRef(null);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
+  useEffect(() => {
+    if (videos) {
+      register();
+
+      const params = {
+        modules: [Scrollbar, Navigation],
+        slidesPerView: mdUp ? 4 : 1.2,
+        spaceBetween: 20,
+        // loop: true,
+        scrollbar: { draggable: true },
+        navigation: {
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
+          disabledClass: 'disabled',
+        },
+
+        injectStyles: [],
+      };
+
+      Object.assign(swiperRef.current, params);
+
+      swiperRef.current.initialize();
+    }
+  }, [mdUp, videos]);
+
+  return (
+    <Box className={classes.reviews}>
+      <Box className={classes.reviewsWrapper}>
+        <Title title={'IQ WATT в деле'} lng={lng} />
+        <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
+      </Box>
+
+      <Box className={classes.swiperWrapper}>
+        {videos ? (
+          <swiper-container
+            ref={swiperRef}
+            class={classes.mySwiper}
+            init='false'
+          >
+            {videos.map((video, index) => {
+              return (
+                <swiper-slide key={video.id} class={classes.swiperSlide}>
+                  <ReviewsItem
+                    video={video.attributes}
+                    lng={lng}
+                    setModal={setModal}
+                  />
+                </swiper-slide>
+              );
+            })}
+          </swiper-container>
+        ) : (
+          <Box className={classes.loaderWrapper}>
+            {[...Array(4).keys()].map((v, index) => (
+              <Skeleton
+                key={index}
+                variant='rounded'
+                className={classes.loaderItem}
+                height={mdUp ? 623 : 423}
+              />
+            ))}
+          </Box>
+        )}
+      </Box>
+
+      <ModalContent
+        open={modal.open}
+        video={modal.video}
+        setOpen={(v) =>
+          setModal((m) => {
+            return { ...m, open: v };
+          })
+        }
+        lng={lng}
+      />
+    </Box>
+  );
 }
 
 export default VideosContent;

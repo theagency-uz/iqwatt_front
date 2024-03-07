@@ -1,5 +1,4 @@
 .formContent {
-  padding: 0 10px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
@@ -36,7 +35,7 @@
 
 .formContentTitle {
   color: #333;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font30);
   font-style: normal;
   font-weight: 500;
@@ -45,7 +44,6 @@
 
 @media (min-width: 992px) {
   .formContent {
-    padding: 0 20px;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 80px;
     min-height: 760px;
@@ -70,7 +68,6 @@
     max-width: 18.7vw;
   }
 }
-
 
 @media (min-width: 1200px) {
   .formContentInner {

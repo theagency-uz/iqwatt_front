@@ -1,7 +1,7 @@
-"use client";
-import { useTranslation } from "@/app/i18n/client";
-import React, { useState } from "react";
-import { TabContext, TabList, TabPanel } from "@mui/lab";
+'use client';
+import { useTranslation } from '@/app/i18n/client';
+import React, { useState } from 'react';
+import { TabContext, TabList, TabPanel } from '@mui/lab';
 import {
   Box,
   Button,
@@ -9,15 +9,17 @@ import {
   Tab,
   Typography,
   useTheme,
-} from "@mui/material";
-import classes from "./styles.module.css";
-import Image from "next/image";
+} from '@mui/material';
+import Image from 'next/image';
+import { BlocksRenderer } from '@strapi/blocks-react-renderer';
+
+import classes from './styles.module.css';
+import { strapiImageUrl } from '@/utils/endpoints';
 
 function ProductTabs({ lng, product, ...props }) {
   const { t, i18n } = useTranslation(lng);
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
-  const [value, setValue] = useState("1");
+  const [value, setValue] = useState('1');
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -28,25 +30,25 @@ function ProductTabs({ lng, product, ...props }) {
         <Box className={classes.tabContext}>
           <TabList
             onChange={handleChange}
-            aria-label="product"
+            aria-label='product'
             TabIndicatorProps={{
               style: {
-                backgroundColor: "#ff8115",
+                backgroundColor: '#ff8115',
               },
             }}
-            variant="scrollable"
+            variant='standard'
             className={classes.tabList}
           >
             <Tab
-              label={t("Описание")}
-              value="1"
+              label={t('Описание')}
+              value='1'
               className={classes.tabLabel}
               disableRipple={true}
             />
 
             <Tab
-              label={t("Инструкция")}
-              value="2"
+              label={t('Инструкция')}
+              value='2'
               className={classes.tabLabel}
               disableRipple={true}
             />
@@ -54,16 +56,13 @@ function ProductTabs({ lng, product, ...props }) {
         </Box>
 
         <Box>
-          <TabPanel value="1" className={classes.tabPanel}>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: product.description,
-              }}
-              className={classes.editor}
-            ></div>
+          <TabPanel value='1' className={classes.tabPanel}>
+            <div className={classes.editor}>
+              <BlocksRenderer content={product.description} />
+            </div>
           </TabPanel>
 
-          <TabPanel value="2" className={classes.tabPanel}>
+          <TabPanel value='2' className={classes.tabPanel}>
             <div
               // dangerouslySetInnerHTML={{
               //   __html: product.description[i18n.language],
@@ -72,27 +71,29 @@ function ProductTabs({ lng, product, ...props }) {
             >
               <Box className={classes.editorInner}>
                 <Image
-                  src={"/icons/training-icon.svg"}
+                  src={'/icons/training-icon.svg'}
                   width={17}
                   height={17}
-                  alt={"icon"}
+                  alt={'icon'}
                   className={classes.editorCircleIcon}
                 />
-                <p className={classes.editor}>{t(product.editorText)}</p>
+                <p className={classes.editor}>
+                  {product.instruction.data.attributes.name}
+                </p>
               </Box>
 
               <a
-                href="./directory/yourfile.pdf"
-                download="newfilename"
+                href={strapiImageUrl + product.instruction.data.attributes.url}
+                download={product.instruction.data.attributes.name}
                 className={classes.editorLink}
               >
-                <span>{t("скачать")}</span>
+                <span>{t('скачать')}</span>
                 <Box className={classes.editorIconBox}>
                   <Image
-                    src={"/icons/arrow-right-white.svg"}
+                    src={'/icons/arrow-right-white.svg'}
                     width={15}
                     height={13}
-                    alt={"icon"}
+                    alt={'icon'}
                     className={classes.editorIcon}
                   />
                 </Box>

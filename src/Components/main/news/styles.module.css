@@ -1,5 +1,4 @@
 .news {
-  padding: 0 10px;
   margin-bottom: 60px;
 }
 
@@ -36,7 +35,7 @@
 
 .newsTitle {
   color: #333;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font18);
   font-style: normal;
   font-weight: 500;
@@ -52,7 +51,7 @@
   border-radius: 50px;
   background: #f07d00;
   color: #fff;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 600;
@@ -91,24 +90,22 @@
 
 @media (min-width: 992px) {
   .news {
-    padding: 0 20px;
   }
 
   .newsTitle {
     max-width: 17.3vw;
   }
-  
+
   .newsLink {
     width: 160px;
     height: 46px;
     font-size: 14px;
   }
-  
+
   .newsIconBox {
     width: 27px;
     height: 27px;
   }
-
 }
 
 @media (min-width: 1440px) {
@@ -117,7 +114,7 @@
     height: 50px;
     font-size: var(--font14);
   }
-  
+
   .newsIconBox {
     width: 32px;
     height: 32px;
