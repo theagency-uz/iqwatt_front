@@ -32,8 +32,8 @@ function ProductCharacteristics({ lng, product, selectedVariation, ...props }) {
           <span className={classes.productDesc}>{t('Категория')}:</span>
           <span className={classes.productAbout}>
             {product.subcategory_2
-              ? product.subcategory_2.data.attributes.name
-              : product.subcategory.data.attributes.name}
+              ? product.subcategory_2.data?.attributes?.name
+              : product.subcategory.data?.attributes.name}
           </span>
         </li>
       </ul>

@@ -13,7 +13,7 @@ async function getPortfolios({ lng = "ru", limit = 10, page = 1 } = { lng: "ru",
         // sort: ['createdAt:desc'],
       }
     });
-    return result.data.data;
+    return result.data;
 
   } catch (err) {
     console.log("err: ", err.response);

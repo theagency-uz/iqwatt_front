@@ -1,21 +1,18 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import SidebarContext from '@/context/sidebar.context';
 import FormContext from '@/context/form.context';
 import FormBar from '@/layout/formBar';
-import Loading from '@/Components/common/loading';
 import SettingsContext from '@/context/settings.context';
-import { getSettings } from '@/services/settings';
 import Notificationcontext from '@/context/notification.context';
 import Notification from '@/Components/common/form/notification';
 
-export default function Providers({ lng, children }) {
+export default function Providers({ lng, initialSettings, children }) {
   const [loading, setLoading] = useState(true);
   const [form, setForm] = useState(false);
   const [notify, setNotify] = useState({ open: false, text: '' });
   const [open, setOpen] = useState(false);
-  const [settings, setSettings] = useState({});
+  const [settings, setSettings] = useState(initialSettings?.attributes || {});
   const settingsValue = { settings, setSettings };
   const sidebarValue = { open, setOpen };
   const notifyValue = { notify, setNotify };
@@ -25,8 +22,8 @@ export default function Providers({ lng, children }) {
   useEffect(() => {
     setLoading(false);
     async function fetchAll() {
-      const tempSettings = await getSettings({ lng });
-      setSettings(tempSettings.data);
+      // const tempSettings = await getSettings({ lng });
+      // setSettings(tempSettings.data);
     }
     fetchAll();
   }, [lng]);
@@ -43,10 +40,10 @@ export default function Providers({ lng, children }) {
           {loading ? (
             <Loading loading={loading} />
           ) : ( */}
-      <Notificationcontext.Provider value={notifyValue}>
-        <FormContext.Provider value={formValue}>
+      <SettingsContext.Provider value={settingsValue}>
+        <Notificationcontext.Provider value={notifyValue}>
           <SidebarContext.Provider value={sidebarValue}>
-            <SettingsContext.Provider value={settingsValue}>
+            <FormContext.Provider value={formValue}>
               <Notification
                 handleClose={() =>
                   setNotify((n) => {
@@ -58,10 +55,10 @@ export default function Providers({ lng, children }) {
               />
               <FormBar form={form} setForm={setForm} lng={lng} />
               {children}
-            </SettingsContext.Provider>
+            </FormContext.Provider>
           </SidebarContext.Provider>
-        </FormContext.Provider>
-      </Notificationcontext.Provider>
+        </Notificationcontext.Provider>
+      </SettingsContext.Provider>
       {/*     )}
          </motion.div>
         </AnimatePresence>*/}

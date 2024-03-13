@@ -69,35 +69,41 @@ function ProductTabs({ lng, product, ...props }) {
               // }}
               className={classes.editorBox}
             >
-              <Box className={classes.editorInner}>
-                <Image
-                  src={'/icons/training-icon.svg'}
-                  width={17}
-                  height={17}
-                  alt={'icon'}
-                  className={classes.editorCircleIcon}
-                />
-                <p className={classes.editor}>
-                  {product.instruction.data.attributes.name}
-                </p>
-              </Box>
+              {product.instruction.data && (
+                <>
+                  <Box className={classes.editorInner}>
+                    <Image
+                      src={'/icons/training-icon.svg'}
+                      width={17}
+                      height={17}
+                      alt={'icon'}
+                      className={classes.editorCircleIcon}
+                    />
+                    <p className={classes.editor}>
+                      {product.instruction?.data?.attributes.name ?? ''}
+                    </p>
+                  </Box>
 
-              <a
-                href={strapiImageUrl + product.instruction.data.attributes.url}
-                download={product.instruction.data.attributes.name}
-                className={classes.editorLink}
-              >
-                <span>{t('скачать')}</span>
-                <Box className={classes.editorIconBox}>
-                  <Image
-                    src={'/icons/arrow-right-white.svg'}
-                    width={15}
-                    height={13}
-                    alt={'icon'}
-                    className={classes.editorIcon}
-                  />
-                </Box>
-              </a>
+                  <a
+                    href={
+                      strapiImageUrl + product.instruction?.data?.attributes.url
+                    }
+                    download={product.instruction.data.attributes.name}
+                    className={classes.editorLink}
+                  >
+                    <span>{t('скачать')}</span>
+                    <Box className={classes.editorIconBox}>
+                      <Image
+                        src={'/icons/arrow-right-white.svg'}
+                        width={15}
+                        height={13}
+                        alt={'icon'}
+                        className={classes.editorIcon}
+                      />
+                    </Box>
+                  </a>
+                </>
+              )}
             </div>
           </TabPanel>
         </Box>

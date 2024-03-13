@@ -14,9 +14,9 @@ export default function CatalogProducts({
 }) {
   const filteredProducts = products.filter((p) => {
     if (subcategory2) {
-      return p.attributes.subcategory_2.data.id === subcategory2.id;
+      return p.attributes.subcategory_2.data?.id === subcategory2.id;
     }
-    return p.attributes.subcategory.data.id === subcategory.id;
+    return p.attributes.subcategory.data?.id === subcategory.id;
   });
 
   return (

@@ -12,6 +12,7 @@ async function getSettings({ lng = "ru" } = { lng: "ru" }) {
 
   } catch (err) {
     console.log("err: ", err.response);
+    return { error: true, msg: err };
   }
 }
 

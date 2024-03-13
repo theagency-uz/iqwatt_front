@@ -2,7 +2,7 @@
 import { Box } from '@mui/material';
 
 import classes from './styles.module.css';
-import Sidebar from '../sidebar';
+import Sidebar from '../sidebar/sidebarDrawer';
 import Form from '@/Components/common/form';
 import { useTranslation } from '@/app/i18n/client';
 
@@ -14,6 +14,7 @@ function FormBar({ lng, form, setForm, ...props }) {
       open={form.open}
       setOpen={(v) => setForm({ open: v })}
       isForm={true}
+      hasClose={true}
     >
       <Box className={classes.wrapper}>
         <h3 className={classes.drawerTitle}>

@@ -1,5 +1,5 @@
 .slider {
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   position: relative;
 }
 
@@ -99,7 +99,7 @@
 
 @media (min-width: 992px) {
   .slider {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
   }
 
   .sliderTitle {

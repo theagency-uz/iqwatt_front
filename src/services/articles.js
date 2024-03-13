@@ -22,15 +22,10 @@ async function getArticles({ lng = "ru", limit = 10, page = 1 } = { lng: "ru", l
 
 async function getArticle({ lng = "ru", slug } = { lng: "ru" }) {
   try {
-    const result = await strapi.get("/articles/" + slug, {
+    const result = await strapi.get("/articles/slug/" + slug, {
       params: {
         locale: lng,
         populate: ['image'],
-        pagination: {
-          page: page,
-          pageSize: limit
-        }
-        // sort: ['createdAt:desc'],
       }
     });
     return result.data.data;

@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import CustomCheckbox from './CustomCheckbox';
+import CustomCheckbox from './customCheckbox';
 import classes from './styles.module.css';
 import CheckedServices from './checkedServices';
 

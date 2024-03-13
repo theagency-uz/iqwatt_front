@@ -1,27 +1,39 @@
-"use client";
-import { Drawer } from "@mui/material";
-import classes from "./styles.module.css";
+'use client';
+import { Box } from '@mui/material';
+import { useContext } from 'react';
+import SidebarDrawer from './sidebarDrawer';
+import SidebarContext from '@/context/sidebar.context';
+import SocialMedia from '@/Components/common/socialMedia';
 
-function Sidebar({
-  open,
-  setOpen,
-  children,
-  isForm = false,
-  ...props
-}) {
+import classes from './styles.module.css';
+import NavList from '../navList';
+import LangSwitcher from '../langSwitcher';
+import SendFormButton from '../sendFormButton';
+
+function SidebarMenu({ lng, settings, menu, ...props }) {
+  const { open, setOpen } = useContext(SidebarContext);
+
   return (
-    <Drawer
-      // disablePortal={true}
-      anchor="right"
-      onClose={() => setOpen(false)}
+    <SidebarDrawer
+      maxWidth={'100%'}
       open={open}
-      sx={{ zIndex: isForm ? 15 : 12 }}
-      className={classes.sidebar}
-      variant="temporary"
+      setOpen={setOpen}
+      hasClose={true}
     >
-      {children}
-    </Drawer>
+      <Box className={classes.sidebar}>
+        <NavList setOpen={setOpen} lng={lng} menu={menu} />
+
+        <div className={classes.formButtonWrapper}>
+          <SendFormButton lng={lng} />
+        </div>
+
+        <Box className={classes.sidebarWrapper}>
+          <LangSwitcher lng={lng} />
+          <SocialMedia settings={settings} />
+        </Box>
+      </Box>
+    </SidebarDrawer>
   );
 }
 
-export default Sidebar;
+export default SidebarMenu;

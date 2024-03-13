@@ -12,36 +12,32 @@ export default function CategoryItem({ lng, category }) {
   return (
     <li className={classes.categoryItem}>
       <a href={`/${lng}/catalog/${category.slug}`}>
-      <Box className={classes.categoryBox}>
-        <h4 className={classes.categoryTitle}>{category.name}</h4>
+        <Box className={classes.categoryBox}>
+          <h4 className={classes.categoryTitle}>{category.name}</h4>
 
-        <Link
-          href={`/${lng}/catalog/${category.slug}`}
-          className={classes.categoryItemLink}
-        >
-          <span>{t('в каталог')}</span>
-          <Box className={classes.categoryItemIconBox}>
-            <Image
-              src={'/icons/arrow-right-white.svg'}
-              width={18}
-              height={15}
-              alt={'icon'}
-              className={classes.categoryIcon}
-            />
-          </Box>
-        </Link>
-      </Box>
+          <button className={classes.categoryItemLink}>
+            <span>{t('в каталог')}</span>
+            <Box className={classes.categoryItemIconBox}>
+              <Image
+                src={'/icons/arrow-right-white.svg'}
+                width={18}
+                height={15}
+                alt={'icon'}
+                className={classes.categoryIcon}
+              />
+            </Box>
+          </button>
+        </Box>
 
-      <Box className={classes.categoryImgBox}>
-        <Image
-          src={strapiImageUrl + category.image.data.attributes.url}
-          width={461}
-          height={324}
-          alt={'category-image'}
-          className={classes.categoryImg}
-        />
-      </Box>
-
+        <Box className={classes.categoryImgBox}>
+          <Image
+            src={strapiImageUrl + category.image.data.attributes.url}
+            width={461}
+            height={324}
+            alt={'category-image'}
+            className={classes.categoryImg}
+          />
+        </Box>
       </a>
     </li>
   );

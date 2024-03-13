@@ -35,174 +35,104 @@
   display: flex;
   align-items: flex-end;
   position: absolute;
-  top: 14.5%;
-  right: 0;
   z-index: 10;
   transition: all 0.4s ease;
 }
 
-.boxWrapperScnd {
-  display: flex;
-  align-items: flex-end;
+.card {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: padding 0.2s ease, opacity 0.5s ease;
   position: absolute;
-  bottom: 7%;
-  right: 15%;
-  z-index: 10;
-  transition: all 0.4s ease;
+  bottom: 40px;
+  left: 40px;
 }
 
-.boxWrapperThrd {
-  display: flex;
-  align-items: flex-end;
-  position: absolute;
-  bottom: 25%;
-  right: 23.5%;
-  z-index: 10;
+.boxWrapper:hover > .card {
+  padding: 26px 17px;
+  max-height: max-content;
+  opacity: 1;
   transition: all 0.4s ease;
+  visibility: inherit;
 }
 
-.boxWrapperFourth {
-  display: flex;
-  align-items: flex-end;
-  position: absolute;
-  bottom: 46%;
+.boxWrapper1 {
+  top: 39%;
+  right: 18%;
+}
+.boxWrapper2 {
+  top: 85%;
   right: 30%;
-  z-index: 10;
-  transition: all 0.4s ease;
+}
+.boxWrapper3 {
+  top: 64%;
+  right: 40%;
+}
+.boxWrapper4 {
+  top: 46%;
+  right: 47%;
+}
+.boxWrapper5 {
+  top: 26%;
+  right: 42%;
+}
+.boxWrapper6 {
+  top: 57%;
+  right: 67%;
+}
+.boxWrapper7 {
+  top: 74%;
+  right: 68%;
 }
 
-.boxWrapperFifth {
+/*============================================= Card ===================================================*/
+
+.card {
+  border-radius: 8.568px;
+  background: #ff8115;
   display: flex;
-  align-items: flex-end;
-  position: absolute;
-  bottom: 66%;
-  right: 25%;
-  z-index: 10;
-  transition: all 0.4s ease;
+  flex-direction: column;
+  gap: 15px;
+  width: 17vw;
 }
 
-.boxWrapperSixth {
+.cardImgBox {
   display: flex;
-  align-items: flex-end;
-  flex-direction: row-reverse;
-  position: absolute;
-  bottom: 36%;
-  left: 28%;
-  z-index: 20;
-  transition: all 0.4s ease;
+}
+.cardImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-.boxWrapperSeventh {
+.cardWrapper {
   display: flex;
-  align-items: flex-end;
-  flex-direction: row-reverse;
-  position: absolute;
-  bottom: 19%;
-  left: 28%;
-  z-index: 10;
-  transition: all 0.4s ease;
+  flex-direction: column;
+  gap: 7px;
 }
 
-.boxWrapper:hover .cardFrst {
-  opacity: 1;
-  transition: all 0.4s ease;
+.cardTitle {
+  color: #fff;
+  font-family: 'Manrope';
+  font-size: var(--font16);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 122.222%;
+  text-transform: uppercase;
 }
 
-.boxWrapperScnd:hover > .cardScnd {
-  opacity: 1;
-  transition: all 0.4s ease;
-  visibility: inherit;
+.cardText {
+  color: #fff;
+  font-family: 'Manrope';
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128.571%;
 }
-
-.boxWrapperThrd:hover > .cardThrd {
-  opacity: 1;
-  transition: all 0.4s ease;
-  visibility: inherit;
-}
-
-.boxWrapperFourth:hover > .cardFourth {
-  opacity: 1;
-  transition: all 0.4s ease;
-  visibility: inherit;
-}
-
-.boxWrapperFifth:hover > .cardFifth {
-  opacity: 1;
-  transition: all 0.4s ease;
-  visibility: inherit;
-}
-
-.boxWrapperSixth:hover > .cardSixth {
-  opacity: 1;
-  transition: all 0.4s ease;
-  visibility: inherit;
-}
-
-.boxWrapperSeventh:hover > .cardSeventh {
-  opacity: 1;
-  transition: all 0.4s ease;
-  visibility: inherit;
-}
-
-.cardFrst {
-  position: relative;
-  bottom: 35px;
-  right: 37px;
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-
-.cardScnd {
-  position: relative;
-  bottom: 35px;
-  right: 37px;
-  opacity: 0;
-  transition: all 0.4s ease;
-  visibility: hidden;
-}
-
-.cardThrd {
-  position: relative;
-  bottom: 35px;
-  right: 37px;
-  opacity: 0;
-  transition: all 0.4s ease;
-  visibility: hidden;
-}
-
-.cardFourth {
-  position: relative;
-  bottom: 35px;
-  right: 37px;
-  opacity: 0;
-  transition: all 0.4s ease;
-  visibility: hidden;
-}
-
-.cardFifth {
-  position: relative;
-  bottom: 35px;
-  right: 90%;
-  opacity: 0;
-  transition: all 0.4s ease;
-  visibility: hidden;
-}
-.cardSixth {
-  position: relative;
-  bottom: 35px;
-  left: 40px;
-  opacity: 0;
-  transition: all 0.4s ease;
-  visibility: hidden;
-}
-.cardSeventh {
-  position: relative;
-  bottom: 35px;
-  left: 40px;
-  opacity: 0;
-  transition: all 0.4s ease;
-  visibility: hidden;
-}
+/*============================================= /Card ===================================================*/
 
 /*============================================= Circle Animation ===================================================*/
 
@@ -258,126 +188,5 @@
     transform: scale(1.3);
   }
 }
+
 /*============================================= /Circle Animation ===================================================*/
-
-/*============================================= Card ===================================================*/
-
-.card {
-  border-radius: 8.568px;
-  background: #ff8115;
-  padding: 26px 17px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 17vw;
-}
-
-.cardImgBox {
-  display: flex;
-}
-.cardImg {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.cardWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.cardTitle {
-  color: #fff;
-  font-family: "Manrope";
-  font-size: var(--font16);
-  font-style: normal;
-  font-weight: 600;
-  line-height: 122.222%;
-  text-transform: uppercase;
-}
-
-.cardText {
-  color: #fff;
-  font-family: "Manrope";
-  font-size: var(--font14);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 128.571%;
-}
-/*============================================= /Card ===================================================*/
-
-@media (min-width: 1200px) {
-  .boxWrapper {
-    top: 14.5%;
-    right: -25px;
-  }
-
-  .boxWrapperScnd {
-    bottom: 6%;
-    right: 13%;
-  }
-
-  .boxWrapperThrd {
-    bottom: 25%;
-    right: 22%;
-  }
-
-  .boxWrapperFourth {
-    bottom: 43%;
-    right: 30%;
-  }
-
-  .boxWrapperFifth {
-    bottom: 63%;
-    right: 23%;
-  }
-
-  .boxWrapperSixth {
-    bottom: 34%;
-    left: 10%;
-  }
-
-  .boxWrapperSeventh {
-    bottom: 17%;
-    left: 11%;
-  }
-}
-
-@media (min-width: 1440px) {
-  .boxWrapper {
-    top: 14.5%;
-    right: 0;
-  }
-
-  .boxWrapperScnd {
-    bottom: 7%;
-    right: 15%;
-  }
-
-  .boxWrapperThrd {
-    bottom: 25%;
-    right: 23.5%;
-  }
-
-  .boxWrapperFourth {
-    bottom: 46%;
-    right: 30%;
-  }
-
-  .boxWrapperFifth {
-    bottom: 66%;
-    right: 25%;
-  }
-
-  .boxWrapperSixth {
-    bottom: 36%;
-    left: 11%;
-  }
-
-  .boxWrapperSeventh {
-    bottom: 18%;
-    left: 12%;
-  }
-}

@@ -13,6 +13,7 @@ async function getCategories({ lng = "ru" } = { lng: "ru" }) {
 
   } catch (err) {
     console.log("err: ", err.response);
+    return { error: true, msg: err };
   }
 }
 async function getCategory({ lng = "ru", slug } = { lng: "ru" }) {

@@ -79,7 +79,10 @@ function ReviewsItem({ lng, video, setModal, ...props }) {
         className={classes.videoBtn}
         // onClick={handleVideo}
         onClick={(e) => {
-          setModal({ open: true, video: strapiImageUrl + video.url });
+          setModal({
+            open: true,
+            video: strapiImageUrl + video.video.data.attributes.url,
+          });
         }}
       >
         <PlayArrowIcon style={{ color: '#fff', fontSize: '50px' }} />

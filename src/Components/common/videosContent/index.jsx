@@ -1,5 +1,5 @@
 'use client';
-import { useMediaQuery, Box, Skeleton } from '@mui/material';
+import { useMediaQuery, Box, Skeleton, Button } from '@mui/material';
 import { useTranslation } from '@/app/i18n/client';
 
 import { register } from 'swiper/element';
@@ -12,7 +12,14 @@ import CustomNavigation from './CustomNavigation';
 import ReviewsItem from './reviewsItem';
 import ModalContent from './modalContent';
 
-function VideosContent({ lng, videos, ...props }) {
+function VideosContent({
+  lng,
+  videos,
+  handleMore,
+  hasMore,
+  moreLoading,
+  ...props
+}) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const { t, i18n } = useTranslation(lng);
 
@@ -28,7 +35,7 @@ function VideosContent({ lng, videos, ...props }) {
 
       const params = {
         modules: [Scrollbar, Navigation],
-        slidesPerView: mdUp ? 4 : 1.2,
+        slidesPerView: mdUp ? 4 : 1.5,
         spaceBetween: 20,
         // loop: true,
         scrollbar: { draggable: true },
@@ -72,15 +79,37 @@ function VideosContent({ lng, videos, ...props }) {
                 </swiper-slide>
               );
             })}
-          </swiper-container>
-        ) : (
-          <Box className={classes.loaderWrapper}>
-            {[...Array(4).keys()].map((v, index) => (
+            {hasMore && !moreLoading && (
+              <swiper-slide class={classes.swiperSlide}>
+                <div className={classes.moreContent}>
+                  <Button
+                    onClick={handleMore}
+                    sx={{
+                      color: '#181818',
+                      fontSize: '20px',
+                    }}
+                  >
+                    {t('Загрузить еще')}
+                  </Button>
+                </div>
+              </swiper-slide>
+            )}
+            {moreLoading && (
               <Skeleton
                 key={index}
                 variant='rounded'
                 className={classes.loaderItem}
                 height={mdUp ? 623 : 423}
+              />
+            )}
+          </swiper-container>
+        ) : (
+          <Box className={classes.loaderWrapper}>
+            {[...Array(mdUp ? 4 : 2).keys()].map((v, index) => (
+              <Skeleton
+                key={index}
+                variant='rounded'
+                className={classes.loaderItem}
               />
             ))}
           </Box>

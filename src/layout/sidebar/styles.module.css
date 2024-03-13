@@ -5,3 +5,10 @@
   padding-top: 90px;
   max-width: 650px;
 }
+
+.formButtonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}

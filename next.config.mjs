@@ -1,3 +1,12 @@
+const cspHeader = `
+    default-src 'none';
+    connect-src 'self';
+    script-src 'self';
+    img-src * data:;
+    style-src 'self' 'unsafe-inline';
+    frame-src *
+`;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,
@@ -17,6 +26,20 @@ const nextConfig = {
 
       },
     ],
+  },
+
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: cspHeader.replace(/\n/g, ''),
+          },
+        ],
+      },
+    ];
   },
 };
 

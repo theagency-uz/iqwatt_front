@@ -1,8 +1,3 @@
-'use client';
-import { Box, useMediaQuery } from '@mui/material';
-
-import { useTranslation } from '@/app/i18n/client';
-
 import classes from './styles.module.css';
 import Title from '@/Components/common/title';
 
@@ -14,15 +9,13 @@ const infoData = [
 ];
 
 function InfoWrapper({ lng, title, text, ...props }) {
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
-
   return (
-    <Box className={classes.info}>
-      <Box className={classes.infoWrapper}>
+    <div className={classes.info}>
+      <div className={classes.infoWrapper}>
         <Title title={title} />
         <span className={classes.border}></span>
         <p className={classes.infoText}>{text}</p>
-      </Box>
+      </div>
 
       <ul className={classes.infoList}>
         {infoData.map((item, index) => {
@@ -34,7 +27,7 @@ function InfoWrapper({ lng, title, text, ...props }) {
           );
         })}
       </ul>
-    </Box>
+    </div>
   );
 }
 

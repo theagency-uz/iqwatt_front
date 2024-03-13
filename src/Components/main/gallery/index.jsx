@@ -1,5 +1,5 @@
 'use client';
-import { useMediaQuery, Box, Skeleton } from '@mui/material';
+import { useMediaQuery, Box, Skeleton, Button } from '@mui/material';
 import { useTranslation } from '@/app/i18n/client';
 import { useEffect, useRef, useState } from 'react';
 import { getGallery } from '@/services/gallery';
@@ -11,15 +11,19 @@ import { register } from 'swiper/element';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import GalleryItem from './galleryItem';
 
+const LIMIT = 10;
+
 function Gallery({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const { t, i18n } = useTranslation(lng);
   const [gallery, setGallery] = useState();
+  const [totalCount, setTotalCount] = useState(0);
 
   useEffect(() => {
     async function fetchAll() {
-      const tempGallery = await getGallery({ lng, limit: 10, page: 1 });
-      setGallery(tempGallery);
+      const tempGallery = await getGallery({ lng, limit: LIMIT, page: 1 });
+      setGallery(tempGallery.data);
+      setTotalCount(tempGallery.meta.pagination.total);
     }
     fetchAll();
   }, [lng]);
@@ -54,6 +58,19 @@ function Gallery({ lng, ...props }) {
     }
   }, [mdUp, gallery]);
 
+  async function handleMore() {
+    const tempGallery = await getGallery({
+      lng,
+      limit: LIMIT,
+      page: Math.ceil(gallery.length / LIMIT) + 1,
+    });
+
+    if (tempGallery?.data?.length > 0) {
+      setGallery((g) => [...g, ...tempGallery.data]);
+    }
+  }
+
+  console.log('gallery: ', gallery);
   return (
     <Box className={classes.portfolio}>
       <Box className={classes.portfolioWrapper}>
@@ -75,6 +92,21 @@ function Gallery({ lng, ...props }) {
                 </swiper-slide>
               );
             })}
+            {totalCount > gallery?.length && (
+              <swiper-slide class={classes.swiperSlide}>
+                <div className={classes.moreContent}>
+                  <Button
+                    onClick={handleMore}
+                    sx={{
+                      color: '#181818',
+                      fontSize: '20px',
+                    }}
+                  >
+                    {t('Загрузить еще')}
+                  </Button>
+                </div>
+              </swiper-slide>
+            )}
           </swiper-container>
         ) : (
           <Box className={classes.loaderWrapper}>

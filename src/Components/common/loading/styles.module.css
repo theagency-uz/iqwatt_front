@@ -22,13 +22,13 @@
 }
 
 .logo {
-  width: 13vw;
+  width: 186px;
   height: auto;
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .logo {
-    width: 186px;
+    width: 13vw;
   }
 }

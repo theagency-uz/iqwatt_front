@@ -12,11 +12,12 @@ import LangSwitcher from '@/layout/langSwitcher';
 import NavList from '@/layout/navList';
 import MenuIcon from '@/layout/menuIcon';
 import { strapiImageUrl } from '@/utils/endpoints';
+import SendFormButton from '../sendFormButton';
 // import dynamic from "next/dynamic";
 
 // const LangSwitcher = dynamic(() => import("./langSwitcher"), { ssr: false });
 
-function Navbar({ lng, settings, ...props }) {
+function Navbar({ lng, settings, categories, menu, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
   const { form, setForm } = useContext(FormContext);
@@ -70,15 +71,9 @@ function Navbar({ lng, settings, ...props }) {
             />
           </Link>
 
-          <NavList lng={lng} setOpen={setOpen} className={classes.desktop} />
+          <NavList lng={lng} menu={menu} isDesktop={true} />
 
-          <Button
-            className={`${classes.navbarBtn} ${classes.desktop}`}
-            onClick={() => setForm({ open: true })}
-            disableRipple={true}
-          >
-            {t('оставить заявку')}
-          </Button>
+          <SendFormButton className={classes.desktop} lng={lng} />
 
           <div className={classes.mobile}>
             <MenuIcon />

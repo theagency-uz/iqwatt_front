@@ -1,14 +1,14 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { Box, useMediaQuery } from "@mui/material";
+'use client';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Box, useMediaQuery } from '@mui/material';
 
-import { useTranslation } from "@/app/i18n/client";
+import { useTranslation } from '@/app/i18n/client';
 
-import classes from "./styles.module.css";
+import classes from './styles.module.css';
 
 function HouseCard({ lng, ...props }) {
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
   const { t, i18n } = useTranslation(lng);
 
   return (
@@ -16,14 +16,14 @@ function HouseCard({ lng, ...props }) {
       {lgUp ? (
         <Box className={classes.houseBox}>
           <Image
-            src={"/static/site/house.png"}
-            width={1045}
-            height={644}
-            alt={"house-image"}
+            src={'/static/site/house.png'}
+            width={1500}
+            height={1000}
+            alt={'house-image'}
             className={classes.houseImg}
           />
 
-          <Box className={classes.boxWrapper}>
+          <Box className={`${classes.boxWrapper} ${classes.boxWrapper1}`}>
             <div className={classes.box}>
               <div className={classes.boxLine}>
                 <div className={classes.boxLineThird}>
@@ -35,25 +35,25 @@ function HouseCard({ lng, ...props }) {
             <Box className={`${classes.card} ${classes.cardFrst}`}>
               <Box className={classes.cardImgBox}>
                 <Image
-                  src={"/images/cardImages/roof.png"}
+                  src={'/images/cardImages/roof.png'}
                   width={197}
                   height={116}
-                  alt={"house-image"}
+                  alt={'house-image'}
                   className={classes.cardImg}
                 />
               </Box>
               <Box className={classes.cardWrapper}>
-                <h3 className={classes.cardTitle}>{t("IQ Roof")}</h3>
+                <h3 className={classes.cardTitle}>{t('IQ Roof')}</h3>
                 <p className={classes.cardText}>
                   {t(
-                    "Система антиобледенения для крыш работает автоматически, не позволяя образоваться наледи или большому количеству снега для безопасности зимой."
+                    'Система антиобледенения для крыш работает автоматически, не позволяя образоваться наледи или большому количеству снега для безопасности зимой.'
                   )}
                 </p>
               </Box>
             </Box>
           </Box>
 
-          <Box className={classes.boxWrapperScnd}>
+          <Box className={`${classes.boxWrapper} ${classes.boxWrapper2}`}>
             <div className={classes.box}>
               <div className={classes.boxLine}>
                 <div className={classes.boxLineThird}>
@@ -65,25 +65,25 @@ function HouseCard({ lng, ...props }) {
             <Box className={`${classes.card} ${classes.cardScnd}`}>
               <Box className={classes.cardImgBox}>
                 <Image
-                  src={"/images/cardImages/outdoor.png"}
+                  src={'/images/cardImages/outdoor.png'}
                   width={197}
                   height={116}
-                  alt={"house-image"}
+                  alt={'house-image'}
                   className={classes.cardImg}
                 />
               </Box>
               <Box className={classes.cardWrapper}>
-                <h3 className={classes.cardTitle}>{t("IQ outdoor")}</h3>
+                <h3 className={classes.cardTitle}>{t('IQ outdoor')}</h3>
                 <p className={classes.cardText}>
                   {t(
-                    "Системы снеготаяния для лестниц и участка для безопасности и комфорта на площадке  в зимнее время года."
+                    'Системы снеготаяния для лестниц и участка для безопасности и комфорта на площадке  в зимнее время года.'
                   )}
                 </p>
               </Box>
             </Box>
           </Box>
 
-          <Box className={classes.boxWrapperThrd}>
+          <Box className={`${classes.boxWrapper} ${classes.boxWrapper3}`}>
             <div className={classes.box}>
               <div className={classes.boxLine}>
                 <div className={classes.boxLineThird}>
@@ -95,25 +95,25 @@ function HouseCard({ lng, ...props }) {
             <Box className={`${classes.card} ${classes.cardThrd}`}>
               <Box className={classes.cardImgBox}>
                 <Image
-                  src={"/images/cardImages/pipe.png"}
+                  src={'/images/cardImages/pipe.png'}
                   width={197}
                   height={116}
-                  alt={"house-image"}
+                  alt={'house-image'}
                   className={classes.cardImg}
                 />
               </Box>
               <Box className={classes.cardWrapper}>
-                <h3 className={classes.cardTitle}>{t("IQ pipe")}</h3>
+                <h3 className={classes.cardTitle}>{t('IQ pipe')}</h3>
                 <p className={classes.cardText}>
                   {t(
-                    "Системы обогрева труб для защиты от наледи для бесперебойной подачи воды зимой."
+                    'Системы обогрева труб для защиты от наледи для бесперебойной подачи воды зимой.'
                   )}
                 </p>
               </Box>
             </Box>
           </Box>
 
-          <Box className={classes.boxWrapperFourth}>
+          <Box className={`${classes.boxWrapper} ${classes.boxWrapper4}`}>
             <div className={classes.box}>
               <div className={classes.boxLine}>
                 <div className={classes.boxLineThird}>
@@ -125,25 +125,25 @@ function HouseCard({ lng, ...props }) {
             <Box className={`${classes.card} ${classes.cardFourth}`}>
               <Box className={classes.cardImgBox}>
                 <Image
-                  src={"/images/cardImages/mat.png"}
+                  src={'/images/cardImages/mat.png'}
                   width={197}
                   height={116}
-                  alt={"house-image"}
+                  alt={'house-image'}
                   className={classes.cardImg}
                 />
               </Box>
               <Box className={classes.cardWrapper}>
-                <h3 className={classes.cardTitle}>{t("IQ floor mat")}</h3>
+                <h3 className={classes.cardTitle}>{t('IQ floor mat')}</h3>
                 <p className={classes.cardText}>
                   {t(
-                    "​Система «теплого пола» при ремонте существующего пола для любого керамического покрытия. Экономит время при укладке."
+                    '​Система «теплого пола» при ремонте существующего пола для любого керамического покрытия. Экономит время при укладке.'
                   )}
                 </p>
               </Box>
             </Box>
           </Box>
 
-          <Box className={classes.boxWrapperFifth}>
+          <Box className={`${classes.boxWrapper} ${classes.boxWrapper5}`}>
             <div className={classes.box}>
               <div className={classes.boxLine}>
                 <div className={classes.boxLineThird}>
@@ -155,25 +155,25 @@ function HouseCard({ lng, ...props }) {
             <Box className={`${classes.card} ${classes.cardFifth}`}>
               <Box className={classes.cardImgBox}>
                 <Image
-                  src={"/images/cardImages/conditioner.png"}
+                  src={'/images/cardImages/conditioner.png'}
                   width={197}
                   height={116}
-                  alt={"house-image"}
+                  alt={'house-image'}
                   className={classes.cardImg}
                 />
               </Box>
               <Box className={classes.cardWrapper}>
-                <h3 className={classes.cardTitle}>{t("IQ conditioner")}</h3>
+                <h3 className={classes.cardTitle}>{t('IQ conditioner')}</h3>
                 <p className={classes.cardText}>
                   {t(
-                    "Кондиционеры для поддержания комфортной температуры в любое время года с системой Wi-Fi или без неё на выбор."
+                    'Кондиционеры для поддержания комфортной температуры в любое время года с системой Wi-Fi или без неё на выбор.'
                   )}
                 </p>
               </Box>
             </Box>
           </Box>
 
-          <Box className={classes.boxWrapperSixth}>
+          <Box className={`${classes.boxWrapper} ${classes.boxWrapper6}`}>
             <div className={classes.box}>
               <div className={classes.boxLine}>
                 <div className={classes.boxLineThird}>
@@ -185,25 +185,25 @@ function HouseCard({ lng, ...props }) {
             <Box className={`${classes.card} ${classes.cardSixth}`}>
               <Box className={classes.cardImgBox}>
                 <Image
-                  src={"/images/cardImages/thermostat.png"}
+                  src={'/images/cardImages/thermostat.png'}
                   width={197}
                   height={116}
-                  alt={"house-image"}
+                  alt={'house-image'}
                   className={classes.cardImg}
                 />
               </Box>
               <Box className={classes.cardWrapper}>
-                <h3 className={classes.cardTitle}>{t("IQ thermostat")}</h3>
+                <h3 className={classes.cardTitle}>{t('IQ thermostat')}</h3>
                 <p className={classes.cardText}>
                   {t(
-                    "Термостаты с ручным или программным управлением в разном стиле и цветах для регулирования работы систем."
+                    'Термостаты с ручным или программным управлением в разном стиле и цветах для регулирования работы систем.'
                   )}
                 </p>
               </Box>
             </Box>
           </Box>
 
-          <Box className={classes.boxWrapperSeventh}>
+          <Box className={`${classes.boxWrapper} ${classes.boxWrapper7}`}>
             <div className={classes.box}>
               <div className={classes.boxLine}>
                 <div className={classes.boxLineThird}>
@@ -215,18 +215,18 @@ function HouseCard({ lng, ...props }) {
             <Box className={`${classes.card} ${classes.cardSeventh}`}>
               <Box className={classes.cardImgBox}>
                 <Image
-                  src={"/images/cardImages/floor.png"}
+                  src={'/images/cardImages/floor.png'}
                   width={197}
                   height={116}
-                  alt={"house-image"}
+                  alt={'house-image'}
                   className={classes.cardImg}
                 />
               </Box>
               <Box className={classes.cardWrapper}>
-                <h3 className={classes.cardTitle}>{t("IQ floor")}</h3>
+                <h3 className={classes.cardTitle}>{t('IQ floor')}</h3>
                 <p className={classes.cardText}>
                   {t(
-                    "​Эта система «теплого пола» предназначена для любого напольного покрытия для комфортного подогрева не только пола, но и помещения."
+                    '​Эта система «теплого пола» предназначена для любого напольного покрытия для комфортного подогрева не только пола, но и помещения.'
                   )}
                 </p>
               </Box>
@@ -236,10 +236,10 @@ function HouseCard({ lng, ...props }) {
       ) : (
         <Box className={classes.houseBoxMobi}>
           <Image
-            src={"/static/site/house-mobi.png"}
+            src={'/static/site/house-mobi.png'}
             width={1120}
             height={690}
-            alt={"house-image"}
+            alt={'house-image'}
             className={classes.houseImgMobi}
           />
         </Box>

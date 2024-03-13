@@ -5,7 +5,7 @@ import Contacts from '@/Components/main/contacts';
 import Faq from '@/Components/main/faq';
 import FormContent from '@/Components/main/formContent';
 import House from '@/Components/main/house';
-import News from '@/Components/main/news';
+import Articles from '@/Components/main/articles';
 import Partners from '@/Components/main/partners';
 import Portfolio from '@/Components/main/portfolio';
 import Gallery from '@/Components/main/gallery';
@@ -38,7 +38,7 @@ export default async function Home({ params: { lng }, ...props }) {
         <Stage lng={lng} />
         <Faq lng={lng} />
         <Partners lng={lng} />
-        <News lng={lng} />
+        <Articles lng={lng} />
         <Contacts lng={lng} />
       </Container>
     </main>

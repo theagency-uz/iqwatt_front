@@ -20,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  padding: 0;
 }
 
 .navDropList {
@@ -54,32 +55,69 @@
   text-transform: lowercase;
 }
 
+.navDropList {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  transition: padding 0.3s ease, opacity 0.5s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.dropDown:hover .navDropList {
+  max-height: max-content;
+  padding: 10px;
+
+  opacity: 1;
+}
+.desktop {
+  display: none;
+}
 @media (min-width: 992px) {
-  ul.navList {
+  .desktop {
+    display: flex;
+  }
+  .navList {
     display: flex;
     gap: 30px;
     margin-bottom: 0;
     flex-direction: row;
+    align-self: stretch;
   }
+
+  .navItem {
+    padding: 15px 0;
+    align-self: stretch;
+    justify-content: center;
+  }
+
   .navDropList {
     position: absolute;
-    top: 48px;
+    top: 59px;
     left: -20px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
     border-radius: 5px;
-    border: 1px solid #ededed;
     background: #fff;
     z-index: 10;
-    transition: all 0.4s ease;
+    padding: 0;
+
+    transition: padding 0.3s ease, opacity 0.5s ease;
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
   }
 
   .dropDown:hover .navDropList {
-    transition: all 0.4s ease;
+    max-height: max-content;
+    padding: 20px;
+    border: 1px solid #ededed;
     opacity: 1;
   }
 }
