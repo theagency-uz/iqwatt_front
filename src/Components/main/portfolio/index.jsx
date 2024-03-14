@@ -14,7 +14,7 @@ function Portfolio({ lng, ...props }) {
   useEffect(() => {
     async function fetchAll() {
       const tempVideos = await getPortfolios({ lng, limit: LIMIT, page: 1 });
-      // setVideos(tempVideos.data);
+      setVideos(tempVideos.data);
       setTotalCount(tempVideos.meta.pagination.total);
     }
     fetchAll();

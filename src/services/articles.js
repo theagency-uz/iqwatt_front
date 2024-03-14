@@ -9,11 +9,11 @@ async function getArticles({ lng = "ru", limit = 10, page = 1 } = { lng: "ru", l
         pagination: {
           page: page,
           pageSize: limit
-        }
-        // sort: ['createdAt:desc'],
+        },
+        sort: ['date:desc'],
       }
     });
-    return result.data.data;
+    return result.data;
 
   } catch (err) {
     console.log("err: ", err.response);

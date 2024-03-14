@@ -7,12 +7,12 @@ import { getArticles } from '@/services/articles';
 import { register } from 'swiper/element';
 import Title from '@/Components/common/title';
 import CustomNavigation from './customNavigation';
-import NewsItem from './newsItem';
 import Link from 'next/link';
 import Image from 'next/image';
 
 import classes from './styles.module.css';
 import { Navigation, Scrollbar } from 'swiper/modules';
+import ArticleCard from '@/Components/common/articleCard';
 
 function Articles({ lng, ...props }) {
   const swiperRef = useRef(null);
@@ -27,7 +27,7 @@ function Articles({ lng, ...props }) {
   useEffect(() => {
     async function fetchAll() {
       const tempArticles = await getArticles({ lng, limit: 10, page: 1 });
-      setArticles(tempArticles);
+      setArticles(tempArticles.data);
     }
     fetchAll();
   }, [lng]);
@@ -73,7 +73,7 @@ function Articles({ lng, ...props }) {
             {articles.map((article, index) => {
               return (
                 <swiper-slide key={article.id} class={classes.swiperSlide}>
-                  <NewsItem article={article} lng={lng} />
+                  <ArticleCard article={article.attributes} lng={lng} />
                 </swiper-slide>
               );
             })}

@@ -5,6 +5,7 @@ import { useTranslation } from '@/app/i18n/client';
 import { register } from 'swiper/element';
 import { useEffect, useRef, useState } from 'react';
 import { Scrollbar, Navigation } from 'swiper/modules';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import classes from './styles.module.css';
 import Title from '@/Components/common/title';
@@ -85,22 +86,22 @@ function VideosContent({
                   <Button
                     onClick={handleMore}
                     sx={{
-                      color: '#181818',
+                      color: '#333333',
                       fontSize: '20px',
+                      display: 'flex',
+                      gap: '10px',
                     }}
                   >
                     {t('Загрузить еще')}
+                    <ArrowForwardIosIcon
+                      sx={{ color: '#333333', fontSize: '25px' }}
+                    />
                   </Button>
                 </div>
               </swiper-slide>
             )}
             {moreLoading && (
-              <Skeleton
-                key={index}
-                variant='rounded'
-                className={classes.loaderItem}
-                height={mdUp ? 623 : 423}
-              />
+              <Skeleton variant='rounded' className={classes.loaderItem} />
             )}
           </swiper-container>
         ) : (

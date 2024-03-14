@@ -1,0 +1,38 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.articleImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+}
+
+.title {
+  color: #333;
+  font-family: 'Manrope';
+  font-size: var(--font18);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+}
+
+.date {
+  background: #ff8115;
+  color: #fff;
+  padding: 8px 10px;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .article {
+    gap: 20px;
+  }
+}

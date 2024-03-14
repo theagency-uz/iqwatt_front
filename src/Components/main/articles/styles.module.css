@@ -35,21 +35,6 @@
   gap: 20px;
   height: auto;
 }
-.swiperItem {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  height: 100%;
-}
-
-.newsImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
-  aspect-ratio: 1/1;
-}
 
 .newsTitle {
   color: #333;
@@ -106,21 +91,7 @@
   object-fit: cover;
 }
 
-.date {
-  background: #ff8115;
-  color: #fff;
-  padding: 8px 10px;
-  width: fit-content;
-  border-radius: 5px;
-}
 @media (min-width: 992px) {
-  .news {
-  }
-
-  .newsTitle {
-    max-width: 17.3vw;
-  }
-
   .newsLink {
     width: 160px;
     height: 46px;

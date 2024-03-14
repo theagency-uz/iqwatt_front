@@ -3,6 +3,7 @@ import { useMediaQuery, Box, Skeleton, Button } from '@mui/material';
 import { useTranslation } from '@/app/i18n/client';
 import { useEffect, useRef, useState } from 'react';
 import { getGallery } from '@/services/gallery';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import classes from './styles.module.css';
 import Title from '@/Components/common/title';
@@ -18,6 +19,7 @@ function Gallery({ lng, ...props }) {
   const { t, i18n } = useTranslation(lng);
   const [gallery, setGallery] = useState();
   const [totalCount, setTotalCount] = useState(0);
+  const [moreLoading, setMoreLoading] = useState(false);
 
   useEffect(() => {
     async function fetchAll() {
@@ -59,6 +61,8 @@ function Gallery({ lng, ...props }) {
   }, [mdUp, gallery]);
 
   async function handleMore() {
+    setMoreLoading(true);
+
     const tempGallery = await getGallery({
       lng,
       limit: LIMIT,
@@ -68,9 +72,10 @@ function Gallery({ lng, ...props }) {
     if (tempGallery?.data?.length > 0) {
       setGallery((g) => [...g, ...tempGallery.data]);
     }
+
+    setMoreLoading(false);
   }
 
-  console.log('gallery: ', gallery);
   return (
     <Box className={classes.portfolio}>
       <Box className={classes.portfolioWrapper}>
@@ -98,14 +103,23 @@ function Gallery({ lng, ...props }) {
                   <Button
                     onClick={handleMore}
                     sx={{
-                      color: '#181818',
+                      color: '#333333',
                       fontSize: '20px',
+                      display: 'flex',
+                      gap: '10px',
                     }}
                   >
                     {t('Загрузить еще')}
+                    <ArrowForwardIosIcon
+                      sx={{ color: '#333333', fontSize: '25px' }}
+                    />
                   </Button>
                 </div>
               </swiper-slide>
+            )}
+
+            {moreLoading && (
+              <Skeleton variant='rounded' className={classes.loaderItem} />
             )}
           </swiper-container>
         ) : (

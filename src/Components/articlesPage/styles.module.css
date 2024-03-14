@@ -1,7 +1,7 @@
 .articlesList {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .articlesItem {
@@ -19,23 +19,40 @@
 
 .articlesTitle {
   color: #333;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-size: var(--font14);
   font-style: normal;
   font-weight: 500;
   line-height: 110%;
 }
+.articlesList li {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .articlesList {
+    column-gap: 20px;
+    row-gap: 30px;
+  }
+
+  .articlesList li {
+    width: calc(50% - 20px / 2);
+  }
+}
 
 @media (min-width: 768px) {
   .articlesList {
-    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
     row-gap: 40px;
+  }
+  .articlesList li {
+    width: calc(100% / 3 - 40px / 3);
   }
 }
 
 @media (min-width: 992px) {
-  .articlesList {
-    grid-template-columns: repeat(4, 1fr);
+  .articlesList li {
+    width: calc(25% - 60px / 4);
   }
 
   .articlesItem {

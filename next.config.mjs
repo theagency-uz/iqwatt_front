@@ -1,7 +1,7 @@
 const cspHeader = `
     default-src 'none';
     connect-src 'self';
-    script-src 'self';
+    script-src * 'self' 'unsafe-eval';
     img-src * data:;
     style-src 'self' 'unsafe-inline';
     frame-src *
@@ -28,19 +28,19 @@ const nextConfig = {
     ],
   },
 
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'Content-Security-Policy',
-            value: cspHeader.replace(/\n/g, ''),
-          },
-        ],
-      },
-    ];
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: '/(.*)',
+  //       headers: [
+  //         {
+  //           key: 'Content-Security-Policy',
+  //           value: cspHeader.replace(/\n/g, ''),
+  //         },
+  //       ],
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;
