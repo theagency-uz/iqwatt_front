@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import NextTopLoader from 'nextjs-toploader';
 import SidebarContext from '@/context/sidebar.context';
 import FormContext from '@/context/form.context';
 import FormBar from '@/layout/formBar';
@@ -44,6 +45,7 @@ export default function Providers({ lng, initialSettings, children }) {
         <Notificationcontext.Provider value={notifyValue}>
           <SidebarContext.Provider value={sidebarValue}>
             <FormContext.Provider value={formValue}>
+              <NextTopLoader color='#ff8115' showSpinner={false} />
               <Notification
                 handleClose={() =>
                   setNotify((n) => {

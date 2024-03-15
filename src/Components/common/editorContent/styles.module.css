@@ -44,7 +44,7 @@
   width: 100%;
 }
 
-.content video {
+.editor video {
   width: 100%;
   position: absolute;
   left: 0;
@@ -52,75 +52,75 @@
   max-width: 100%;
 }
 
-.content h1,
-.content h1 span {
+.editor h1,
+.editor h1 span {
   font-size: var(--font50);
   line-height: 130%;
   font-weight: 300;
 }
 
-.content h2,
-.content h2 span {
+.editor h2,
+.editor h2 span {
   font-size: var(--font50);
   line-height: 130%;
   font-weight: 300;
 }
 
-.content h3,
-.content h3 span {
+.editor h3,
+.editor h3 span {
   font-size: var(--font30);
   line-height: 130%;
   font-weight: 300;
 }
 
-.content h4,
-.content h4 span {
+.editor h4,
+.editor h4 span {
   font-size: var(--font20);
   line-height: 130%;
   font-weight: 300;
 }
 
-.content a {
+.editor a {
   text-decoration: underline;
   color: -webkit-link;
 }
 
-.content a > span {
+.editor a > span {
   text-decoration: underline;
 }
 
-.content :global(.__se__float-center figure) {
+.editor :global(.__se__float-center figure) {
   margin: auto;
 }
 
-.content :global(.__se__float-left) {
+.editor :global(.__se__float-left) {
   float: left;
   margin: 0;
 }
-.content :global(.__se__float-right) {
+.editor :global(.__se__float-right) {
   float: right;
   margin: 0px;
 }
 
-.content table:global(.catalog) {
+.editor table:global(.catalog) {
   width: 100%;
 }
 
-.content table:global(.catalog) tr {
+.editor table:global(.catalog) tr {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-editor: center;
   gap: 15px;
 }
 
-.content table:global(.catalog) td {
+.editor table:global(.catalog) td {
   height: 60px;
 }
 
-.content table:global(.catalog) a {
+.editor table:global(.catalog) a {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-editor: center;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: #000;
@@ -132,15 +132,15 @@
   text-decoration: none;
 }
 
-.content :global(.__se__tag__bg__black) {
+.editor :global(.__se__tag__bg__black) {
   color: #fff;
   position: relative;
   z-index: 1;
   padding: 20px 0;
 }
 
-.content :global(.__se__tag__bg__black)::before {
-  content: '';
+.editor :global(.__se__tag__bg__black)::before {
+  editor: '';
   background: #000;
   color: #fff;
 
@@ -156,41 +156,41 @@
   margin-right: -50vw;
 }
 
-.content table {
+.editor table {
   width: 100%;
 }
-.content table tbody {
+.editor table tbody {
   width: 100%;
 }
-.content table tr {
+.editor table tr {
   display: flex;
   flex-direction: row;
   /* align-items: center; */
-  /* justify-content: space-between; */
+  /* justify-editor: space-between; */
   gap: 50px;
 }
-.content table tr td {
+.editor table tr td {
   width: calc(50% - 25px);
 }
 
-.content :global(.__se__tag__bg__color) {
+.editor :global(.__se__tag__bg__color) {
   border-radius: 0;
   padding: 30px;
 }
-.content :global(.__se__top) {
+.editor :global(.__se__top) {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-editor: flex-start;
 }
-.content :global(.__se__bottom) {
+.editor :global(.__se__bottom) {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-editor: flex-end;
 }
-.content :global(.__se__middle) {
+.editor :global(.__se__middle) {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-editor: center;
 }
 
 .modal table {
@@ -199,19 +199,19 @@
   margin: auto;
 }
 .modal table tr {
-  justify-content: space-between;
+  justify-editor: space-between;
 }
-.content table tr td {
+.editor table tr td {
   width: calc(50% - 25px);
 }
 .modal table tr td {
   width: calc(36%);
 }
 
-.content p,
-.content p > span,
-.content div,
-.content div > span {
+.editor p,
+.editor p > span,
+.editor div,
+.editor div > span {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -233,23 +233,23 @@
 /* editor */
 
 @media (min-width: 992px) {
-  .content table:global(.catalog) tr {
+  .editor table:global(.catalog) tr {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-editor: center;
   }
 
-  .content table:global(.catalog) a {
+  .editor table:global(.catalog) a {
     width: 200px;
     height: 50px;
   }
-  .content table:global(.catalog) td {
+  .editor table:global(.catalog) td {
     height: auto;
   }
 }
 
 @media (max-width: 768px) {
-  .content img {
+  .editor img {
     max-height: 90vh;
     margin: auto;
   }
@@ -258,42 +258,42 @@
     margin: auto;
   }
 
-  .content h1,
-  .content h1 span {
+  .editor h1,
+  .editor h1 span {
     font-size: 25px;
     line-height: 130%;
   }
 
-  .content h2,
-  .content h2 span {
+  .editor h2,
+  .editor h2 span {
     font-size: 25px;
     line-height: 130%;
   }
 
-  .content h3,
-  .content h3 span {
+  .editor h3,
+  .editor h3 span {
     font-size: 20px;
     line-height: 130%;
   }
 
-  .content h4,
-  .content h4 span {
+  .editor h4,
+  .editor h4 span {
     font-size: 15px;
     line-height: 130%;
   }
 
-  .content table tr {
+  .editor table tr {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .content table:global(.__se__tag__table__invert tr) {
+  .editor table:global(.__se__tag__table__invert tr) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
   }
 
-  .content table tr td {
+  .editor table tr td {
     max-width: 100%;
     width: 100%;
   }
@@ -303,7 +303,7 @@
   .modal table tr td {
     width: calc(45%);
   }
-  .content :global(.__se__tag__bg__color) {
+  .editor :global(.__se__tag__bg__color) {
     padding: 20px;
   }
 }

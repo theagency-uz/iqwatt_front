@@ -4,6 +4,8 @@ import { getArticle } from '@/services/articles';
 import classes from './page.module.css';
 import EditorContent from '@/Components/common/editorContent';
 import { strapiImageUrl } from '@/utils/endpoints';
+import BreadCrumbs from '@/Components/common/breadCrumbs';
+import { useTranslation } from '@/app/i18n';
 
 export async function generateMetadata({
   params: { lng, articleSlug },
@@ -23,14 +25,30 @@ export async function generateMetadata({
 async function Article({ params: { lng, articleSlug } }) {
   const article = await getArticle({ lng, slug: articleSlug });
 
-  if(article.attributes.description.includes('oembed')){
-    article.attributes.description = article.attributes.description.replace()
+  const { t } = await useTranslation(lng);
+
+  if (article.attributes.description.includes('oembed')) {
+    article.attributes.description = article.attributes.description.replace();
   }
 
+  const links = [
+    {
+      name: t('Статьи'),
+      link: `/${lng}/articles`,
+      id: 'articles',
+    },
+    {
+      name: article.attributes.name,
+      link: `/${lng}/articles/${article.attributes.slug}`,
+      id: 'articles',
+    },
+  ];
+
   return (
-    <Container>
-      <div>
-        <h1>{article.attributes.name}</h1>
+    <Container className={classes.container}>
+      <div className={classes.articleTop}>
+        <BreadCrumbs links={links} />
+        <h1 className={classes.title}>{article.attributes.name}</h1>
       </div>
 
       <EditorContent content={article.attributes.description} />

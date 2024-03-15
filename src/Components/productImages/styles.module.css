@@ -3,6 +3,10 @@
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  flex-shrink: 0;
+  max-height: 90vh;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 
 .productMainSwiperItem {
@@ -39,5 +43,7 @@
 @media (min-width: 992px) {
   .productImages {
     width: 50%;
+    position: sticky;
+    top: 0;
   }
 }

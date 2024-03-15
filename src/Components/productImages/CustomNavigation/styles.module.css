@@ -18,16 +18,18 @@
   align-items: center;
   justify-content: center;
   border: 1px solid #fff;
-  background: #ff9f54;
+
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .sliderNavigation > button:hover {
-  background: #ff9f54;
 }
 
 .sliderNavigation > button > svg {
   color: #fff;
   font-size: var(--font20);
+
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
 }
 
 @media (min-width: 992px) {

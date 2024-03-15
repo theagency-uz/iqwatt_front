@@ -1,7 +1,7 @@
 import classes from './styles.module.css';
-export default function Container({ children, ...props }) {
+export default function Container({ children, className = '', ...props }) {
   return (
-    <div className={classes.container} {...props}>
+    <div className={`${classes.container} ${className}`} {...props}>
       {children}
     </div>
   );

@@ -8,12 +8,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { strapiImageUrl } from '@/utils/endpoints';
 import ArticleCard from '../common/articleCard';
+import goToTop from '@/utils/goToTop';
 
-function ArticlesPage({ lng, initialArticles, initialPage, limit, ...props }) {
+function ArticlesPage({
+  lng,
+  initialArticles,
+  initialPage,
+  limit,
+  pageCount,
+  ...props
+}) {
   const { t } = useTranslation(lng);
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+  const smUp = useMediaQuery((theme) => theme.breakpoints.up('sm'));
 
   const [articles, setArticles] = useState(initialArticles);
+  const [page, setPage] = useState(initialPage);
 
   return (
     <div>
@@ -36,7 +45,7 @@ function ArticlesPage({ lng, initialArticles, initialPage, limit, ...props }) {
           sx={{
             display: 'flex',
             justifyContent: 'center',
-            marginTop: '24px',
+
             '& .Mui-selected': {
               border: '1px solid #000',
               borderRadius: '5px',
@@ -50,7 +59,8 @@ function ArticlesPage({ lng, initialArticles, initialPage, limit, ...props }) {
               backgroundColor: '#fff !important',
             },
           }}
-          onChange={handlePaginationChange}
+          className={classes.pagination}
+          onChange={(e, page) => setPage(page)}
           onClick={goToTop}
         />
       )}

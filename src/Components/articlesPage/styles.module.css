@@ -29,6 +29,10 @@
   width: 100%;
 }
 
+.pagination {
+  margin-top: 24px;
+}
+
 @media (min-width: 576px) {
   .articlesList {
     column-gap: 20px;

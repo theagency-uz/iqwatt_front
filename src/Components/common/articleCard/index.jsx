@@ -5,6 +5,7 @@ import React from 'react';
 import classes from './styles.module.css';
 import { strapiImageUrl } from '@/utils/endpoints';
 import { enGB, ru, uz } from 'date-fns/locale';
+import skeleton from '@/utils/skeleton';
 
 export default function ArticleCard({ article, lng }) {
   const locales = { uz: uz, ru: ru, en: enGB };
@@ -17,6 +18,8 @@ export default function ArticleCard({ article, lng }) {
         height={1000}
         alt={article.name}
         className={classes.articleImg}
+        placeholder='blur'
+        blurDataURL={skeleton}
       />
       <div className={classes.date}>
         {format(new Date(article.date), 'd MMMM yyyy', {

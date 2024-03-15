@@ -1,13 +1,19 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
 import classes from './styles.module.css';
-import { useTranslation } from '@/app/i18n';
+import { useTranslation } from '@/app/i18n/client';
 import { strapiImageUrl } from '@/utils/endpoints';
+import skeleton from '@/utils/skeleton';
+import { useContext } from 'react';
+import SettingsContext from '@/context/settings.context';
 
-export default async function Product({ product, lng, ...props }) {
-  const { t } = await useTranslation(lng);
+export default function Product({ product, lng, ...props }) {
+  const { t } = useTranslation(lng);
+
+  const { settings } = useContext(SettingsContext);
+
   return (
     <Link
       href={`/catalog/${product.attributes.category.data.attributes.slug}/${product.attributes.slug}`}
@@ -17,6 +23,9 @@ export default async function Product({ product, lng, ...props }) {
       <div className={classes.catalogItemBox}>
         <div className={classes.catalogWrapper}>
           <p className={classes.catalogName}>{t(product.attributes.name)}</p>
+        </div>
+
+        <div className={classes.catalogImgBox}>
           <button className={classes.catalogItemLink}>
             {t('смотреть')}
             <div className={classes.catalogItemIconBox}>
@@ -29,18 +38,19 @@ export default async function Product({ product, lng, ...props }) {
               />
             </div>
           </button>
-        </div>
-
-        <div className={classes.catalogImgBox}>
           <Image
             src={
               strapiImageUrl +
-              product.attributes.preview_image.data.attributes.url
+              (product.attributes.preview_image.data
+                ? product.attributes.preview_image.data.attributes.url
+                : settings.placeholder.data.attributes.url)
             }
-            width={194}
-            height={194}
+            width={200}
+            height={200}
             alt={'catalog-image'}
             className={classes.catalogImg}
+            placeholder='blur'
+            blurDataURL={skeleton}
           />
         </div>
       </div>

@@ -18,12 +18,14 @@ function ProductImages({ images, ...props }) {
 
     /** @type {import('swiper/react').SwiperProps} */
     const params = {
-      modules: [Scrollbar, Navigation],
+      modules: [Navigation],
       slidesPerView: 1,
       spaceBetween: 10,
       loop: true,
-      scrollbar: { draggable: true },
+
       navigation: {
+        enabled: true,
+
         prevEl: prevRef.current,
         nextEl: nextRef.current,
         disabledClass: 'disabled',
@@ -58,7 +60,9 @@ function ProductImages({ images, ...props }) {
           );
         })}
       </swiper-container>
-      <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
+      {images.length > 1 && (
+        <CustomNavigation prevRef={prevRef} nextRef={nextRef} />
+      )}
     </Box>
   );
 }
