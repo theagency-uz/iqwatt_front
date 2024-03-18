@@ -62,11 +62,11 @@ function GuaranteeCard({ lng, ...props }) {
               telegram
               <Box className={classes.uploadIconBox}>
                 <Image
-                  src={"/icons/arrow-right.svg"}
-                  width={18}
-                  height={15}
+                  src={"/icons/telegram-icon.svg"}
+                  width={33}
+                  height={33}
                   alt={"icon"}
-                  className={classes.uploadIcon}
+                  className={classes.contactsIcon}
                 />
               </Box>
             </a>
