@@ -112,6 +112,15 @@ function Footer({ lng, page, settings, ...props }) {
                     className={classes.footerSocial}
                   />
                 </a>
+                <a href="/" target="_blank">
+                  <Image
+                    src={"/icons/youtube.svg"}
+                    width={31}
+                    height={32}
+                    alt={"logo"}
+                    className={classes.footerSocial}
+                  />
+                </a>
               </Box>
             </li>
 
@@ -312,6 +321,15 @@ function Footer({ lng, page, settings, ...props }) {
                   className={classes.footerSocial}
                 />
               </a>
+              <a href="/" target="_blank">
+                  <Image
+                    src={"/icons/youtube.svg"}
+                    width={31}
+                    height={32}
+                    alt={"logo"}
+                    className={classes.footerSocial}
+                  />
+                </a>
             </Box>
           </li>
 

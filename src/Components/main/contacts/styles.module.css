@@ -45,8 +45,8 @@
   font-weight: 500;
   line-height: 128.571%;
   text-transform: lowercase;
-  width: 120px;
-  height: 35px;
+  width: 135px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -79,8 +79,6 @@
   width: 100%;
 }
 @media (min-width: 992px) {
-  .contacts {
-  }
   .contactsWrapper {
     flex-direction: row;
     align-items: center;
