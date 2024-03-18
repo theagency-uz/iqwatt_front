@@ -55,6 +55,20 @@
   height: 5px;
 }
 
+.colorWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.color {
+  padding: 3px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
 @media (min-width: 992px) {
 }
 

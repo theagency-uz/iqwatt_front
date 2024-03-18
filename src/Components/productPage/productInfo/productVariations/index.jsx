@@ -5,6 +5,8 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import classes from './styles.module.css';
 
+const TYPES = ['Длина', 'Мощность', 'Цвет', 'Резьба'];
+
 function ProductVariations({
   lng,
   variations,
@@ -13,6 +15,8 @@ function ProductVariations({
   ...props
 }) {
   const { t, i18n } = useTranslation(lng);
+
+  console.log(variations[0].type);
 
   return (
     <FormControl
@@ -44,7 +48,10 @@ function ProductVariations({
         displayEmpty
       >
         <MenuItem className={classes.variationItem} disabled value=''>
-          {t('Выбрать метраж')}
+          {variations[0].type === TYPES[0] && t('Выбрать метраж')}
+          {variations[0].type === TYPES[1] && t('Выбрать мощность')}
+          {variations[0].type === TYPES[2] && t('Выбрать цвет')}
+          {variations[0].type === TYPES[3] && t('Выбрать резьбу')}
         </MenuItem>
         {variations.map((variation) => (
           <MenuItem
@@ -53,7 +60,26 @@ function ProductVariations({
             className={classes.variationItem}
           >
             <CustomRadio checked={selectedVariation === variation.id} />
-            <span>{variation.value}</span>
+
+            {/* Длина */}
+            {variation.type === TYPES[0] && <span>{variation.value}</span>}
+
+            {/* Мощность */}
+            {variation.type === TYPES[1] && <span>{variation.value}</span>}
+
+            {/* Цвет */}
+            {variation.type === TYPES[2] && (
+              <div className={classes.colorWrapper}>
+                <span
+                  className={classes.color}
+                  style={{ backgroundColor: variation.value.split('-')[0] }}
+                ></span>
+                {variation.value.split('-')[1]}
+              </div>
+            )}
+
+            {/* Резьба */}
+            {variation.type === TYPES[3] && <span>{variation.value}</span>}
           </MenuItem>
         ))}
       </Select>

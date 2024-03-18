@@ -1,13 +1,11 @@
-import Title from '@/Components/common/title';
 import { useTranslation } from '@/app/i18n';
-import productData from '@/data/productData';
-import ProductImages from '@/Components/productImages';
-import ProductInfo from '@/Components/productInfo';
+
 import ProductTabs from '@/Components/productTabs';
 import classes from './styles.module.css';
 import { getProductBySlug } from '@/services/product';
 import BreadCrumbs from '@/Components/common/breadCrumbs';
 import Container from '@/Container';
+import ProductTop from '@/Components/productPage';
 
 async function Product({
   params: { lng, categorySlug, productSlug },
@@ -34,10 +32,8 @@ async function Product({
       <div className={classes.productWrapper}>
         <BreadCrumbs lng={lng} links={links} />
 
-        <div className={classes.productInfoWrapper}>
-          <ProductImages images={product.attributes.images.data} />
-          <ProductInfo lng={lng} product={product.attributes} />
-        </div>
+        <ProductTop lng={lng} product={product.attributes} />
+
         <ProductTabs lng={lng} product={product.attributes} />
       </div>
     </Container>

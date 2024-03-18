@@ -9,12 +9,15 @@ import FormContext from '@/context/form.context';
 import ProductVariations from './productVariations';
 import ProductCharacteristics from './productCharacteristics';
 
-function ProductInfo({ lng, product, ...props }) {
+function ProductInfo({
+  lng,
+  product,
+  selectedVariation,
+  setSelectedVariation,
+  ...props
+}) {
   const { t } = useTranslation(lng);
   const { form, setForm } = useContext(FormContext);
-  const [selectedVariation, setSelectedVariation] = useState(
-    product.variation?.[0]?.id
-  );
 
   return (
     <Box className={classes.productBox}>
