@@ -8,9 +8,8 @@ import Contacts from '@component/main/contacts';
 import InfoCard from '../common/infoCard';
 import FormContext from '@/context/form.context';
 import InfoWrapper from '../common/infoWrapper';
-import SliderDesk from './sliderDesk';
-import SliderMobi from './sliderMobi';
 import Portfolio from '../main/portfolio';
+import SliderImages from './sliderImages';
 
 
 function PartnersPage({ lng, ...props }) {
@@ -77,7 +76,7 @@ function PartnersPage({ lng, ...props }) {
         />
       </Box>
 
-      {mdUp ? <SliderDesk lng={lng} /> : <SliderMobi lng={lng} />}
+      <SliderImages lng={lng} />
 
       <Portfolio lng={lng} />
       <Contacts lng={lng} />

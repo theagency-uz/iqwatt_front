@@ -1,5 +1,5 @@
 "use client";
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import classes from "./styles.module.css";
 import { register } from "swiper/element";
@@ -9,17 +9,18 @@ import PartnersItem from "./partnersItem";
 import SliderImageViewer from "./sliderImageViewer";
 import ModalContent from "./modalContent";
 
-function SliderDesk({ lng, ...props }) {
+function SliderImages({ lng, ...props }) {
   const swiperRef = useRef(null);
   const [images, setImages] = useState(partnersData);
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
 
   useEffect(() => {
     register();
 
     const params = {
       modules: [Scrollbar],
-      slidesPerView: 3,
-      spaceBetween: 20,
+      slidesPerView: mdUp ? 3 : 1.2,
+      spaceBetween: mdUp ? 20 : 10,
       centeredSlides: true,
       loop: true,
       scrollbar: { draggable: true },
@@ -30,7 +31,7 @@ function SliderDesk({ lng, ...props }) {
     Object.assign(swiperRef.current, params);
 
     swiperRef.current.initialize();
-  }, []);
+  }, [mdUp]);
 
   const [currentImage, setCurrentImage] = useState(null);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
@@ -74,4 +75,4 @@ function SliderDesk({ lng, ...props }) {
   );
 }
 
-export default SliderDesk;
+export default SliderImages;

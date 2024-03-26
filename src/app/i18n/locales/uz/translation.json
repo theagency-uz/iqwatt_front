@@ -74,8 +74,8 @@
   "Портфолио": "Portfolio",
   "IQ WATT в деле": "IQ WATT amalda",
   "Галерея объектов": "Obyektlar galeriyasi",
-  "4 этапа \n до нового \n уровня комфорта": "Qulaylikning yangi \n bosqichigacha bo’lgan \n 4 bosqich",
-  "Вся работа делится на 4 этапа - подписание договора, замеры и выбор схемы, установка и оплата. По окончанию всех работ мы также выдаем гарантию на 20 лет.": "Barcha ishlar 4 bosqichga bo'linadi - shartnomani imzolash, o'lchovlar va sxemani tanlash, o'rnatish va to'lashdan iborat. Shuningdek, biz barcha ishlarni tugatgandan so'ng kafolat beramiz.",
+  "5 этапов \n до нового \n уровня комфорта": "Qulaylikning yangi \n bosqichigacha bo’lgan \n 5 bosqich",
+  "Вся работа делится на 5 этапов - заявка, замеры и выбор схемы, подписание договора, установка и оплата. По окончанию всех работ мы также выдаем гарантию.": "Barcha ishlar 5 bosqichga bo'linadi - shartnomani imzolash, o'lchovlar va sxemani tanlash, o'rnatish va to'lashdan iborat. Shuningdek, biz barcha ishlarni tugatgandan so'ng kafolat beramiz.",
   "Встреча и подписание договора": "Uchrashuv va shartnomani imzolash",
   "Сначала мы встречаемся в офисе, отвечаем на ваши вопросы, обсуждаем нюансы и заклчюаем договор.": "Oldin ofisda uchrashamiz, so'rovingiz bo'yicha muhokama o'tkazamiz, savollaringizga javob beramiz va shartnoma tuzamiz.",
   "Замеры и выбор схемы": "O'lchovlar va sxemani tanlash",
@@ -166,5 +166,9 @@
   "ЖК «TATLIN», г. Москва": "«TATLIN» turar-joy majmuasi, Moskva",
   "«Усачевский рынок», г. Москва": "«Usachevskiy bozori», Moskva",
   "Детский Хоспис, г. Истра": "Istra shahri, Bolalar Hospis",
-  "Храм «Живоначальной Троицы» в Троице-Лыкове": "Trinity-Lykovodagi «Hayot beruvchi Uch Birlik» cherkovi"
+  "Храм «Живоначальной Троицы» в Троице-Лыкове": "Trinity-Lykovodagi «Hayot beruvchi Uch Birlik» cherkovi",
+  "Оставьте заявку на нашем сайте и вас проконсультируют по всем вопросам": "Bizning veb-saytimizda so'rov qoldiring va sizga barcha savollar bo'yicha maslahat beriladi",
+  "На этом этапе важно определить область обогрева: где будут проходить коммуникации, как будет расставлена мебель, дизайнерские особенности.": "Ushbu bosqichda isitish maydonini aniqlash muhim: kommunikatsiyalar qaerda bo'ladi, mebel qanday tartibga solinadi, dizayn xususiyatlari.",
+  "После мы встречаемся в офисе, отвечаем на ваши вопросы, обсуждаем нюансы и заключаем договор.": "Keyin biz ofisda uchrashamiz, savollaringizga javob beramiz, nuanslarni muhokama qilamiz va shartnoma tuzamiz.",
+  "На стадии третьего этапа монтажники устанавливают систему в ваш дом в согласованный с вами и вашим бригадиром срок.": "Uchinchi bosqichda o'rnatuvchilar tizimni siz va sizning ustangiz bilan kelishilgan vaqt ichida uyingizga o'rnatadilar."
 }

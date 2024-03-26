@@ -18,7 +18,7 @@ function StageItem({ lng, stage, nextItemRef, ...props }) {
       <Box className={classes.stageStepBox}>
         <Image
           src={stage.step}
-          width={110}
+          width={140}
           height={20}
           alt={"stage-staps"}
           className={classes.stageStep}

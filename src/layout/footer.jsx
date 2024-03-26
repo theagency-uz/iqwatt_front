@@ -112,7 +112,7 @@ function Footer({ lng, page, settings, ...props }) {
                     className={classes.footerSocial}
                   />
                 </a>
-                <a href="/" target="_blank">
+                <a href="https://www.youtube.com/@iqwatt6962/playlists" target="_blank">
                   <Image
                     src={"/icons/youtube.svg"}
                     width={31}
@@ -321,7 +321,7 @@ function Footer({ lng, page, settings, ...props }) {
                   className={classes.footerSocial}
                 />
               </a>
-              <a href="/" target="_blank">
+              <a href="https://www.youtube.com/@iqwatt6962/playlists" target="_blank">
                   <Image
                     src={"/icons/youtube.svg"}
                     width={31}
