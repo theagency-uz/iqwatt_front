@@ -3,9 +3,9 @@ import Title from '@/Components/common/title';
 
 const infoData = [
   { number: '10', text: 'лет на международном рынке' },
-  { number: '<100', text: 'установленных систем' },
+  { number: '>100', text: 'установленных систем' },
   { number: '25', text: 'до 25 лет гарантии на наши системы' },
-  { number: '<200', text: 'положительных отзывов' },
+  { number: '>200', text: 'положительных отзывов' },
 ];
 
 function InfoWrapper({ lng, title, text, ...props }) {
